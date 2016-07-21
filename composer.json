@@ -1,0 +1,24 @@
+{
+	"name": "xiewulong/yii2-account",
+	"description": "yii2 account management module",
+	"keywords": ["yii2", "xiewulong", "account", "user", "login", "signin", "signup", "password", "reset"],
+	"type": "yii2-extension",
+	"license": "MIT",
+	"support": {
+		"issues": "https://github.com/xiewulong/yii2-account/issues",
+		"wiki": "https://github.com/xiewulong/yii2-account/wiki",
+		"source": "https://github.com/xiewulong/yii2-account"
+	},
+	"authors": [
+		{
+			"name": "xiewulong",
+			"email": "xiewulong@vip.qq.com"
+		}
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+	"autoload": {
+		"psr-4": {"yii\\account\\": ""}
+	}
+}
