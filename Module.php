@@ -28,6 +28,8 @@ class Module extends \yii\base\Module {
 
 	public $messageCategory = 'account';
 
+	public $permissions = ['@'];
+
 	public function init() {
 		parent::init();
 

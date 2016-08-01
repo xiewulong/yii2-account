@@ -1,5 +1,8 @@
 <?php
 use yii\helpers\Html;
+use yii\account\assets\AccountAsset;
+
+AccountAsset::register($this);
 ?>
 <?php $this->beginPage(); ?>
 <!doctype html>

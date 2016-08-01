@@ -24,7 +24,7 @@ class UserController extends Controller {
                     [
                         'actions' => ['logout'],
                         'allow' => true,
-                        'roles' => ['@'],
+                        'roles' => $this->module->permissions,
                     ],
                 ],
             ],
