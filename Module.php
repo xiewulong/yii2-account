@@ -16,9 +16,9 @@ use yii\base\ErrorException;
 
 class Module extends \yii\base\Module {
 
-	public $defaultRoute = 'user';
+	public $layout = 'account';
 
-	public $layout = 'main';
+	public $defaultRoute = 'user';
 
 	public $author = 'xiewulong<xiewulong@vip.qq.com>';
 
