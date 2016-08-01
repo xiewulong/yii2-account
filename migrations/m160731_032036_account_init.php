@@ -36,7 +36,7 @@ class m160731_032036_account_init extends Migration {
 			'mobile' => $this->string(50)->unique()->comment(\Yii::t($this->messageCategory, 'Mobile')),
 			'password_hash' => $this->string()->comment(\Yii::t($this->messageCategory, 'Password hash')),
 			'auth_key' => $this->string(32)->comment(\Yii::t($this->messageCategory, 'Authentication key')),
-			'status' => $this->smallInteger()->notNull()->defaultValue(10)->comment(\Yii::t($this->messageCategory, 'User status'));
+			'status' => $this->smallInteger()->notNull()->defaultValue(10)->comment(\Yii::t($this->messageCategory, 'User status')),
 			'created_at' => $this->integer()->notNull()->comment(\Yii::t($this->messageCategory, 'Created time')),
 			'updated_at' => $this->integer()->notNull()->comment(\Yii::t($this->messageCategory, 'Updated time')),
 		], $tableOptions);
