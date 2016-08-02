@@ -40,6 +40,38 @@ class m160731_032036_account_init extends Migration {
 			'created_at' => $this->integer()->notNull()->comment(\Yii::t($this->messageCategory, 'Created time')),
 			'updated_at' => $this->integer()->notNull()->comment(\Yii::t($this->messageCategory, 'Updated time')),
 		], $tableOptions);
+
+		if(YII_ENV == 'prod') return;
+
+		$time = time();
+		$this->batchInsert('{{%user}}', [
+			'username',
+			'email',
+			'mobile',
+			'password_hash',
+			'auth_key',
+			'created_at',
+			'updated_at',
+		], [
+			[
+				'tester0',
+				'tester0@domain.com',
+				'12345678900',
+				\Yii::$app->security->generatePasswordHash('test'),
+				\Yii::$app->security->generateRandomString(),
+				$time,
+				$time,
+			],
+			[
+				'tester1',
+				'tester1@domain.com',
+				'12345678901',
+				\Yii::$app->security->generatePasswordHash('test'),
+				\Yii::$app->security->generateRandomString(),
+				$time,
+				$time,
+			],
+		]);
 	}
 
 	public function safeDown() {

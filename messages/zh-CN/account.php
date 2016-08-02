@@ -18,12 +18,9 @@ return [
 	'Operation succeeded' => '操作成功',
 	'Operation failed' => '操作失败',
 	'Please try again' => '请重试',
-	'Please enter your username' => '请输入您的用户名',
-	'Please enter your email' => '请输入您的邮箱',
-	'Please enter your mobile' => '请输入您的手机',
-	'Please enter your password' => '请输入您的密码',
-	'Please confirm your password' => '请确认您的用户名',
-	'Incorrect username or password' => '不正确的用户名或密码',
+	'Please enter your {attribute}' => '请输入您的{attribute}',
+	'Please confirm your password' => '请确认您的密码',
+	'Incorrect username or password' => '用户名或密码不正确',
 
 	'Login' => '登录',
 ];

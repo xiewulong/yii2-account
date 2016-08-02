@@ -33,7 +33,7 @@ class User extends ActiveRecord implements IdentityInterface {
 
 	public $password;
 
-	public $password_confirm;
+	public $passwordConfirm;
 
 	public $rememberMe = true;
 
@@ -103,11 +103,11 @@ class User extends ActiveRecord implements IdentityInterface {
 	 */
 	public function attributeHints() {
 		return [
-			'username' => \Yii::t($this->messageCategory, 'Please enter your username'),
-			'email' => \Yii::t($this->messageCategory, 'Please enter your email'),
-			'mobile' => \Yii::t($this->messageCategory, 'Please enter your mobile'),
+			'username' => \Yii::t($this->messageCategory, 'Please enter your {attribute}', ['attribute' => \Yii::t($this->messageCategory, 'Username')]),
+			'email' => \Yii::t($this->messageCategory, 'Please enter your {attribute}', ['attribute' => \Yii::t($this->messageCategory, 'Email')]),
+			'mobile' => \Yii::t($this->messageCategory, 'Please enter your {attribute}', ['attribute' => \Yii::t($this->messageCategory, 'Mobile')]),
 
-			'password' => \Yii::t($this->messageCategory, 'Please enter your password'),
+			'password' => \Yii::t($this->messageCategory, 'Please enter your {attribute}', ['attribute' => \Yii::t($this->messageCategory, 'Password')]),
 			'passwordConfirm' => \Yii::t($this->messageCategory, 'Please confirm your password'),
 		];
 	}
@@ -137,7 +137,10 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @return {boolean}
 	 */
 	public function findByUsername($username) {
-		return static::findOne(['username' => $username, 'status' => static::STATUS_ACTIVE]);
+		return static::findOne([
+			'username' => $username,
+			'status' => static::STATUS_ACTIVE,
+		]);
 	}
 
 	/**

@@ -24,8 +24,7 @@ class AccountAsset extends AssetBundle {
 	public function init() {
 		parent::init();
 
-		$controller = \Yii::$app->controller;
-		$filename = $controller->module->id . '.' . $controller->id;
+		$filename = \Yii::$app->controller->module->id . '.' . \Yii::$app->controller->id;
 		$this->css[] = 'css/' . $filename . '.css';
 		$this->js[] = 'js/' . $filename . '.js';
 	}
