@@ -5,7 +5,7 @@
  * https://github.com/xiewulong/yii2-account
  * https://raw.githubusercontent.com/xiewulong/yii2-account/master/LICENSE
  * create: 2016/7/27
- * update: 2016/7/29
+ * update: 2016/8/1
  * version: 0.0.1
  */
 

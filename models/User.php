@@ -10,6 +10,7 @@ use yii\account\components\ActiveRecord;
 /**
  * User model
  *
+ * @since 0.0.1
  * @property {integer} $id
  * @property {string} $username
  * @property {string} $email
@@ -115,6 +116,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	/**
 	 * Logs in a user using the provided username and password
 	 *
+	 * @since 0.0.1
 	 * @return {boolean}
 	 */
 	public function login() {
@@ -134,6 +136,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	/**
 	 * Logs in a user using the provided username and password
 	 *
+	 * @since 0.0.1
 	 * @return {boolean}
 	 */
 	public function findByUsername($username) {
@@ -146,6 +149,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	/**
 	 * Validates password
 	 *
+	 * @since 0.0.1
 	 * @param {string} $password
 	 * @return {boolean}
 	 */
@@ -156,6 +160,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	/**
 	 * Generates password hash from password and sets it to the model
 	 *
+	 * @since 0.0.1
 	 * @param {string} $password
 	 */
 	public function setPassword($password) {

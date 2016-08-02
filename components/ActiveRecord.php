@@ -10,6 +10,7 @@ class ActiveRecord extends \yii\db\ActiveRecord {
 	/**
 	 * Returns the first error's attribute name
 	 *
+	 * @since 0.0.1
 	 * @param {string} $attribute
 	 * @return {string|null}
 	 */
@@ -25,6 +26,7 @@ class ActiveRecord extends \yii\db\ActiveRecord {
 	/**
 	 * Returns the first error
 	 *
+	 * @since 0.0.1
 	 * @return {string|null}
 	 */
 	public function getFirstErrorInFirstErrors() {
