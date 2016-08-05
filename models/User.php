@@ -139,11 +139,8 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @since 0.0.1
 	 * @return {boolean}
 	 */
-	public function findByUsername($username) {
-		return static::findOne([
-			'username' => $username,
-			'status' => static::STATUS_ACTIVE,
-		]);
+	public static function findByUsername($username) {
+		return static::findOne(['username' => $username, 'status' => static::STATUS_ACTIVE]);
 	}
 
 	/**
@@ -186,7 +183,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	 */
 	public static function findIdentityByAccessToken($token, $type = null) {
 		throw new NotSupportedException('"findIdentityByAccessToken" is not implemented.');
-		// return static::findOne(['access_token' => $token]);
+		return static::findOne(['access_token' => $token, 'status' => static::STATUS_ACTIVE]);
 	}
 
 	/**
