@@ -2,10 +2,10 @@
 namespace yii\account\controllers;
 
 use Yii;
+use yii\components\Controller;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\web\NotFoundHttpException;
-use yii\account\components\Controller;
 use yii\account\models\User;
 
 class UserController extends Controller {
