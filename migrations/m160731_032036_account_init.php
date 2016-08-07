@@ -1,5 +1,4 @@
 <?php
-
 use yii\db\Migration;
 
 class m160731_032036_account_init extends Migration {
