@@ -18,8 +18,13 @@ return [
 	'Operation succeeded' => '操作成功',
 	'Operation failed' => '操作失败',
 	'Please try again' => '请重试',
-	'Please enter your {attribute}' => '请输入您的{attribute}',
-	'Please confirm your password' => '请确认您的密码',
+
+	'Please {action} {attribute}' => '请{action}{attribute}',
+	'choose' => '选择',
+	'confirm' => '确定',
+	'enter' => '输入',
+	'upload' => '上传',
+
 	'Incorrect username or password' => '用户名或密码不正确',
 
 	'Login' => '登录',

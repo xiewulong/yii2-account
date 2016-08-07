@@ -1,25 +1,14 @@
 <?php
-use yii\db\Migration;
+use yii\components\Migration;
 
 class m160731_032036_account_init extends Migration {
 
 	public $messageCategory ='account';
 
 	public function init() {
+		$this->messagesPath = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'messages';
+
 		parent::init();
-
-		$this->registerTranslations();
-	}
-
-	public function registerTranslations() {
-		$i18n = \Yii::$app->i18n;
-		if(!isset($i18n->translations[$this->messageCategory]) && !isset($i18n->translations[$this->messageCategory])) {
-			$i18n->translations[$this->messageCategory] = [
-				'class' => 'yii\i18n\PhpMessageSource',
-				'basePath' => dirname(__DIR__) . '/messages',
-				'sourceLanguage' => \Yii::$app->sourceLanguage,
-			];
-		}
 	}
 
 	public function safeUp() {

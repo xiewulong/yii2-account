@@ -61,16 +61,6 @@ class User extends ActiveRecord implements IdentityInterface {
 	/**
 	 * @inheritdoc
 	 */
-	public function scenarios() {
-		$scenarios = parent::scenarios();
-		$scenarios['login'] = ['username', 'password', 'rememberMe'];
-
-		return $scenarios;
-	}
-
-	/**
-	 * @inheritdoc
-	 */
 	public function rules() {
 		return [
 			[['username', 'password'], 'required'],
@@ -80,6 +70,16 @@ class User extends ActiveRecord implements IdentityInterface {
 
 			['rememberMe', 'boolean'],
 		];
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	public function scenarios() {
+		$scenarios = parent::scenarios();
+		$scenarios['login'] = ['username', 'password', 'rememberMe'];
+
+		return $scenarios;
 	}
 
 	/**
@@ -104,12 +104,27 @@ class User extends ActiveRecord implements IdentityInterface {
 	 */
 	public function attributeHints() {
 		return [
-			'username' => \Yii::t($this->messageCategory, 'Please enter your {attribute}', ['attribute' => \Yii::t($this->messageCategory, 'Username')]),
-			'email' => \Yii::t($this->messageCategory, 'Please enter your {attribute}', ['attribute' => \Yii::t($this->messageCategory, 'Email')]),
-			'mobile' => \Yii::t($this->messageCategory, 'Please enter your {attribute}', ['attribute' => \Yii::t($this->messageCategory, 'Mobile')]),
+			'username' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
+				'action' => \Yii::t($this->messageCategory, 'enter'),
+				'attribute' => \Yii::t($this->messageCategory, 'Username'),
+			]),
+			'email' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
+				'action' => \Yii::t($this->messageCategory, 'enter'),
+				'attribute' => \Yii::t($this->messageCategory, 'Email'),
+			]),
+			'mobile' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
+				'action' => \Yii::t($this->messageCategory, 'enter'),
+				'attribute' => \Yii::t($this->messageCategory, 'Mobile'),
+			]),
 
-			'password' => \Yii::t($this->messageCategory, 'Please enter your {attribute}', ['attribute' => \Yii::t($this->messageCategory, 'Password')]),
-			'passwordConfirm' => \Yii::t($this->messageCategory, 'Please confirm your password'),
+			'password' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
+				'action' => \Yii::t($this->messageCategory, 'enter'),
+				'attribute' => \Yii::t($this->messageCategory, 'Password'),
+			]),
+			'passwordConfirm' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
+				'action' => \Yii::t($this->messageCategory, 'confirm'),
+				'attribute' => \Yii::t($this->messageCategory, 'Password'),
+			]),
 		];
 	}
 
