@@ -22,9 +22,10 @@ use yii\web\IdentityInterface;
  * @property {integer} $updated_at
  *
  * @property {string} $password
- * @property {string} $passwordConfirm
- * @property {boolean} [$rememberMe=true]
- * @property {integer} [$rememberPeriod=2592000]
+ * @property {string} $password_repeat
+ * @property {string} $password_old
+ * @property {boolean} [$remember_me=true]
+ * @property {integer} [$remember_period=2592000]
  */
 class User extends ActiveRecord implements IdentityInterface {
 
@@ -34,11 +35,13 @@ class User extends ActiveRecord implements IdentityInterface {
 
 	public $password;
 
-	public $passwordConfirm;
+	public $password_repeat;
 
-	public $rememberMe = true;
+	public $password_old;
 
-	public $rememberPeriod = 60 * 60 * 24 * 30;
+	public $remember_me = true;
+
+	public $remember_period = 60 * 60 * 24 * 30;
 
 	public $messageCategory = 'account';
 
@@ -63,12 +66,21 @@ class User extends ActiveRecord implements IdentityInterface {
 	 */
 	public function rules() {
 		return [
-			[['username', 'password'], 'required'],
+			[['username', 'password', 'password_repeat', 'password_old'], 'required'],
+
+			['username', 'string', 'min' => 6, 'max' => 16, 'on' => 'signup'],
+			['username', 'match', 'pattern' => '/^[a-z]\w{5, 15}$/i', 'on' => 'signup'],
+
+			['password', 'string', 'min' => 6, 'max' => 16, 'on' => ['passwordReset']],
+			['password', 'compare', 'on' => ['passwordReset']],
 
 			['status', 'default', 'value' => static::STATUS_ACTIVE],
 			['status', 'in', 'range' => [static::STATUS_DELETED, static::STATUS_ACTIVE]],
 
-			['rememberMe', 'boolean'],
+			['remember_me', 'boolean'],
+
+			// query data needed
+			[['username'], 'unique', 'on' => 'signup'],
 		];
 	}
 
@@ -77,7 +89,8 @@ class User extends ActiveRecord implements IdentityInterface {
 	 */
 	public function scenarios() {
 		$scenarios = parent::scenarios();
-		$scenarios['login'] = ['username', 'password', 'rememberMe'];
+		$scenarios['login'] = ['username', 'password', 'remember_me'];
+		$scenarios['passwordReset'] = ['password', 'password_repeat', 'password_old'];
 
 		return $scenarios;
 	}
@@ -93,9 +106,10 @@ class User extends ActiveRecord implements IdentityInterface {
 			'mobile' => \Yii::t($this->messageCategory, 'Mobile'),
 
 			'password' => \Yii::t($this->messageCategory, 'Password'),
-			'passwordConfirm' => \Yii::t($this->messageCategory, 'Password confirm'),
-			'rememberMe' => \Yii::t($this->messageCategory, 'Remember me'),
-			'rememberPeriod' => \Yii::t($this->messageCategory, 'Remember period'),
+			'password_repeat' => \Yii::t($this->messageCategory, 'Password repeat'),
+			'password_old' => \Yii::t($this->messageCategory, 'Old password'),
+			'remember_me' => \Yii::t($this->messageCategory, 'Remember me'),
+			'remember_period' => \Yii::t($this->messageCategory, 'Remember period'),
 		];
 	}
 
@@ -121,11 +135,39 @@ class User extends ActiveRecord implements IdentityInterface {
 				'action' => \Yii::t($this->messageCategory, 'enter'),
 				'attribute' => \Yii::t($this->messageCategory, 'Password'),
 			]),
-			'passwordConfirm' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
-				'action' => \Yii::t($this->messageCategory, 'confirm'),
+			'password_repeat' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
+				'action' => \Yii::t($this->messageCategory, 'repeat'),
 				'attribute' => \Yii::t($this->messageCategory, 'Password'),
 			]),
+			'password_old' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
+				'action' => \Yii::t($this->messageCategory, 'enter'),
+				'attribute' => \Yii::t($this->messageCategory, 'Old password'),
+			]),
 		];
+	}
+
+	/**
+	 * Reset user password
+	 *
+	 * @since 0.0.1
+	 * @return {boolean}
+	 */
+	public function passwordReset() {
+		if(!$this->validate()) {
+			return false;
+		}
+
+		if(!$this->validatePassword($this->password_old)) {
+			$this->addError('password_old', \Yii::t($this->messageCategory, 'Incorrect password'));
+			return false;
+		}
+		if($this->validatePassword($this->password)) {
+			$this->addError('password', \Yii::t($this->messageCategory, 'New password can not be same as old password'));
+			return false;
+		}
+
+		$this->setPassword($this->password);
+		return $this->save();
 	}
 
 	/**
@@ -145,11 +187,11 @@ class User extends ActiveRecord implements IdentityInterface {
 			return false;
 		}
 
-		return \Yii::$app->user->login($user, $this->rememberMe ? $this->rememberPeriod : 0);
+		return \Yii::$app->user->login($user, $this->remember_me ? $this->remember_period : 0);
 	}
 
 	/**
-	 * Logs in a user using the provided username and password
+	 * Find user by username
 	 *
 	 * @since 0.0.1
 	 * @return {boolean}

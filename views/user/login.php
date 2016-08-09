@@ -10,22 +10,22 @@ $this->title = \Yii::t('account', 'Login');
 	]) ?>
 		<h1 class="text-center"><?= Html::encode($this->title) ?></h1>
 		<div class="form-group">
-			<?= Html::activeTextInput($model, 'username', [
+			<?= Html::activeTextInput($user, 'username', [
 				'class' => 'form-control',
-				'placeholder' => $model->getAttributeHint('username'),
-				'autofocus' => $model->isFirstErrorAttribute('username') || !$model->hasErrors(),
+				'placeholder' => $user->getAttributeHint('username'),
+				'autofocus' => $user->isFirstErrorAttribute('username') || !$user->hasErrors(),
 			]) ?>
-			<?= Html::label(null, Html::getInputId($model, 'username'), [
+			<?= Html::label(null, Html::getInputId($user, 'username'), [
 				'class' => 'glyphicon glyphicon-user',
 			]) ?>
 		</div>
 		<div class="form-group">
-			<?= Html::activePasswordInput($model, 'password', [
+			<?= Html::activePasswordInput($user, 'password', [
 				'class' => 'form-control',
-				'placeholder' => $model->getAttributeHint('password'),
-				'autofocus' => $model->isFirstErrorAttribute('password'),
+				'placeholder' => $user->getAttributeHint('password'),
+				'autofocus' => $user->isFirstErrorAttribute('password'),
 			]) ?>
-			<?= Html::label(null, Html::getInputId($model, 'password'), [
+			<?= Html::label(null, Html::getInputId($user, 'password'), [
 				'class' => 'glyphicon glyphicon-lock',
 			]) ?>
 		</div>

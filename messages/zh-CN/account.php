@@ -11,7 +11,8 @@ return [
 	'Updated time' => '更新时间',
 
 	'Password' => '密码',
-	'Password confirm' => '确认密码',
+	'Password repeat' => '确认密码',
+	'Old password' => '原密码',
 	'Remember me' => '记住我',
 	'Remember period' => '记住时长',
 
@@ -23,9 +24,12 @@ return [
 	'choose' => '选择',
 	'confirm' => '确定',
 	'enter' => '输入',
+	'repeat' => '重复',
 	'upload' => '上传',
 
 	'Incorrect username or password' => '用户名或密码不正确',
+	'Incorrect password' => '密码不正确',
+	'New password can not be same as old password' => '新密码不能与旧密码相同',
 
 	'Login' => '登录',
 ];
