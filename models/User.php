@@ -24,8 +24,8 @@ use yii\web\IdentityInterface;
  * @property {string} $password
  * @property {string} $password_repeat
  * @property {string} $password_old
- * @property {boolean} [$remember_me=true]
- * @property {integer} [$remember_period=2592000]
+ * @property {boolean} $remember_me
+ * @property {integer} $remember_period
  */
 class User extends ActiveRecord implements IdentityInterface {
 
@@ -71,15 +71,15 @@ class User extends ActiveRecord implements IdentityInterface {
 			['username', 'string', 'min' => 6, 'max' => 16, 'on' => 'signup'],
 			['username', 'match', 'pattern' => '/^[a-z]\w{5, 15}$/i', 'on' => 'signup'],
 
-			['password', 'string', 'min' => 6, 'max' => 16, 'on' => ['passwordReset']],
-			['password', 'compare', 'on' => ['passwordReset']],
+			['password', 'string', 'min' => 6, 'max' => 16, 'on' => ['password-reset']],
+			['password', 'compare', 'on' => ['password-reset']],
 
 			['status', 'default', 'value' => static::STATUS_ACTIVE],
 			['status', 'in', 'range' => [static::STATUS_DELETED, static::STATUS_ACTIVE]],
 
 			['remember_me', 'boolean'],
 
-			// query data needed
+			// Query data needed
 			[['username'], 'unique', 'on' => 'signup'],
 		];
 	}
@@ -90,7 +90,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	public function scenarios() {
 		$scenarios = parent::scenarios();
 		$scenarios['login'] = ['username', 'password', 'remember_me'];
-		$scenarios['passwordReset'] = ['password', 'password_repeat', 'password_old'];
+		$scenarios['password-reset'] = ['password', 'password_repeat', 'password_old'];
 
 		return $scenarios;
 	}
@@ -152,7 +152,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @since 0.0.1
 	 * @return {boolean}
 	 */
-	public function passwordReset() {
+	public function runPasswordReset() {
 		if(!$this->validate()) {
 			return false;
 		}
@@ -176,7 +176,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @since 0.0.1
 	 * @return {boolean}
 	 */
-	public function login() {
+	public function runLogin() {
 		if(!$this->validate()) {
 			return false;
 		}
@@ -188,6 +188,16 @@ class User extends ActiveRecord implements IdentityInterface {
 		}
 
 		return \Yii::$app->user->login($user, $this->remember_me ? $this->remember_period : 0);
+	}
+
+	/**
+	 * Running a common handler
+	 *
+	 * @since 0.0.1
+	 * @return {boolean}
+	 */
+	public function runCommon() {
+		return $this->validate() && $this->save();
 	}
 
 	/**

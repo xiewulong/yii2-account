@@ -18,7 +18,7 @@ class UserController extends Controller {
 				'class' => AccessControl::className(),
 				'rules' => [
 					[
-						'actions' => ['login'],
+						'actions' => ['error', 'captcha', 'login'],
 						'allow' => true,
 					],
 					[
@@ -37,6 +37,17 @@ class UserController extends Controller {
 		];
 	}
 
+	public function actions() {
+		return [
+			'error' => [
+				'class' => 'yii\web\ErrorAction',
+			],
+			'captcha' => [
+				'class' => 'yii\captcha\CaptchaAction',
+			],
+		];
+	}
+
 	public function actionLogin() {
 		if(!\Yii::$app->user->isGuest) {
 			return $this->goBack();
@@ -46,7 +57,7 @@ class UserController extends Controller {
 		$user->messageCategory = $this->module->messageCategory;
 		$user->scenario = 'login';
 		if($user->load(\Yii::$app->request->post())) {
-			$done = $user->login();
+			$done = $user->runLogin();
 			if(\Yii::$app->request->isAjax) {
 				return $this->respond([
 					'error' => !$done,

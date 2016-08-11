@@ -39,9 +39,9 @@ class PasswordController extends Controller {
 
 	public function actionReset() {
 		$user = \Yii::$app->user->identity;
-		$user->scenario = 'passwordReset';
+		$user->scenario = 'password-reset';
 		$user->messageCategory = $this->module->messageCategory;
-		$done = $user->load(\Yii::$app->request->post()) && $user->passwordReset();
+		$done = $user->load(\Yii::$app->request->post()) && $user->runPasswordReset();
 
 		return \Yii::$app->request->isAjax ? $this->respond([
 			'error' => !$done,
