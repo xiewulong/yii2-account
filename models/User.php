@@ -29,9 +29,9 @@ use yii\web\IdentityInterface;
  */
 class User extends ActiveRecord implements IdentityInterface {
 
-	const STATUS_DELETED = 0;
+	const STATUS_DISABLED = 0;
 
-	const STATUS_ACTIVE = 10;
+	const STATUS_ENABLED = 10;
 
 	public $password;
 
@@ -44,6 +44,11 @@ class User extends ActiveRecord implements IdentityInterface {
 	public $remember_period = 60 * 60 * 24 * 30;
 
 	public $messageCategory = 'account';
+
+	protected $_statuses = [
+		self::STATUS_DISABLED => 'Disabled',
+		self::STATUS_ENABLED => 'Enabled',
+	];
 
 	/**
 	 * @inheritdoc
@@ -74,8 +79,8 @@ class User extends ActiveRecord implements IdentityInterface {
 			['password', 'string', 'min' => 6, 'max' => 16, 'on' => ['password-reset']],
 			['password', 'compare', 'on' => ['password-reset']],
 
-			['status', 'default', 'value' => static::STATUS_ACTIVE],
-			['status', 'in', 'range' => [static::STATUS_DELETED, static::STATUS_ACTIVE]],
+			['status', 'default', 'value' => self::STATUS_ENABLED],
+			['status', 'in', 'range' => [self::STATUS_DISABLED, self::STATUS_ENABLED]],
 
 			['remember_me', 'boolean'],
 
@@ -100,10 +105,11 @@ class User extends ActiveRecord implements IdentityInterface {
 	 */
 	public function attributeLabels() {
 		return [
-			'id' => \Yii::t($this->messageCategory, 'User id'),
+			'id' => \Yii::t($this->messageCategory, 'Id'),
 			'username' => \Yii::t($this->messageCategory, 'Username'),
 			'email' => \Yii::t($this->messageCategory, 'Email'),
 			'mobile' => \Yii::t($this->messageCategory, 'Mobile'),
+			'status' => \Yii::t($this->messageCategory, 'Status'),
 
 			'password' => \Yii::t($this->messageCategory, 'Password'),
 			'password_repeat' => \Yii::t($this->messageCategory, 'Password repeat'),
@@ -118,6 +124,10 @@ class User extends ActiveRecord implements IdentityInterface {
 	 */
 	public function attributeHints() {
 		return [
+			'id' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
+				'action' => \Yii::t($this->messageCategory, 'enter'),
+				'attribute' => \Yii::t($this->messageCategory, 'Id'),
+			]),
 			'username' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
 				'action' => \Yii::t($this->messageCategory, 'enter'),
 				'attribute' => \Yii::t($this->messageCategory, 'Username'),
@@ -129,6 +139,10 @@ class User extends ActiveRecord implements IdentityInterface {
 			'mobile' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
 				'action' => \Yii::t($this->messageCategory, 'enter'),
 				'attribute' => \Yii::t($this->messageCategory, 'Mobile'),
+			]),
+			'status' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
+				'action' => \Yii::t($this->messageCategory, 'choose'),
+				'attribute' => \Yii::t($this->messageCategory, 'Status'),
 			]),
 
 			'password' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
@@ -207,7 +221,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @return {boolean}
 	 */
 	public static function findByUsername($username) {
-		return static::findOne(['username' => $username, 'status' => static::STATUS_ACTIVE]);
+		return static::findOne(['username' => $username, 'status' => static::STATUS_ENABLED]);
 	}
 
 	/**
@@ -242,7 +256,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @inheritdoc
 	 */
 	public static function findIdentity($id) {
-		return static::findOne(['id' => $id, 'status' => static::STATUS_ACTIVE]);
+		return static::findOne(['id' => $id, 'status' => static::STATUS_ENABLED]);
 	}
 
 	/**
@@ -250,7 +264,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	 */
 	public static function findIdentityByAccessToken($token, $type = null) {
 		throw new NotSupportedException('"findIdentityByAccessToken" is not implemented.');
-		return static::findOne(['access_token' => $token, 'status' => static::STATUS_ACTIVE]);
+		return static::findOne(['access_token' => $token, 'status' => static::STATUS_ENABLED]);
 	}
 
 	/**

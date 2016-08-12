@@ -18,16 +18,18 @@ class m160731_032036_account_init extends Migration {
 		}
 
 		$this->createTable('{{%user}}', [
-			'id' => $this->primaryKey()->comment(\Yii::t($this->messageCategory, 'User id')),
-			'username' => $this->string(50)->unique()->comment(\Yii::t($this->messageCategory, 'Username')),
-			'email' => $this->string(50)->unique()->comment(\Yii::t($this->messageCategory, 'Email')),
-			'mobile' => $this->string(50)->unique()->comment(\Yii::t($this->messageCategory, 'Mobile')),
+			'id' => $this->primaryKey()->comment(\Yii::t($this->messageCategory, 'Id')),
+			'username' => $this->string(68)->unique()->comment(\Yii::t($this->messageCategory, 'Username')),
+			'email' => $this->string(68)->unique()->comment(\Yii::t($this->messageCategory, 'Email')),
+			'mobile' => $this->string(68)->unique()->comment(\Yii::t($this->messageCategory, 'Mobile')),
 			'password_hash' => $this->string()->comment(\Yii::t($this->messageCategory, 'Password hash')),
-			'auth_key' => $this->string(32)->comment(\Yii::t($this->messageCategory, 'Authentication key')),
-			'status' => $this->smallInteger()->notNull()->defaultValue(10)->comment(\Yii::t($this->messageCategory, 'User status')),
+			'auth_key' => $this->string(68)->comment(\Yii::t($this->messageCategory, 'Authentication key')),
+			'status' => $this->smallInteger()->notNull()->defaultValue(10)->comment(\Yii::t($this->messageCategory, 'Status')),
 			'created_at' => $this->integer()->notNull()->comment(\Yii::t($this->messageCategory, 'Created time')),
 			'updated_at' => $this->integer()->notNull()->comment(\Yii::t($this->messageCategory, 'Updated time')),
 		], $tableOptions);
+		$this->createIndex('status', '{{%user}}', 'status');
+		$this->addCommentOnTable('{{%user}}', \Yii::t($this->messageCategory, 'User'));
 
 		if(YII_ENV == 'prod') return;
 
