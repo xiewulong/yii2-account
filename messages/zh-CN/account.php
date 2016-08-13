@@ -1,5 +1,7 @@
 <?php
 return [
+	'User' => '用户',
+	'User id' => '用户ID',
 	'Id' => 'ID',
 	'Username' => '用户名',
 	'Email' => '邮箱',
@@ -16,10 +18,12 @@ return [
 	'Remember me' => '记住我',
 	'Remember period' => '记住时长',
 
-	'User' => '用户',
-
+	'Deleted' => '已删除',
+	'Active' => '有效',
+	'Inactive' => '无效',
 	'Enabled' => '启用',
 	'Disabled' => '禁用',
+
 	'Login' => '登录',
 
 	'Operation succeeded' => '操作成功',

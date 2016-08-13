@@ -29,9 +29,9 @@ use yii\web\IdentityInterface;
  */
 class User extends ActiveRecord implements IdentityInterface {
 
-	const STATUS_DISABLED = 0;
-
-	const STATUS_ENABLED = 10;
+	const STATUS_DELETED = 0;
+	const STATUS_INACTIVE = 1;
+	const STATUS_ACTIVE = 2;
 
 	public $password;
 
@@ -44,11 +44,6 @@ class User extends ActiveRecord implements IdentityInterface {
 	public $remember_period = 60 * 60 * 24 * 30;
 
 	public $messageCategory = 'account';
-
-	protected $_statuses = [
-		self::STATUS_DISABLED => 'Disabled',
-		self::STATUS_ENABLED => 'Enabled',
-	];
 
 	/**
 	 * @inheritdoc
@@ -76,16 +71,19 @@ class User extends ActiveRecord implements IdentityInterface {
 			['username', 'string', 'min' => 6, 'max' => 16, 'on' => 'signup'],
 			['username', 'match', 'pattern' => '/^[a-z]\w{5, 15}$/i', 'on' => 'signup'],
 
+			['status', 'default', 'value' => self::STATUS_ACTIVE],
+			['status', 'in', 'range' => [
+				self::STATUS_INACTIVE,
+				self::STATUS_ACTIVE,
+			]],
+
 			['password', 'string', 'min' => 6, 'max' => 16, 'on' => ['password-reset']],
 			['password', 'compare', 'on' => ['password-reset']],
-
-			['status', 'default', 'value' => self::STATUS_ENABLED],
-			['status', 'in', 'range' => [self::STATUS_DISABLED, self::STATUS_ENABLED]],
 
 			['remember_me', 'boolean'],
 
 			// Query data needed
-			[['username'], 'unique', 'on' => 'signup'],
+			[['username', 'email', 'mobile'], 'unique', 'on' => 'signup'],
 		];
 	}
 
@@ -161,6 +159,20 @@ class User extends ActiveRecord implements IdentityInterface {
 	}
 
 	/**
+	 * Return status items in every scenario
+	 *
+	 * @since 0.0.1
+	 * @return {array}
+	 */
+	public function statusItems() {
+		return [
+			self::STATUS_ACTIVE => \Yii::t($this->messageCategory, 'Active'),
+			self::STATUS_INACTIVE => \Yii::t($this->messageCategory, 'Inactive'),
+			self::STATUS_DELETED => \Yii::t($this->messageCategory, 'Deleted'),
+		];
+	}
+
+	/**
 	 * Reset user password
 	 *
 	 * @since 0.0.1
@@ -181,7 +193,7 @@ class User extends ActiveRecord implements IdentityInterface {
 		}
 
 		$this->setPassword($this->password);
-		return $this->save();
+		return $this->save(false);
 	}
 
 	/**
@@ -205,23 +217,13 @@ class User extends ActiveRecord implements IdentityInterface {
 	}
 
 	/**
-	 * Running a common handler
-	 *
-	 * @since 0.0.1
-	 * @return {boolean}
-	 */
-	public function runCommon() {
-		return $this->validate() && $this->save();
-	}
-
-	/**
 	 * Find user by username
 	 *
 	 * @since 0.0.1
 	 * @return {boolean}
 	 */
 	public static function findByUsername($username) {
-		return static::findOne(['username' => $username, 'status' => static::STATUS_ENABLED]);
+		return static::findOne(['username' => $username, 'status' => static::STATUS_ACTIVE]);
 	}
 
 	/**
@@ -256,7 +258,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @inheritdoc
 	 */
 	public static function findIdentity($id) {
-		return static::findOne(['id' => $id, 'status' => static::STATUS_ENABLED]);
+		return static::findOne(['id' => $id, 'status' => static::STATUS_ACTIVE]);
 	}
 
 	/**
@@ -264,7 +266,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	 */
 	public static function findIdentityByAccessToken($token, $type = null) {
 		throw new NotSupportedException('"findIdentityByAccessToken" is not implemented.');
-		return static::findOne(['access_token' => $token, 'status' => static::STATUS_ENABLED]);
+		return static::findOne(['access_token' => $token, 'status' => static::STATUS_ACTIVE]);
 	}
 
 	/**
