@@ -3,9 +3,13 @@ namespace yii\account\controllers;
 
 use Yii;
 use yii\components\Controller;
+use yii\data\Pagination;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
+use yii\helpers\ArrayHelper;
+use yii\helpers\Json;
 use yii\web\NotFoundHttpException;
+
 use yii\account\models\User;
 
 class PasswordController extends Controller {
@@ -41,7 +45,7 @@ class PasswordController extends Controller {
 		$user = \Yii::$app->user->identity;
 		$user->scenario = 'password-reset';
 		$user->messageCategory = $this->module->messageCategory;
-		$done = $user->load(\Yii::$app->request->post()) && $user->runPasswordReset();
+		$done = $user->load(\Yii::$app->request->post()) && $user->passwordResetHandler();
 
 		return \Yii::$app->request->isAjax ? $this->respond([
 			'error' => !$done,

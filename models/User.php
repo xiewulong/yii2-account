@@ -92,8 +92,18 @@ class User extends ActiveRecord implements IdentityInterface {
 	 */
 	public function scenarios() {
 		$scenarios = parent::scenarios();
-		$scenarios['login'] = ['username', 'password', 'remember_me'];
-		$scenarios['password-reset'] = ['password', 'password_repeat', 'password_old'];
+
+		$scenarios['login'] = [
+			'username',
+			'password',
+			'remember_me',
+		];
+
+		$scenarios['password-reset'] = [
+			'password',
+			'password_repeat',
+			'password_old',
+		];
 
 		return $scenarios;
 	}
@@ -103,7 +113,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	 */
 	public function attributeLabels() {
 		return [
-			'id' => \Yii::t($this->messageCategory, 'Id'),
+			'id' => \Yii::t($this->messageCategory, 'User id'),
 			'username' => \Yii::t($this->messageCategory, 'Username'),
 			'email' => \Yii::t($this->messageCategory, 'Email'),
 			'mobile' => \Yii::t($this->messageCategory, 'Mobile'),
@@ -124,7 +134,7 @@ class User extends ActiveRecord implements IdentityInterface {
 		return [
 			'id' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
 				'action' => \Yii::t($this->messageCategory, 'enter'),
-				'attribute' => \Yii::t($this->messageCategory, 'Id'),
+				'attribute' => \Yii::t($this->messageCategory, 'User id'),
 			]),
 			'username' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
 				'action' => \Yii::t($this->messageCategory, 'enter'),
@@ -173,12 +183,12 @@ class User extends ActiveRecord implements IdentityInterface {
 	}
 
 	/**
-	 * Reset user password
+	 * Reset user password handler
 	 *
 	 * @since 0.0.1
 	 * @return {boolean}
 	 */
-	public function runPasswordReset() {
+	public function passwordResetHandler() {
 		if(!$this->validate()) {
 			return false;
 		}
@@ -202,7 +212,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @since 0.0.1
 	 * @return {boolean}
 	 */
-	public function runLogin() {
+	public function loginHandler() {
 		if(!$this->validate()) {
 			return false;
 		}
