@@ -44,18 +44,9 @@ class m160731_032036_account_init extends Migration {
 			'updated_at',
 		], [
 			[
-				'tester0',
-				'tester0@domain.com',
+				'test',
+				'test0@domain.com',
 				'12345678900',
-				\Yii::$app->security->generatePasswordHash('test'),
-				\Yii::$app->security->generateRandomString(),
-				$time,
-				$time,
-			],
-			[
-				'tester1',
-				'tester1@domain.com',
-				'12345678901',
 				\Yii::$app->security->generatePasswordHash('test'),
 				\Yii::$app->security->generateRandomString(),
 				$time,

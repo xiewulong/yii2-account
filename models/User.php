@@ -176,9 +176,11 @@ class User extends ActiveRecord implements IdentityInterface {
 	 */
 	public function statusItems() {
 		return [
-			self::STATUS_ACTIVE => \Yii::t($this->messageCategory, 'Active'),
-			self::STATUS_INACTIVE => \Yii::t($this->messageCategory, 'Inactive'),
-			self::STATUS_DELETED => \Yii::t($this->messageCategory, 'Deleted'),
+			[
+				self::STATUS_ACTIVE => \Yii::t($this->messageCategory, 'Active'),
+				self::STATUS_INACTIVE => \Yii::t($this->messageCategory, 'Inactive'),
+				self::STATUS_DELETED => \Yii::t($this->messageCategory, 'Deleted'),
+			],
 		];
 	}
 
@@ -195,14 +197,17 @@ class User extends ActiveRecord implements IdentityInterface {
 
 		if(!$this->validatePassword($this->password_old)) {
 			$this->addError('password_old', \Yii::t($this->messageCategory, 'Incorrect password'));
+
 			return false;
 		}
 		if($this->validatePassword($this->password)) {
 			$this->addError('password', \Yii::t($this->messageCategory, 'New password can not be same as old password'));
+
 			return false;
 		}
 
 		$this->setPassword($this->password);
+
 		return $this->save(false);
 	}
 
@@ -220,6 +225,7 @@ class User extends ActiveRecord implements IdentityInterface {
 		$user = static::findByUsername($this->username);
 		if(!$user || !$user->validatePassword($this->password)) {
 			$this->addError('password', \Yii::t($this->messageCategory, 'Incorrect username or password'));
+
 			return false;
 		}
 
