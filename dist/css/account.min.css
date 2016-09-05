@@ -1,0 +1,7 @@
+/*!
+ * account
+ * xiewulong <xiewulong@vip.qq.com>
+ * create: 2016/8/1
+ * since: 0.0.1
+ */body{background-color:#1abc9c}.btn{border:0;outline:0}.btn:active,.btn.active{box-shadow:none}.btn:focus,.btn.focus,.btn:active:focus,.btn:active.focus,.btn.active:focus,.btn.active.focus{outline:0}.btn-primary{background-color:#1abc9c;-webkit-transition-duration:.25s;transition-duration:.25s}.btn-primary:hover,.btn-primary:focus,.btn-primary.focus{background-color:#2fe2bf}.btn-primary:active,.btn-primary.active,.btn-primary:active:hover,.btn-primary:active:focus,.btn-primary:active.focus,.btn-primary.active:hover,.btn-primary.active:focus,.btn-primary.active.focus{background-color:#16a085}.form-control{height:46px;border:2px solid transparent;border-radius:6px;font-size:16px;box-shadow:none;color:#34495e;-webkit-transition-duration:.2s;transition-duration:.2s}.form-control:focus{border-color:#1abc9c}.account-form{background-color:#eceff1;border-radius:6px;margin-top:20%;padding:30px}.account-form h1{color:#16a085;font-weight:700;margin-top:0}.account-form .form-group{overflow:hidden;position:relative}.account-form .form-group label.glyphicon{position:absolute;top:15px;right:15px;font-size:16px;color:#bfc9ca}.account-form .form-control:focus ~ label.glyphicon{color:#1abc9c;-webkit-transition-duration:.25s;transition-duration:.25s}
+/*# sourceMappingURL=account.min.css.map */

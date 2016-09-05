@@ -2,7 +2,7 @@
 namespace yii\account\assets;
 
 use Yii;
-use yii\web\AssetBundle;
+use yii\components\AssetBundle;
 
 class AccountAsset extends AssetBundle {
 
