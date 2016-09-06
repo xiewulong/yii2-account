@@ -30,8 +30,8 @@ use yii\web\IdentityInterface;
 class User extends ActiveRecord implements IdentityInterface {
 
 	const STATUS_DELETED = 0;
-	const STATUS_INACTIVE = 1;
-	const STATUS_ACTIVE = 2;
+	const STATUS_ACTIVE = 1;
+	const STATUS_INACTIVE = 2;
 
 	public $password;
 
@@ -71,10 +71,10 @@ class User extends ActiveRecord implements IdentityInterface {
 			['username', 'string', 'min' => 6, 'max' => 16, 'on' => 'signup'],
 			['username', 'match', 'pattern' => '/^[a-z]\w{5, 15}$/i', 'on' => 'signup'],
 
-			['status', 'default', 'value' => self::STATUS_ACTIVE],
+			['status', 'default', 'value' => static::STATUS_ACTIVE],
 			['status', 'in', 'range' => [
-				self::STATUS_INACTIVE,
-				self::STATUS_ACTIVE,
+				static::STATUS_ACTIVE,
+				static::STATUS_INACTIVE,
 			]],
 
 			['password', 'string', 'min' => 6, 'max' => 16, 'on' => ['password-reset']],
@@ -177,9 +177,9 @@ class User extends ActiveRecord implements IdentityInterface {
 	public function statusItems() {
 		return [
 			[
-				self::STATUS_ACTIVE => \Yii::t($this->messageCategory, 'Active'),
-				self::STATUS_INACTIVE => \Yii::t($this->messageCategory, 'Inactive'),
-				self::STATUS_DELETED => \Yii::t($this->messageCategory, 'Deleted'),
+				static::STATUS_ACTIVE => \Yii::t($this->messageCategory, 'Active'),
+				static::STATUS_INACTIVE => \Yii::t($this->messageCategory, 'Inactive'),
+				static::STATUS_DELETED => \Yii::t($this->messageCategory, 'Deleted'),
 			],
 		];
 	}
