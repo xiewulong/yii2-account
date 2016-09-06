@@ -10,12 +10,12 @@ $this->title = \Yii::t('account', 'Login');
 	]) ?>
 		<h1 class="text-center"><?= Html::encode($this->title) ?></h1>
 		<div class="form-group">
-			<?= Html::activeTextInput($user, 'username', [
+			<?= Html::activeTextInput($user, 'login_name', [
 				'class' => 'form-control',
-				'placeholder' => $user->getAttributeHint('username'),
-				'autofocus' => $user->isFirstErrorAttribute('username') || !$user->hasErrors(),
+				'placeholder' => $user->getAttributeHint('login_name'),
+				'autofocus' => $user->isFirstErrorAttribute('login_name') || !$user->hasErrors(),
 			]) ?>
-			<?= Html::label(null, Html::getInputId($user, 'username'), [
+			<?= Html::label(null, Html::getInputId($user, 'login_name'), [
 				'class' => 'glyphicon glyphicon-user',
 			]) ?>
 		</div>

@@ -21,6 +21,7 @@ use yii\web\IdentityInterface;
  * @property {integer} $created_at
  * @property {integer} $updated_at
  *
+ * @property {string} $login_name
  * @property {string} $password
  * @property {string} $password_repeat
  * @property {string} $password_old
@@ -32,6 +33,8 @@ class User extends ActiveRecord implements IdentityInterface {
 	const STATUS_DELETED = 0;
 	const STATUS_ACTIVE = 1;
 	const STATUS_INACTIVE = 2;
+
+	public $login_name;
 
 	public $password;
 
@@ -66,10 +69,10 @@ class User extends ActiveRecord implements IdentityInterface {
 	 */
 	public function rules() {
 		return [
-			[['username', 'password', 'password_repeat', 'password_old'], 'required'],
+			[['login_name', 'password', 'password_repeat', 'password_old'], 'required'],
 
-			['username', 'string', 'min' => 6, 'max' => 16, 'on' => 'signup'],
-			['username', 'match', 'pattern' => '/^[a-z]\w{5, 15}$/i', 'on' => 'signup'],
+			// ['username', 'string', 'min' => 6, 'max' => 16, 'on' => 'signup'],
+			// ['username', 'match', 'pattern' => '/^[a-z]\w{5, 15}$/i', 'on' => 'signup'],
 
 			['status', 'default', 'value' => static::STATUS_ACTIVE],
 			['status', 'in', 'range' => [
@@ -83,7 +86,7 @@ class User extends ActiveRecord implements IdentityInterface {
 			['remember_me', 'boolean'],
 
 			// Query data needed
-			[['username', 'email', 'mobile'], 'unique', 'on' => 'signup'],
+			// [['username', 'email', 'mobile'], 'unique', 'on' => 'signup'],
 		];
 	}
 
@@ -94,7 +97,7 @@ class User extends ActiveRecord implements IdentityInterface {
 		$scenarios = parent::scenarios();
 
 		$scenarios['login'] = [
-			'username',
+			'login_name',
 			'password',
 			'remember_me',
 		];
@@ -119,6 +122,7 @@ class User extends ActiveRecord implements IdentityInterface {
 			'mobile' => \Yii::t($this->messageCategory, 'Mobile'),
 			'status' => \Yii::t($this->messageCategory, 'Status'),
 
+			'login_name' => \Yii::t($this->messageCategory, 'Login name'),
 			'password' => \Yii::t($this->messageCategory, 'Password'),
 			'password_repeat' => \Yii::t($this->messageCategory, 'Password repeat'),
 			'password_old' => \Yii::t($this->messageCategory, 'Old password'),
@@ -133,36 +137,40 @@ class User extends ActiveRecord implements IdentityInterface {
 	public function attributeHints() {
 		return [
 			'id' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
-				'action' => \Yii::t($this->messageCategory, 'enter'),
+				'action' => \Yii::t($this->messageCategory, 'Enter'),
 				'attribute' => \Yii::t($this->messageCategory, 'User id'),
 			]),
 			'username' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
-				'action' => \Yii::t($this->messageCategory, 'enter'),
+				'action' => \Yii::t($this->messageCategory, 'Enter'),
 				'attribute' => \Yii::t($this->messageCategory, 'Username'),
 			]),
 			'email' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
-				'action' => \Yii::t($this->messageCategory, 'enter'),
+				'action' => \Yii::t($this->messageCategory, 'Enter'),
 				'attribute' => \Yii::t($this->messageCategory, 'Email'),
 			]),
 			'mobile' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
-				'action' => \Yii::t($this->messageCategory, 'enter'),
+				'action' => \Yii::t($this->messageCategory, 'Enter'),
 				'attribute' => \Yii::t($this->messageCategory, 'Mobile'),
 			]),
 			'status' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
-				'action' => \Yii::t($this->messageCategory, 'choose'),
+				'action' => \Yii::t($this->messageCategory, 'Choose'),
 				'attribute' => \Yii::t($this->messageCategory, 'Status'),
 			]),
 
+			'login_name' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
+				'action' => \Yii::t($this->messageCategory, 'Enter'),
+				'attribute' => \Yii::t($this->messageCategory, 'Login name'),
+			]),
 			'password' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
-				'action' => \Yii::t($this->messageCategory, 'enter'),
+				'action' => \Yii::t($this->messageCategory, 'Enter'),
 				'attribute' => \Yii::t($this->messageCategory, 'Password'),
 			]),
 			'password_repeat' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
-				'action' => \Yii::t($this->messageCategory, 'repeat'),
+				'action' => \Yii::t($this->messageCategory, 'Repeat'),
 				'attribute' => \Yii::t($this->messageCategory, 'Password'),
 			]),
 			'password_old' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
-				'action' => \Yii::t($this->messageCategory, 'enter'),
+				'action' => \Yii::t($this->messageCategory, 'Enter'),
 				'attribute' => \Yii::t($this->messageCategory, 'Old password'),
 			]),
 		];
@@ -222,7 +230,7 @@ class User extends ActiveRecord implements IdentityInterface {
 			return false;
 		}
 
-		$user = static::findByUsername($this->username);
+		$user = static::findByLoginName($this->login_name);
 		if(!$user || !$user->validatePassword($this->password)) {
 			$this->addError('password', \Yii::t($this->messageCategory, 'Incorrect username or password'));
 
@@ -238,8 +246,11 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @since 0.0.1
 	 * @return {boolean}
 	 */
-	public static function findByUsername($username) {
-		return static::findOne(['username' => $username, 'status' => static::STATUS_ACTIVE]);
+	public static function findByLoginName($login_name) {
+		return static::findOne([
+			'username' => $login_name,
+			'status' => static::STATUS_ACTIVE,
+		]);
 	}
 
 	/**
@@ -274,7 +285,10 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @inheritdoc
 	 */
 	public static function findIdentity($id) {
-		return static::findOne(['id' => $id, 'status' => static::STATUS_ACTIVE]);
+		return static::findOne([
+			'id' => $id,
+			'status' => static::STATUS_ACTIVE,
+		]);
 	}
 
 	/**
@@ -282,7 +296,11 @@ class User extends ActiveRecord implements IdentityInterface {
 	 */
 	public static function findIdentityByAccessToken($token, $type = null) {
 		throw new NotSupportedException('"findIdentityByAccessToken" is not implemented.');
-		return static::findOne(['access_token' => $token, 'status' => static::STATUS_ACTIVE]);
+
+		// return static::findOne([
+		// 	'access_token' => $token,
+		// 	'status' => static::STATUS_ACTIVE,
+		// ]);
 	}
 
 	/**

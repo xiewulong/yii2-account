@@ -10,8 +10,6 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
 use yii\web\NotFoundHttpException;
 
-use yii\account\models\User;
-
 class UserController extends Controller {
 
 	public $defaultAction = 'login';
@@ -35,7 +33,7 @@ class UserController extends Controller {
 			'verbs' => [
 				'class' => VerbFilter::className(),
 				'actions' => [
-					'logout' => ['post'],
+					'logout' => [YII_ENV == 'prod' ? 'post' : 'get'],
 				],
 			],
 		];
@@ -57,8 +55,7 @@ class UserController extends Controller {
 			return $this->goBack();
 		}
 
-		$user = new User;
-		$user->messageCategory = $this->module->messageCategory;
+		$user = new $this->module->identityClass;
 		$user->scenario = 'login';
 		if($user->load(\Yii::$app->request->post())) {
 			$done = $user->loginHandler();

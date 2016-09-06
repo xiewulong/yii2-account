@@ -10,8 +10,6 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
 use yii\web\NotFoundHttpException;
 
-use yii\account\models\User;
-
 class PasswordController extends Controller {
 
 	public $defaultAction = 'forgot';
@@ -44,7 +42,6 @@ class PasswordController extends Controller {
 	public function actionReset() {
 		$user = \Yii::$app->user->identity;
 		$user->scenario = 'password-reset';
-		$user->messageCategory = $this->module->messageCategory;
 		$done = $user->load(\Yii::$app->request->post()) && $user->passwordResetHandler();
 
 		return \Yii::$app->request->isAjax ? $this->respond([
