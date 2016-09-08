@@ -33,7 +33,7 @@ class UserController extends Controller {
 			'verbs' => [
 				'class' => VerbFilter::className(),
 				'actions' => [
-					'logout' => [YII_ENV == 'prod' ? 'post' : 'get'],
+					'logout' => ['post'],
 				],
 			],
 		];

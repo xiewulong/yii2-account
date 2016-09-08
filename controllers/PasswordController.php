@@ -26,7 +26,7 @@ class PasswordController extends Controller {
 					[
 						'actions' => ['reset'],
 						'allow' => true,
-						'roles' => ['@'],
+						'roles' => $this->module->permissions,
 					],
 				],
 			],
