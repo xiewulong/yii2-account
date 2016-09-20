@@ -17,28 +17,8 @@ const CONFIG = {
 		outputStyles: ['compact', 'compressed'],
 	},
 	js: {
-		src: PATH.join(BASE_PATH, 'js'),
+		src: PATH.join(BASE_PATH, 'js', '**', '*.js'),
 		dist: PATH.join(BASE_PATH, 'dist', 'js'),
-		concat: {
-			'account.js': {
-				header: {
-					author: 'xiewulong',
-					email: 'xiewulong@vip.qq.com',
-					create: '2016/8/1',
-					since: '0.0.1',
-				},
-				deps: [],
-			},
-			'account.user.js': {
-				header: {
-					author: 'xiewulong',
-					email: 'xiewulong@vip.qq.com',
-					create: '2016/8/8',
-					since: '0.0.1',
-				},
-				deps: [],
-			},
-		},
 	},
 };
 
@@ -60,62 +40,27 @@ GULP.task(_ns('scss'), function() {
 	});
 });
 
-let jsTasks = [];
-let jsWatchConfigs = [];
-for(let distName of Object.keys(CONFIG.js.concat)) {
-	let concatConfig = CONFIG.js.concat[distName];
-	let jsTask = _ns('babel:concat:' + distName);
-	let globs = [];
-	concatConfig.deps.forEach((file) => {
-		globs.push(PATH.join(CONFIG.js.src, file));
-	});
-	GULP.task(jsTask, function() {
-		GULP.src(globs)
-			.pipe(PLUGINS.sourcemaps.init())
-			.pipe(PLUGINS.concat(distName))
-			.pipe(PLUGINS.babel())
-			.pipe(PLUGINS.header([
-				'/*!',
-				' * ' + distName.replace('.js', ''),
-				' * ' + concatConfig.header.author + ' <' + concatConfig.header.email + '>',
-				' * create: ' + concatConfig.header.create,
-				' * since: ' + concatConfig.header.since,
-				' */',
-			].join('\n') + '\n'))
-			.pipe(PLUGINS.sourcemaps.write('.'))
-			.pipe(GULP.dest(CONFIG.js.dist));
-		GULP.src(globs)
-			.pipe(PLUGINS.sourcemaps.init())
-			.pipe(PLUGINS.concat(distName))
-			.pipe(PLUGINS.babel())
-			.pipe(PLUGINS.uglify())
-			.pipe(PLUGINS.header([
-				'/*!',
-				' * ' + distName.replace('.js', ' minify'),
-				' * ' + concatConfig.header.author + ' <' + concatConfig.header.email + '>',
-				' * create: ' + concatConfig.header.create,
-				' * since: ' + concatConfig.header.since,
-				' */',
-			].join('\n') + '\n'))
-			.pipe(PLUGINS.rename(function(path) {
-				path.basename += '.min';
-			}))
-			.pipe(PLUGINS.sourcemaps.write('.'))
-			.pipe(GULP.dest(CONFIG.js.dist));
-	});
-	jsTasks.push(jsTask);
-	jsWatchConfigs.push({
-		glob: globs,
-		tasks: [jsTask],
-	});
-}
+GULP.task(_ns('babel'), function() {
+	GULP.src(CONFIG.js.src)
+		.pipe(PLUGINS.sourcemaps.init())
+		.pipe(PLUGINS.babel())
+		.pipe(PLUGINS.sourcemaps.write('.'))
+		.pipe(GULP.dest(CONFIG.js.dist));
+	GULP.src(CONFIG.js.src)
+		.pipe(PLUGINS.sourcemaps.init())
+		.pipe(PLUGINS.babel())
+		.pipe(PLUGINS.uglify())
+		.pipe(PLUGINS.rename(function(path) {
+			path.basename += '.min';
+		}))
+		.pipe(PLUGINS.sourcemaps.write('.'))
+		.pipe(GULP.dest(CONFIG.js.dist));
+});
 
 GULP.task(_ns('watch'), function() {
 	GULP.watch(CONFIG.css.src, [_ns('scss')]);
-	jsWatchConfigs.forEach(({glob, tasks}) => {
-		GULP.watch(glob, tasks);
-	});
+	GULP.watch(CONFIG.js.src, [_ns('babel')]);
 });
 
-GULP.task('release', (GULP.tasks.release ? GULP.tasks.release.dep : []).concat([_ns('scss')], jsTasks));
+GULP.task('release', (GULP.tasks.release ? GULP.tasks.release.dep : []).concat([_ns('scss'), _ns('babel')]));
 GULP.task('default', (GULP.tasks.default ? GULP.tasks.default.dep : []).concat([_ns('watch')]));

@@ -4,5 +4,3 @@
  * create: 2016/8/1
  * since: 0.0.1
  */
-"use strict";
-//# sourceMappingURL=account.js.map
