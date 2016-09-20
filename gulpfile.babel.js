@@ -22,7 +22,7 @@ const CONFIG = {
 	},
 };
 
-let ns = 'cms';
+let ns = 'account';
 let _ns = (name, parent = ns) => (parent ? parent + ':' : '') + name;
 
 GULP.task(_ns('scss'), function() {
