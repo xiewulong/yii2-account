@@ -244,7 +244,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * Find user by username
 	 *
 	 * @since 0.0.1
-	 * @return {boolean}
+	 * @return {object}
 	 */
 	public static function findByLoginName($login_name) {
 		return static::findOne([
