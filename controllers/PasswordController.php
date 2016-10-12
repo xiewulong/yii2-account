@@ -46,7 +46,7 @@ class PasswordController extends Controller {
 
 		return \Yii::$app->request->isAjax ? $this->respond([
 			'error' => !$done,
-			'message' => $done ? \Yii::t($this->module->messageCategory, 'Operation succeeded') : $user->firstErrorInFirstErrors,
+			'message' => $done ? \Yii::t($this->module->messageCategory, 'operation succeeded') : $user->firstErrorInFirstErrors,
 		]) : $this->goBack();
 	}
 

@@ -1,7 +1,7 @@
 <?php
 use yii\helpers\Html;
 
-$this->title = \Yii::t('account', 'Login');
+$this->title = \Yii::t('account', 'login');
 ?>
 
 <div class="container">
@@ -10,12 +10,12 @@ $this->title = \Yii::t('account', 'Login');
 	]) ?>
 		<h1 class="text-center"><?= Html::encode($this->title) ?></h1>
 		<div class="form-group">
-			<?= Html::activeTextInput($user, 'login_name', [
+			<?= Html::activeTextInput($user, 'username', [
 				'class' => 'form-control',
-				'placeholder' => $user->getAttributeHint('login_name'),
-				'autofocus' => $user->isFirstErrorAttribute('login_name') || !$user->hasErrors(),
+				'placeholder' => $user->getAttributeHint('username'),
+				'autofocus' => $user->isFirstErrorAttribute('username') || !$user->hasErrors(),
 			]) ?>
-			<?= Html::label(null, Html::getInputId($user, 'login_name'), [
+			<?= Html::label(null, Html::getInputId($user, 'username'), [
 				'class' => 'glyphicon glyphicon-user',
 			]) ?>
 		</div>
@@ -30,7 +30,7 @@ $this->title = \Yii::t('account', 'Login');
 			]) ?>
 		</div>
 		<div class="form-group">
-			<?= Html::submitButton(\Yii::t('account', 'Login'), [
+			<?= Html::submitButton(\Yii::t('account', 'login'), [
 				'class' => 'btn btn-primary btn-lg btn-block',
 			]) ?>
 		</div>

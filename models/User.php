@@ -12,7 +12,7 @@ use yii\web\IdentityInterface;
  *
  * @since 0.0.1
  * @property {integer} $id
- * @property {string} $username
+ * @property {string} $name
  * @property {string} $email
  * @property {string} $mobile
  * @property {string} $password_hash
@@ -21,7 +21,7 @@ use yii\web\IdentityInterface;
  * @property {integer} $created_at
  * @property {integer} $updated_at
  *
- * @property {string} $login_name
+ * @property {string} $username
  * @property {string} $password
  * @property {string} $password_repeat
  * @property {string} $password_old
@@ -34,7 +34,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	const STATUS_ACTIVE = 1;
 	const STATUS_INACTIVE = 2;
 
-	public $login_name;
+	public $username;
 
 	public $password;
 
@@ -69,10 +69,10 @@ class User extends ActiveRecord implements IdentityInterface {
 	 */
 	public function rules() {
 		return [
-			[['login_name', 'password', 'password_repeat', 'password_old'], 'required'],
+			[['username', 'password', 'password_repeat', 'password_old'], 'required'],
 
-			// ['username', 'string', 'min' => 6, 'max' => 16, 'on' => 'signup'],
-			// ['username', 'match', 'pattern' => '/^[a-z]\w{5, 15}$/i', 'on' => 'signup'],
+			// ['name', 'string', 'min' => 6, 'max' => 16, 'on' => 'signup'],
+			// ['name', 'match', 'pattern' => '/^[a-z]\w{5, 15}$/i', 'on' => 'signup'],
 
 			['status', 'default', 'value' => static::STATUS_ACTIVE],
 			['status', 'in', 'range' => [
@@ -86,7 +86,7 @@ class User extends ActiveRecord implements IdentityInterface {
 			['remember_me', 'boolean'],
 
 			// Query data needed
-			// [['username', 'email', 'mobile'], 'unique', 'on' => 'signup'],
+			// [['name', 'email', 'mobile'], 'unique', 'on' => 'signup'],
 		];
 	}
 
@@ -97,7 +97,7 @@ class User extends ActiveRecord implements IdentityInterface {
 		$scenarios = parent::scenarios();
 
 		$scenarios['login'] = [
-			'login_name',
+			'username',
 			'password',
 			'remember_me',
 		];
@@ -116,18 +116,18 @@ class User extends ActiveRecord implements IdentityInterface {
 	 */
 	public function attributeLabels() {
 		return [
-			'id' => \Yii::t($this->messageCategory, 'User id'),
-			'username' => \Yii::t($this->messageCategory, 'Username'),
-			'email' => \Yii::t($this->messageCategory, 'Email'),
-			'mobile' => \Yii::t($this->messageCategory, 'Mobile'),
-			'status' => \Yii::t($this->messageCategory, 'Status'),
+			'id' => \Yii::t($this->messageCategory, 'user id'),
+			'name' => \Yii::t($this->messageCategory, 'name'),
+			'email' => \Yii::t($this->messageCategory, 'email'),
+			'mobile' => \Yii::t($this->messageCategory, 'mobile'),
+			'status' => \Yii::t($this->messageCategory, 'status'),
 
-			'login_name' => \Yii::t($this->messageCategory, 'Login name'),
-			'password' => \Yii::t($this->messageCategory, 'Password'),
-			'password_repeat' => \Yii::t($this->messageCategory, 'Password repeat'),
-			'password_old' => \Yii::t($this->messageCategory, 'Old password'),
-			'remember_me' => \Yii::t($this->messageCategory, 'Remember me'),
-			'remember_period' => \Yii::t($this->messageCategory, 'Remember period'),
+			'username' => \Yii::t($this->messageCategory, 'username'),
+			'password' => \Yii::t($this->messageCategory, 'password'),
+			'password_repeat' => \Yii::t($this->messageCategory, 'password repeat'),
+			'password_old' => \Yii::t($this->messageCategory, 'old password'),
+			'remember_me' => \Yii::t($this->messageCategory, 'remember me'),
+			'remember_period' => \Yii::t($this->messageCategory, 'remember period'),
 		];
 	}
 
@@ -136,42 +136,42 @@ class User extends ActiveRecord implements IdentityInterface {
 	 */
 	public function attributeHints() {
 		return [
-			'id' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
-				'action' => \Yii::t($this->messageCategory, 'Enter'),
-				'attribute' => \Yii::t($this->messageCategory, 'User id'),
+			'id' => \Yii::t($this->messageCategory, 'please {action} {attribute}', [
+				'action' => \Yii::t($this->messageCategory, 'enter'),
+				'attribute' => \Yii::t($this->messageCategory, 'user id'),
 			]),
-			'username' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
-				'action' => \Yii::t($this->messageCategory, 'Enter'),
-				'attribute' => \Yii::t($this->messageCategory, 'Username'),
+			'name' => \Yii::t($this->messageCategory, 'please {action} {attribute}', [
+				'action' => \Yii::t($this->messageCategory, 'enter'),
+				'attribute' => \Yii::t($this->messageCategory, 'name'),
 			]),
-			'email' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
-				'action' => \Yii::t($this->messageCategory, 'Enter'),
-				'attribute' => \Yii::t($this->messageCategory, 'Email'),
+			'email' => \Yii::t($this->messageCategory, 'please {action} {attribute}', [
+				'action' => \Yii::t($this->messageCategory, 'enter'),
+				'attribute' => \Yii::t($this->messageCategory, 'email'),
 			]),
-			'mobile' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
-				'action' => \Yii::t($this->messageCategory, 'Enter'),
-				'attribute' => \Yii::t($this->messageCategory, 'Mobile'),
+			'mobile' => \Yii::t($this->messageCategory, 'please {action} {attribute}', [
+				'action' => \Yii::t($this->messageCategory, 'enter'),
+				'attribute' => \Yii::t($this->messageCategory, 'mobile'),
 			]),
-			'status' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
-				'action' => \Yii::t($this->messageCategory, 'Choose'),
-				'attribute' => \Yii::t($this->messageCategory, 'Status'),
+			'status' => \Yii::t($this->messageCategory, 'please {action} {attribute}', [
+				'action' => \Yii::t($this->messageCategory, 'choose'),
+				'attribute' => \Yii::t($this->messageCategory, 'status'),
 			]),
 
-			'login_name' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
-				'action' => \Yii::t($this->messageCategory, 'Enter'),
-				'attribute' => \Yii::t($this->messageCategory, 'Login name'),
+			'username' => \Yii::t($this->messageCategory, 'please {action} {attribute}', [
+				'action' => \Yii::t($this->messageCategory, 'enter'),
+				'attribute' => \Yii::t($this->messageCategory, 'username'),
 			]),
-			'password' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
-				'action' => \Yii::t($this->messageCategory, 'Enter'),
-				'attribute' => \Yii::t($this->messageCategory, 'Password'),
+			'password' => \Yii::t($this->messageCategory, 'please {action} {attribute}', [
+				'action' => \Yii::t($this->messageCategory, 'enter'),
+				'attribute' => \Yii::t($this->messageCategory, 'password'),
 			]),
-			'password_repeat' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
-				'action' => \Yii::t($this->messageCategory, 'Repeat'),
-				'attribute' => \Yii::t($this->messageCategory, 'Password'),
+			'password_repeat' => \Yii::t($this->messageCategory, 'please {action} {attribute}', [
+				'action' => \Yii::t($this->messageCategory, 'repeat'),
+				'attribute' => \Yii::t($this->messageCategory, 'password'),
 			]),
-			'password_old' => \Yii::t($this->messageCategory, 'Please {action} {attribute}', [
-				'action' => \Yii::t($this->messageCategory, 'Enter'),
-				'attribute' => \Yii::t($this->messageCategory, 'Old password'),
+			'password_old' => \Yii::t($this->messageCategory, 'please {action} {attribute}', [
+				'action' => \Yii::t($this->messageCategory, 'enter'),
+				'attribute' => \Yii::t($this->messageCategory, 'old password'),
 			]),
 		];
 	}
@@ -185,9 +185,9 @@ class User extends ActiveRecord implements IdentityInterface {
 	public function statusItems() {
 		return [
 			[
-				static::STATUS_ACTIVE => \Yii::t($this->messageCategory, 'Active'),
-				static::STATUS_INACTIVE => \Yii::t($this->messageCategory, 'Inactive'),
-				static::STATUS_DELETED => \Yii::t($this->messageCategory, 'Deleted'),
+				static::STATUS_ACTIVE => \Yii::t($this->messageCategory, 'active'),
+				static::STATUS_INACTIVE => \Yii::t($this->messageCategory, 'inactive'),
+				static::STATUS_DELETED => \Yii::t($this->messageCategory, 'deleted'),
 			],
 		];
 	}
@@ -204,12 +204,12 @@ class User extends ActiveRecord implements IdentityInterface {
 		}
 
 		if(!$this->validatePassword($this->password_old)) {
-			$this->addError('password_old', \Yii::t($this->messageCategory, 'Incorrect password'));
+			$this->addError('password_old', \Yii::t($this->messageCategory, 'incorrect password'));
 
 			return false;
 		}
 		if($this->validatePassword($this->password)) {
-			$this->addError('password', \Yii::t($this->messageCategory, 'New password can not be same as old password'));
+			$this->addError('password', \Yii::t($this->messageCategory, 'new password can not be same as old password'));
 
 			return false;
 		}
@@ -230,9 +230,9 @@ class User extends ActiveRecord implements IdentityInterface {
 			return false;
 		}
 
-		$user = static::findByLoginName($this->login_name);
+		$user = static::findByUsername($this->username);
 		if(!$user || !$user->validatePassword($this->password)) {
-			$this->addError('password', \Yii::t($this->messageCategory, 'Incorrect username or password'));
+			$this->addError('password', \Yii::t($this->messageCategory, 'incorrect username or password'));
 
 			return false;
 		}
@@ -246,9 +246,9 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @since 0.0.1
 	 * @return {object}
 	 */
-	public static function findByLoginName($login_name) {
+	public static function findByUsername($username) {
 		return static::findOne([
-			'username' => $login_name,
+			'name' => $username,
 			'status' => static::STATUS_ACTIVE,
 		]);
 	}

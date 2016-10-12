@@ -62,7 +62,7 @@ class UserController extends Controller {
 			if(\Yii::$app->request->isAjax) {
 				return $this->respond([
 					'error' => !$done,
-					'message' => $done ? \Yii::t($this->module->messageCategory, 'Operation succeeded') : $user->firstErrorInFirstErrors,
+					'message' => $done ? \Yii::t($this->module->messageCategory, 'operation succeeded') : $user->firstErrorInFirstErrors,
 				]);
 			} else if($done) {
 				return $this->goBack();
@@ -77,7 +77,7 @@ class UserController extends Controller {
 	public function actionLogout() {
 		\Yii::$app->user->logout();
 
-		return \Yii::$app->request->isAjax ? $this->respond(['error' => 0, 'message' => \Yii::t($this->module->messageCategory, 'Operation succeeded')]) : $this->goBack();
+		return \Yii::$app->request->isAjax ? $this->respond(['error' => 0, 'message' => \Yii::t($this->module->messageCategory, 'operation succeeded')]) : $this->goBack();
 	}
 
 }
