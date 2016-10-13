@@ -214,7 +214,7 @@ class User extends ActiveRecord implements IdentityInterface {
 			return false;
 		}
 
-		$this->setPassword($this->password);
+		$this->encryptPassword($this->password);
 
 		return $this->save(false);
 	}
@@ -270,7 +270,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @since 0.0.1
 	 * @param {string} $password
 	 */
-	public function setPassword($password) {
+	public function encryptPassword($password) {
 		$this->password_hash = \Yii::$app->security->generatePasswordHash($password);
 	}
 
