@@ -7,7 +7,8 @@ use yii\components\AssetBundle;
 class AccountAsset extends AssetBundle {
 
 	public $depends = [
-		'yii\xui\BootstrapAsset',
+		// 'yii\xui\BootstrapAsset',
+		'yii\xui\VueAsset',
 		'yii\xui\ModuleAsset',
 	];
 
