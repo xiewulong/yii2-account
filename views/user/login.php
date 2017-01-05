@@ -11,7 +11,6 @@ $this->title = \Yii::t('account', 'login');
 <div class="container">
 	<?= Html::beginForm(null, 'post', [
 		'class' => 'col-md-4 col-md-push-4 account-form',
-		'is' => 'login'
 	]) ?>
 		<h1 class="text-center"><?= Html::encode($this->title) ?></h1>
 		<div class="form-group">

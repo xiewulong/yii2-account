@@ -1,7 +1,8 @@
 <template lang="pug">
 .account
-	.account-body
-		slot
+	.container
+		.account-body
+			slot
 </template>
 
 <style lang="scss" scoped>

@@ -10,12 +10,13 @@ import 'normalize.css';
 import '../scss/account.scss';
 
 import Vue from 'vue';
+import Vuex from 'vuex';
 import {
 	account,
-	cButton,
-	login,
 	logo,
 } from './components';
+
+Vue.use(Vuex);
 
 window.App = class App {
 
@@ -32,8 +33,6 @@ window.App = class App {
 			data: this.state,
 			components: {
 				account,
-				cButton,
-				login,
 				logo,
 			},
 		});
