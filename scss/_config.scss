@@ -1,0 +1,48 @@
+// colors
+$asphalt: #34495e !default;
+$asphalt-dark: #2c3e50 !default;
+$asphalt-light: #415b76 !default;
+$black: #000 !default;
+$blue: #3498db !default;
+$blue-dark: #2980b9 !default;
+$blue-light: #5dade2 !default;
+$gray: #95a5a6 !default;
+$gray-dark: #7f8c8d !default;
+$gray-light: #bdc3c7 !default;
+$gray-lighter: #ecf0f1 !default;
+$gray-lightest: #f8f8f8 !default;
+$green: #2ecc71 !default;
+$green-dark: #27ae60 !default;
+$green-light: #58d68d !default;
+$orange: #e67e22 !default;
+$orange-dark: #d35400 !default;
+$purple: #9b59b6 !default;
+$purple-dark: #8e44ad !default;
+$red: #e74c3c !default;
+$red-dark: #c0392b !default;
+$red-light: #ec7063 !default;
+$turquoise: #1abc9c !default;
+$turquoise-dark: #16a085 !default;
+$turquoise-light: #48c9b0 !default;
+$white: #fff !default;
+$yellow: #f1c40f !default;
+$yellow-dark: #f39c12 !default;
+$yellow-light: #f5d313 !default;
+
+$color-danger: $red !default;
+$color-info: $blue !default;
+$color-inverse: $asphalt !default;
+$color-primary: $turquoise !default;
+$color-success: $green !default;
+$color-warning: $yellow !default;
+
+$color-bg: $gray-lightest !default;
+$color-text: $asphalt !default;
+$color-link: $green-dark !default;
+$color-link-hover: $turquoise !default;
+
+$font-family: '\5FAE\8F6F\96C5\9ED1',microsoft yahei,'helvetica neue',helvetica,arial,sans-serif !default;
+$font-size: 12px !default;
+$line-height: 1.4 !default;
+
+$images: '../images' !default;
