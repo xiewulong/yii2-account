@@ -15,8 +15,6 @@ let webpackExtractTextPlugin = require('extract-text-webpack-plugin');
 
 let webpackConfig = {
 
-	// devtool: ENV == 'production' ? '#source-map' : '#eval-source-map',
-
 	devtool: '#source-map',
 
 	entry: {
