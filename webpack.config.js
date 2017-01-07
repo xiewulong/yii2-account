@@ -13,11 +13,11 @@ const MIN = ENV == 'production' ? '.min' : '';
 let webpack = require('webpack');
 let webpackExtractTextPlugin = require('extract-text-webpack-plugin');
 
-module.exports = {
+let webpackConfig = {
 
 	// devtool: ENV == 'production' ? '#source-map' : '#eval-source-map',
 
-	// devtool: 'source-map',
+	devtool: '#source-map',
 
 	entry: {
 		account: PATH.join(BASE_PATH, 'js', 'account'),
@@ -52,11 +52,11 @@ module.exports = {
 			},
 			{
 				test: /\.css$/,
-				loader: webpackExtractTextPlugin.extract('style-loader', 'css!postcss?sourceMap'),
+				loader: webpackExtractTextPlugin.extract('style', 'css?sourceMap!postcss'),
 			},
 			{
 				test: /\.scss$/,
-				loader: webpackExtractTextPlugin.extract('style-loader', 'css!postcss!sass?sourceMap'),
+				loader: webpackExtractTextPlugin.extract('style', 'css?sourceMap!postcss!sass'),
 			},
 			{
 				test: /\.js[x]?$/,
@@ -72,7 +72,7 @@ module.exports = {
 
 	vue: {
 		loaders: {
-			scss: webpackExtractTextPlugin.extract("css!sass?sourceMap"),
+			scss: webpackExtractTextPlugin.extract("css?sourceMap!postcss!sass"),
 		},
 		postcss: [
 			require('autoprefixer'),
@@ -93,13 +93,18 @@ module.exports = {
 
 		new webpack.optimize.OccurrenceOrderPlugin(),
 
-		new webpack.optimize.UglifyJsPlugin({
-			compress: {
-				warnings: false,
-			},
-		}),
-
 		new webpackExtractTextPlugin(PATH.join('..', 'css', `[name]${MIN}.css`)),
 	],
 
 };
+
+if(ENV == 'production') {
+	webpackConfig.plugins.push(new webpack.optimize.UglifyJsPlugin({
+		compress: {
+			warnings: false,
+		},
+		sourceMap: true,
+	}));
+}
+
+module.exports = webpackConfig;

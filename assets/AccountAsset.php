@@ -7,11 +7,11 @@ use yii\components\AssetBundle;
 class AccountAsset extends AssetBundle {
 
 	public $depends = [
+		'yii\xui\BootstrapFlexAsset',
 		// 'yii\xui\FontAwesomeAsset',
-		// 'yii\xui\BootstrapAsset',
 		'yii\xui\VueAsset',
-		'yii\xui\VuexAsset',
-		'yii\xui\AxiosAsset',
+		// 'yii\xui\VuexAsset',
+		// 'yii\xui\AxiosAsset',
 		'yii\xui\ModuleAsset',
 	];
 

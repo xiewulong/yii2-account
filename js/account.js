@@ -6,21 +6,20 @@
  */
 
 // styles
-import 'normalize.css';
 import '../scss/account.scss';
 
 import Vue from 'vue';
-import Vuex from 'vuex';
-import {
-	account,
-	logo,
-} from './components';
+// import Vuex from 'vuex';
+import components from './components';
+import FastClick from 'fastclick';
 
-Vue.use(Vuex);
+FastClick.attach(document.body);
+
+// Vue.use(Vuex);
 
 window.App = class App {
 
-	constructor(state, el = '#app') {
+	constructor(state = {}, el = '#app') {
 		this.state = state;
 		this.el = el;
 
@@ -31,10 +30,7 @@ window.App = class App {
 		this.vm = new Vue({
 			el: this.el,
 			data: this.state,
-			components: {
-				account,
-				logo,
-			},
+			components: components,
 		});
 	}
 
