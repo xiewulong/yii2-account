@@ -53,7 +53,7 @@ let webpackConfig = {
 			},
 			{
 				test: /\.scss$/,
-				loader: webpackExtractTextPlugin.extract('style', 'css?sourceMap!postcss!sass'),
+				loader: webpackExtractTextPlugin.extract('style', 'css?sourceMap!postcss!sass?sourceMap'),
 			},
 			{
 				test: /\.js[x]?$/,
@@ -69,7 +69,7 @@ let webpackConfig = {
 
 	vue: {
 		loaders: {
-			scss: webpackExtractTextPlugin.extract("css?sourceMap!postcss!sass"),
+			scss: webpackExtractTextPlugin.extract("css?sourceMap!postcss!sass?sourceMap"),
 		},
 		postcss: [
 			require('autoprefixer'),
