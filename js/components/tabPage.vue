@@ -42,7 +42,7 @@ export default {
 	},
 
 	methods: {
-		switcher: function(id) {
+		switcher(id) {
 			this.activeId = id;
 		},
 	},

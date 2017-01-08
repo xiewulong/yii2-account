@@ -1446,7 +1446,16 @@
 				message: this.error
 			};
 		},
+		mounted: function mounted() {
+			this.message && this.hideMessage();
+		},
 	
+	
+		watch: {
+			message: function message(_message) {
+				_message && this.hideMessage();
+			}
+		},
 	
 		methods: {
 			submit: function submit(e) {
@@ -1472,16 +1481,6 @@
 					_this.message = '';
 				}, this.duration);
 			}
-		},
-	
-		watch: {
-			message: function message(_message) {
-				_message && this.hideMessage();
-			}
-		},
-	
-		mounted: function mounted() {
-			this.message && this.hideMessage();
 		}
 	};
 

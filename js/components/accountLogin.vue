@@ -56,8 +56,18 @@ export default {
 		};
 	},
 
+	mounted() {
+		this.message && this.hideMessage();
+	},
+
+	watch: {
+		message(_message) {
+			_message && this.hideMessage();
+		},
+	},
+
 	methods: {
-		submit: function(e) {
+		submit(e) {
 			let error;
 
 			if(!this.usernameValue) {
@@ -73,21 +83,11 @@ export default {
 				e.preventDefault();
 			}
 		},
-		hideMessage: function() {
+		hideMessage() {
 			setTimeout(() => {
 				this.message = '';
 			}, this.duration);
 		},
-	},
-
-	watch: {
-		message: function(_message) {
-			_message && this.hideMessage();
-		},
-	},
-
-	mounted: function() {
-		this.message && this.hideMessage();
 	},
 };
 </script>
