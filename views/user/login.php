@@ -2,6 +2,8 @@
 use yii\helpers\Html;
 
 $this->title = \Yii::t('account', 'login');
+
+$this->registerJs('new App;', 3);
 ?>
 
 <div is="account-header">
@@ -24,5 +26,3 @@ $this->title = \Yii::t('account', 'login');
 	]) ?>
 	<?= Html::endForm() ?>
 </div>
-
-<?= $this->registerJs('new App;', 3); ?>
