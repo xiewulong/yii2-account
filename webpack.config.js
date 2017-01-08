@@ -12,7 +12,6 @@ const MIN = ENV == 'production' ? '.min' : '';
 
 let webpack = require('webpack');
 let webpackExtractTextPlugin = require('extract-text-webpack-plugin');
-
 let webpackConfig = {
 
 	devtool: '#source-map',
