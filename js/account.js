@@ -30,7 +30,7 @@ window.App = class App {
 		this.vm = new Vue({
 			el: this.el,
 			data: this.state,
-			components: components,
+			components,
 		});
 	}
 
