@@ -1550,6 +1550,10 @@
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
 	var _account = __webpack_require__(7);
 	
 	var _account2 = _interopRequireDefault(_account);
@@ -1574,7 +1578,7 @@
 	 * create: 2017/1/5
 	 * since: 0.0.1
 	 */
-	module.exports = {
+	exports.default = {
 	  account: _account2.default,
 	  accountHeader: _accountHeader2.default,
 	  accountLogin: _accountLogin2.default,

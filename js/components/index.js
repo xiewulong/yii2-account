@@ -9,7 +9,7 @@ import accountHeader from './accountHeader';
 import accountLogin from './accountLogin';
 import tabPage from './tabPage';
 
-module.exports = {
+export default {
 	account,
 	accountHeader,
 	accountLogin,
