@@ -2,7 +2,6 @@
 use yii\helpers\Html;
 
 $this->title = \Yii::t('account', 'login');
-
 $this->registerJs('new App;', 3);
 ?>
 
