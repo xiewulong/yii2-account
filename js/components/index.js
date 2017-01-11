@@ -1,13 +1,13 @@
 /*!
  * components
  * xiewulong <xiewulong@vip.qq.com>
- * create: 2017/1/5
+ * create: 2017/01/05
  * since: 0.0.1
  */
-import account from './account';
-import accountHeader from './accountHeader';
-import accountLogin from './accountLogin';
-import tabPage from './tabPage';
+import account from './account.vue';
+import accountHeader from './accountHeader.vue';
+import accountLogin from './accountLogin.vue';
+import tabPage from './tabPage.vue';
 
 export default {
 	account,

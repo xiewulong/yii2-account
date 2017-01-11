@@ -1,41 +1,41 @@
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-/******/
+
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
-/******/
+
 /******/ 		// Check if module is in cache
 /******/ 		if(installedModules[moduleId])
 /******/ 			return installedModules[moduleId].exports;
-/******/
+
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			exports: {},
 /******/ 			id: moduleId,
 /******/ 			loaded: false
 /******/ 		};
-/******/
+
 /******/ 		// Execute the module function
 /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
+
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;
-/******/
+
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/
-/******/
+
+
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
-/******/
+
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
-/******/
+
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
-/******/
+
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
 /******/ })
@@ -44,1553 +44,130 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /*!
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * account
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * xiewulong <xiewulong@vip.qq.com>
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * create: 2016/8/1
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * since: 0.0.1
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      */
-	
-	// styles
-	
-	// import Vuex from 'vuex';
-	
-	
-	__webpack_require__(1);
-	
-	var _vue = __webpack_require__(20);
-	
-	var _vue2 = _interopRequireDefault(_vue);
-	
-	var _components = __webpack_require__(19);
-	
-	var _components2 = _interopRequireDefault(_components);
-	
-	var _fastclick = __webpack_require__(6);
-	
-	var _fastclick2 = _interopRequireDefault(_fastclick);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	_fastclick2.default.attach(document.body);
-	
-	// Vue.use(Vuex);
-	
-	window.App = function () {
-		function App() {
-			var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-			var el = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '#app';
-	
-			_classCallCheck(this, App);
-	
-			this.state = state;
-			this.el = el;
-	
-			this.mount();
-		}
-	
-		_createClass(App, [{
-			key: 'mount',
-			value: function mount() {
-				this.vm = new _vue2.default({
-					el: this.el,
-					data: this.state,
-					components: _components2.default
-				});
-			}
-		}]);
-	
-		return App;
-	}();
+	eval("'use strict';\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /*!\n                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * account\n                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * xiewulong <xiewulong@vip.qq.com>\n                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * create: 2016/8/1\n                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * since: 0.0.1\n                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      */\n\n// styles\n\n// import Vuex from 'vuex';\n\n\n__webpack_require__(1);\n\nvar _vue = __webpack_require__(4);\n\nvar _vue2 = _interopRequireDefault(_vue);\n\nvar _components = __webpack_require__(3);\n\nvar _components2 = _interopRequireDefault(_components);\n\nvar _fastclick = __webpack_require__(2);\n\nvar _fastclick2 = _interopRequireDefault(_fastclick);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\n_fastclick2.default.attach(document.body);\n\n// Vue.use(Vuex);\n\nwindow.App = function () {\n\tfunction App() {\n\t\tvar state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};\n\t\tvar el = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '#app';\n\n\t\t_classCallCheck(this, App);\n\n\t\tthis.state = state;\n\t\tthis.el = el;\n\n\t\tthis.mount();\n\t}\n\n\t_createClass(App, [{\n\t\tkey: 'mount',\n\t\tvalue: function mount() {\n\t\t\tthis.vm = new _vue2.default({\n\t\t\t\tel: this.el,\n\t\t\t\tdata: this.state,\n\t\t\t\tcomponents: _components2.default\n\t\t\t});\n\t\t}\n\t}]);\n\n\treturn App;\n}();\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi92ZW5kb3IveGlld3Vsb25nL3lpaTItYWNjb3VudC9qcy9hY2NvdW50LmpzPzAwNzUiXSwibmFtZXMiOlsiYXR0YWNoIiwiZG9jdW1lbnQiLCJib2R5Iiwid2luZG93IiwiQXBwIiwic3RhdGUiLCJlbCIsIm1vdW50Iiwidm0iLCJkYXRhIiwiY29tcG9uZW50cyJdLCJtYXBwaW5ncyI6Ijs7cWpCQUFBOzs7Ozs7O0FBT0E7O0FBSUE7OztBQUhBOztBQUVBOzs7O0FBRUE7Ozs7QUFDQTs7Ozs7Ozs7QUFFQSxvQkFBVUEsTUFBVixDQUFpQkMsU0FBU0MsSUFBMUI7O0FBRUE7O0FBRUFDLE9BQU9DLEdBQVA7QUFFQyxnQkFBcUM7QUFBQSxNQUF6QkMsS0FBeUIsdUVBQWpCLEVBQWlCO0FBQUEsTUFBYkMsRUFBYSx1RUFBUixNQUFROztBQUFBOztBQUNwQyxPQUFLRCxLQUFMLEdBQWFBLEtBQWI7QUFDQSxPQUFLQyxFQUFMLEdBQVVBLEVBQVY7O0FBRUEsT0FBS0MsS0FBTDtBQUNBOztBQVBGO0FBQUE7QUFBQSwwQkFTUztBQUNQLFFBQUtDLEVBQUwsR0FBVSxrQkFBUTtBQUNqQkYsUUFBSSxLQUFLQSxFQURRO0FBRWpCRyxVQUFNLEtBQUtKLEtBRk07QUFHakJLO0FBSGlCLElBQVIsQ0FBVjtBQUtBO0FBZkY7O0FBQUE7QUFBQSIsImZpbGUiOiIwLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyohXG4gKiBhY2NvdW50XG4gKiB4aWV3dWxvbmcgPHhpZXd1bG9uZ0B2aXAucXEuY29tPlxuICogY3JlYXRlOiAyMDE2LzgvMVxuICogc2luY2U6IDAuMC4xXG4gKi9cblxuLy8gc3R5bGVzXG5pbXBvcnQgJy4uL3Njc3MvYWNjb3VudC5zY3NzJztcblxuaW1wb3J0IFZ1ZSBmcm9tICd2dWUnO1xuLy8gaW1wb3J0IFZ1ZXggZnJvbSAndnVleCc7XG5pbXBvcnQgY29tcG9uZW50cyBmcm9tICcuL2NvbXBvbmVudHMnO1xuaW1wb3J0IEZhc3RDbGljayBmcm9tICdmYXN0Y2xpY2snO1xuXG5GYXN0Q2xpY2suYXR0YWNoKGRvY3VtZW50LmJvZHkpO1xuXG4vLyBWdWUudXNlKFZ1ZXgpO1xuXG53aW5kb3cuQXBwID0gY2xhc3MgQXBwIHtcblxuXHRjb25zdHJ1Y3RvcihzdGF0ZSA9IHt9LCBlbCA9ICcjYXBwJykge1xuXHRcdHRoaXMuc3RhdGUgPSBzdGF0ZTtcblx0XHR0aGlzLmVsID0gZWw7XG5cblx0XHR0aGlzLm1vdW50KCk7XG5cdH1cblxuXHRtb3VudCgpIHtcblx0XHR0aGlzLnZtID0gbmV3IFZ1ZSh7XG5cdFx0XHRlbDogdGhpcy5lbCxcblx0XHRcdGRhdGE6IHRoaXMuc3RhdGUsXG5cdFx0XHRjb21wb25lbnRzLFxuXHRcdH0pO1xuXHR9XG5cbn1cblxuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyAuL3ZlbmRvci94aWV3dWxvbmcveWlpMi1hY2NvdW50L2pzL2FjY291bnQuanMiXSwic291cmNlUm9vdCI6IiJ9");
 
 /***/ },
 /* 1 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	eval("// removed by extract-text-webpack-plugin\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi92ZW5kb3IveGlld3Vsb25nL3lpaTItYWNjb3VudC9zY3NzL2FjY291bnQuc2Nzcz8zNjUwIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6IjEuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvLyByZW1vdmVkIGJ5IGV4dHJhY3QtdGV4dC13ZWJwYWNrLXBsdWdpblxuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIC4vdmVuZG9yL3hpZXd1bG9uZy95aWkyLWFjY291bnQvc2Nzcy9hY2NvdW50LnNjc3Ncbi8vIG1vZHVsZSBpZCA9IDFcbi8vIG1vZHVsZSBjaHVua3MgPSAwIl0sInNvdXJjZVJvb3QiOiIifQ==");
 
 /***/ },
 /* 2 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	// removed by extract-text-webpack-plugin
+	eval("var __WEBPACK_AMD_DEFINE_RESULT__;;(function () {\n\t'use strict';\n\n\t/**\n\t * @preserve FastClick: polyfill to remove click delays on browsers with touch UIs.\n\t *\n\t * @codingstandard ftlabs-jsv2\n\t * @copyright The Financial Times Limited [All Rights Reserved]\n\t * @license MIT License (see LICENSE.txt)\n\t */\n\n\t/*jslint browser:true, node:true*/\n\t/*global define, Event, Node*/\n\n\n\t/**\n\t * Instantiate fast-clicking listeners on the specified layer.\n\t *\n\t * @constructor\n\t * @param {Element} layer The layer to listen on\n\t * @param {Object} [options={}] The options to override the defaults\n\t */\n\tfunction FastClick(layer, options) {\n\t\tvar oldOnClick;\n\n\t\toptions = options || {};\n\n\t\t/**\n\t\t * Whether a click is currently being tracked.\n\t\t *\n\t\t * @type boolean\n\t\t */\n\t\tthis.trackingClick = false;\n\n\n\t\t/**\n\t\t * Timestamp for when click tracking started.\n\t\t *\n\t\t * @type number\n\t\t */\n\t\tthis.trackingClickStart = 0;\n\n\n\t\t/**\n\t\t * The element being tracked for a click.\n\t\t *\n\t\t * @type EventTarget\n\t\t */\n\t\tthis.targetElement = null;\n\n\n\t\t/**\n\t\t * X-coordinate of touch start event.\n\t\t *\n\t\t * @type number\n\t\t */\n\t\tthis.touchStartX = 0;\n\n\n\t\t/**\n\t\t * Y-coordinate of touch start event.\n\t\t *\n\t\t * @type number\n\t\t */\n\t\tthis.touchStartY = 0;\n\n\n\t\t/**\n\t\t * ID of the last touch, retrieved from Touch.identifier.\n\t\t *\n\t\t * @type number\n\t\t */\n\t\tthis.lastTouchIdentifier = 0;\n\n\n\t\t/**\n\t\t * Touchmove boundary, beyond which a click will be cancelled.\n\t\t *\n\t\t * @type number\n\t\t */\n\t\tthis.touchBoundary = options.touchBoundary || 10;\n\n\n\t\t/**\n\t\t * The FastClick layer.\n\t\t *\n\t\t * @type Element\n\t\t */\n\t\tthis.layer = layer;\n\n\t\t/**\n\t\t * The minimum time between tap(touchstart and touchend) events\n\t\t *\n\t\t * @type number\n\t\t */\n\t\tthis.tapDelay = options.tapDelay || 200;\n\n\t\t/**\n\t\t * The maximum time for a tap\n\t\t *\n\t\t * @type number\n\t\t */\n\t\tthis.tapTimeout = options.tapTimeout || 700;\n\n\t\tif (FastClick.notNeeded(layer)) {\n\t\t\treturn;\n\t\t}\n\n\t\t// Some old versions of Android don't have Function.prototype.bind\n\t\tfunction bind(method, context) {\n\t\t\treturn function() { return method.apply(context, arguments); };\n\t\t}\n\n\n\t\tvar methods = ['onMouse', 'onClick', 'onTouchStart', 'onTouchMove', 'onTouchEnd', 'onTouchCancel'];\n\t\tvar context = this;\n\t\tfor (var i = 0, l = methods.length; i < l; i++) {\n\t\t\tcontext[methods[i]] = bind(context[methods[i]], context);\n\t\t}\n\n\t\t// Set up event handlers as required\n\t\tif (deviceIsAndroid) {\n\t\t\tlayer.addEventListener('mouseover', this.onMouse, true);\n\t\t\tlayer.addEventListener('mousedown', this.onMouse, true);\n\t\t\tlayer.addEventListener('mouseup', this.onMouse, true);\n\t\t}\n\n\t\tlayer.addEventListener('click', this.onClick, true);\n\t\tlayer.addEventListener('touchstart', this.onTouchStart, false);\n\t\tlayer.addEventListener('touchmove', this.onTouchMove, false);\n\t\tlayer.addEventListener('touchend', this.onTouchEnd, false);\n\t\tlayer.addEventListener('touchcancel', this.onTouchCancel, false);\n\n\t\t// Hack is required for browsers that don't support Event#stopImmediatePropagation (e.g. Android 2)\n\t\t// which is how FastClick normally stops click events bubbling to callbacks registered on the FastClick\n\t\t// layer when they are cancelled.\n\t\tif (!Event.prototype.stopImmediatePropagation) {\n\t\t\tlayer.removeEventListener = function(type, callback, capture) {\n\t\t\t\tvar rmv = Node.prototype.removeEventListener;\n\t\t\t\tif (type === 'click') {\n\t\t\t\t\trmv.call(layer, type, callback.hijacked || callback, capture);\n\t\t\t\t} else {\n\t\t\t\t\trmv.call(layer, type, callback, capture);\n\t\t\t\t}\n\t\t\t};\n\n\t\t\tlayer.addEventListener = function(type, callback, capture) {\n\t\t\t\tvar adv = Node.prototype.addEventListener;\n\t\t\t\tif (type === 'click') {\n\t\t\t\t\tadv.call(layer, type, callback.hijacked || (callback.hijacked = function(event) {\n\t\t\t\t\t\tif (!event.propagationStopped) {\n\t\t\t\t\t\t\tcallback(event);\n\t\t\t\t\t\t}\n\t\t\t\t\t}), capture);\n\t\t\t\t} else {\n\t\t\t\t\tadv.call(layer, type, callback, capture);\n\t\t\t\t}\n\t\t\t};\n\t\t}\n\n\t\t// If a handler is already declared in the element's onclick attribute, it will be fired before\n\t\t// FastClick's onClick handler. Fix this by pulling out the user-defined handler function and\n\t\t// adding it as listener.\n\t\tif (typeof layer.onclick === 'function') {\n\n\t\t\t// Android browser on at least 3.2 requires a new reference to the function in layer.onclick\n\t\t\t// - the old one won't work if passed to addEventListener directly.\n\t\t\toldOnClick = layer.onclick;\n\t\t\tlayer.addEventListener('click', function(event) {\n\t\t\t\toldOnClick(event);\n\t\t\t}, false);\n\t\t\tlayer.onclick = null;\n\t\t}\n\t}\n\n\t/**\n\t* Windows Phone 8.1 fakes user agent string to look like Android and iPhone.\n\t*\n\t* @type boolean\n\t*/\n\tvar deviceIsWindowsPhone = navigator.userAgent.indexOf(\"Windows Phone\") >= 0;\n\n\t/**\n\t * Android requires exceptions.\n\t *\n\t * @type boolean\n\t */\n\tvar deviceIsAndroid = navigator.userAgent.indexOf('Android') > 0 && !deviceIsWindowsPhone;\n\n\n\t/**\n\t * iOS requires exceptions.\n\t *\n\t * @type boolean\n\t */\n\tvar deviceIsIOS = /iP(ad|hone|od)/.test(navigator.userAgent) && !deviceIsWindowsPhone;\n\n\n\t/**\n\t * iOS 4 requires an exception for select elements.\n\t *\n\t * @type boolean\n\t */\n\tvar deviceIsIOS4 = deviceIsIOS && (/OS 4_\\d(_\\d)?/).test(navigator.userAgent);\n\n\n\t/**\n\t * iOS 6.0-7.* requires the target element to be manually derived\n\t *\n\t * @type boolean\n\t */\n\tvar deviceIsIOSWithBadTarget = deviceIsIOS && (/OS [6-7]_\\d/).test(navigator.userAgent);\n\n\t/**\n\t * BlackBerry requires exceptions.\n\t *\n\t * @type boolean\n\t */\n\tvar deviceIsBlackBerry10 = navigator.userAgent.indexOf('BB10') > 0;\n\n\t/**\n\t * Determine whether a given element requires a native click.\n\t *\n\t * @param {EventTarget|Element} target Target DOM element\n\t * @returns {boolean} Returns true if the element needs a native click\n\t */\n\tFastClick.prototype.needsClick = function(target) {\n\t\tswitch (target.nodeName.toLowerCase()) {\n\n\t\t// Don't send a synthetic click to disabled inputs (issue #62)\n\t\tcase 'button':\n\t\tcase 'select':\n\t\tcase 'textarea':\n\t\t\tif (target.disabled) {\n\t\t\t\treturn true;\n\t\t\t}\n\n\t\t\tbreak;\n\t\tcase 'input':\n\n\t\t\t// File inputs need real clicks on iOS 6 due to a browser bug (issue #68)\n\t\t\tif ((deviceIsIOS && target.type === 'file') || target.disabled) {\n\t\t\t\treturn true;\n\t\t\t}\n\n\t\t\tbreak;\n\t\tcase 'label':\n\t\tcase 'iframe': // iOS8 homescreen apps can prevent events bubbling into frames\n\t\tcase 'video':\n\t\t\treturn true;\n\t\t}\n\n\t\treturn (/\\bneedsclick\\b/).test(target.className);\n\t};\n\n\n\t/**\n\t * Determine whether a given element requires a call to focus to simulate click into element.\n\t *\n\t * @param {EventTarget|Element} target Target DOM element\n\t * @returns {boolean} Returns true if the element requires a call to focus to simulate native click.\n\t */\n\tFastClick.prototype.needsFocus = function(target) {\n\t\tswitch (target.nodeName.toLowerCase()) {\n\t\tcase 'textarea':\n\t\t\treturn true;\n\t\tcase 'select':\n\t\t\treturn !deviceIsAndroid;\n\t\tcase 'input':\n\t\t\tswitch (target.type) {\n\t\t\tcase 'button':\n\t\t\tcase 'checkbox':\n\t\t\tcase 'file':\n\t\t\tcase 'image':\n\t\t\tcase 'radio':\n\t\t\tcase 'submit':\n\t\t\t\treturn false;\n\t\t\t}\n\n\t\t\t// No point in attempting to focus disabled inputs\n\t\t\treturn !target.disabled && !target.readOnly;\n\t\tdefault:\n\t\t\treturn (/\\bneedsfocus\\b/).test(target.className);\n\t\t}\n\t};\n\n\n\t/**\n\t * Send a click event to the specified element.\n\t *\n\t * @param {EventTarget|Element} targetElement\n\t * @param {Event} event\n\t */\n\tFastClick.prototype.sendClick = function(targetElement, event) {\n\t\tvar clickEvent, touch;\n\n\t\t// On some Android devices activeElement needs to be blurred otherwise the synthetic click will have no effect (#24)\n\t\tif (document.activeElement && document.activeElement !== targetElement) {\n\t\t\tdocument.activeElement.blur();\n\t\t}\n\n\t\ttouch = event.changedTouches[0];\n\n\t\t// Synthesise a click event, with an extra attribute so it can be tracked\n\t\tclickEvent = document.createEvent('MouseEvents');\n\t\tclickEvent.initMouseEvent(this.determineEventType(targetElement), true, true, window, 1, touch.screenX, touch.screenY, touch.clientX, touch.clientY, false, false, false, false, 0, null);\n\t\tclickEvent.forwardedTouchEvent = true;\n\t\ttargetElement.dispatchEvent(clickEvent);\n\t};\n\n\tFastClick.prototype.determineEventType = function(targetElement) {\n\n\t\t//Issue #159: Android Chrome Select Box does not open with a synthetic click event\n\t\tif (deviceIsAndroid && targetElement.tagName.toLowerCase() === 'select') {\n\t\t\treturn 'mousedown';\n\t\t}\n\n\t\treturn 'click';\n\t};\n\n\n\t/**\n\t * @param {EventTarget|Element} targetElement\n\t */\n\tFastClick.prototype.focus = function(targetElement) {\n\t\tvar length;\n\n\t\t// Issue #160: on iOS 7, some input elements (e.g. date datetime month) throw a vague TypeError on setSelectionRange. These elements don't have an integer value for the selectionStart and selectionEnd properties, but unfortunately that can't be used for detection because accessing the properties also throws a TypeError. Just check the type instead. Filed as Apple bug #15122724.\n\t\tif (deviceIsIOS && targetElement.setSelectionRange && targetElement.type.indexOf('date') !== 0 && targetElement.type !== 'time' && targetElement.type !== 'month') {\n\t\t\tlength = targetElement.value.length;\n\t\t\ttargetElement.setSelectionRange(length, length);\n\t\t} else {\n\t\t\ttargetElement.focus();\n\t\t}\n\t};\n\n\n\t/**\n\t * Check whether the given target element is a child of a scrollable layer and if so, set a flag on it.\n\t *\n\t * @param {EventTarget|Element} targetElement\n\t */\n\tFastClick.prototype.updateScrollParent = function(targetElement) {\n\t\tvar scrollParent, parentElement;\n\n\t\tscrollParent = targetElement.fastClickScrollParent;\n\n\t\t// Attempt to discover whether the target element is contained within a scrollable layer. Re-check if the\n\t\t// target element was moved to another parent.\n\t\tif (!scrollParent || !scrollParent.contains(targetElement)) {\n\t\t\tparentElement = targetElement;\n\t\t\tdo {\n\t\t\t\tif (parentElement.scrollHeight > parentElement.offsetHeight) {\n\t\t\t\t\tscrollParent = parentElement;\n\t\t\t\t\ttargetElement.fastClickScrollParent = parentElement;\n\t\t\t\t\tbreak;\n\t\t\t\t}\n\n\t\t\t\tparentElement = parentElement.parentElement;\n\t\t\t} while (parentElement);\n\t\t}\n\n\t\t// Always update the scroll top tracker if possible.\n\t\tif (scrollParent) {\n\t\t\tscrollParent.fastClickLastScrollTop = scrollParent.scrollTop;\n\t\t}\n\t};\n\n\n\t/**\n\t * @param {EventTarget} targetElement\n\t * @returns {Element|EventTarget}\n\t */\n\tFastClick.prototype.getTargetElementFromEventTarget = function(eventTarget) {\n\n\t\t// On some older browsers (notably Safari on iOS 4.1 - see issue #56) the event target may be a text node.\n\t\tif (eventTarget.nodeType === Node.TEXT_NODE) {\n\t\t\treturn eventTarget.parentNode;\n\t\t}\n\n\t\treturn eventTarget;\n\t};\n\n\n\t/**\n\t * On touch start, record the position and scroll offset.\n\t *\n\t * @param {Event} event\n\t * @returns {boolean}\n\t */\n\tFastClick.prototype.onTouchStart = function(event) {\n\t\tvar targetElement, touch, selection;\n\n\t\t// Ignore multiple touches, otherwise pinch-to-zoom is prevented if both fingers are on the FastClick element (issue #111).\n\t\tif (event.targetTouches.length > 1) {\n\t\t\treturn true;\n\t\t}\n\n\t\ttargetElement = this.getTargetElementFromEventTarget(event.target);\n\t\ttouch = event.targetTouches[0];\n\n\t\tif (deviceIsIOS) {\n\n\t\t\t// Only trusted events will deselect text on iOS (issue #49)\n\t\t\tselection = window.getSelection();\n\t\t\tif (selection.rangeCount && !selection.isCollapsed) {\n\t\t\t\treturn true;\n\t\t\t}\n\n\t\t\tif (!deviceIsIOS4) {\n\n\t\t\t\t// Weird things happen on iOS when an alert or confirm dialog is opened from a click event callback (issue #23):\n\t\t\t\t// when the user next taps anywhere else on the page, new touchstart and touchend events are dispatched\n\t\t\t\t// with the same identifier as the touch event that previously triggered the click that triggered the alert.\n\t\t\t\t// Sadly, there is an issue on iOS 4 that causes some normal touch events to have the same identifier as an\n\t\t\t\t// immediately preceeding touch event (issue #52), so this fix is unavailable on that platform.\n\t\t\t\t// Issue 120: touch.identifier is 0 when Chrome dev tools 'Emulate touch events' is set with an iOS device UA string,\n\t\t\t\t// which causes all touch events to be ignored. As this block only applies to iOS, and iOS identifiers are always long,\n\t\t\t\t// random integers, it's safe to to continue if the identifier is 0 here.\n\t\t\t\tif (touch.identifier && touch.identifier === this.lastTouchIdentifier) {\n\t\t\t\t\tevent.preventDefault();\n\t\t\t\t\treturn false;\n\t\t\t\t}\n\n\t\t\t\tthis.lastTouchIdentifier = touch.identifier;\n\n\t\t\t\t// If the target element is a child of a scrollable layer (using -webkit-overflow-scrolling: touch) and:\n\t\t\t\t// 1) the user does a fling scroll on the scrollable layer\n\t\t\t\t// 2) the user stops the fling scroll with another tap\n\t\t\t\t// then the event.target of the last 'touchend' event will be the element that was under the user's finger\n\t\t\t\t// when the fling scroll was started, causing FastClick to send a click event to that layer - unless a check\n\t\t\t\t// is made to ensure that a parent layer was not scrolled before sending a synthetic click (issue #42).\n\t\t\t\tthis.updateScrollParent(targetElement);\n\t\t\t}\n\t\t}\n\n\t\tthis.trackingClick = true;\n\t\tthis.trackingClickStart = event.timeStamp;\n\t\tthis.targetElement = targetElement;\n\n\t\tthis.touchStartX = touch.pageX;\n\t\tthis.touchStartY = touch.pageY;\n\n\t\t// Prevent phantom clicks on fast double-tap (issue #36)\n\t\tif ((event.timeStamp - this.lastClickTime) < this.tapDelay) {\n\t\t\tevent.preventDefault();\n\t\t}\n\n\t\treturn true;\n\t};\n\n\n\t/**\n\t * Based on a touchmove event object, check whether the touch has moved past a boundary since it started.\n\t *\n\t * @param {Event} event\n\t * @returns {boolean}\n\t */\n\tFastClick.prototype.touchHasMoved = function(event) {\n\t\tvar touch = event.changedTouches[0], boundary = this.touchBoundary;\n\n\t\tif (Math.abs(touch.pageX - this.touchStartX) > boundary || Math.abs(touch.pageY - this.touchStartY) > boundary) {\n\t\t\treturn true;\n\t\t}\n\n\t\treturn false;\n\t};\n\n\n\t/**\n\t * Update the last position.\n\t *\n\t * @param {Event} event\n\t * @returns {boolean}\n\t */\n\tFastClick.prototype.onTouchMove = function(event) {\n\t\tif (!this.trackingClick) {\n\t\t\treturn true;\n\t\t}\n\n\t\t// If the touch has moved, cancel the click tracking\n\t\tif (this.targetElement !== this.getTargetElementFromEventTarget(event.target) || this.touchHasMoved(event)) {\n\t\t\tthis.trackingClick = false;\n\t\t\tthis.targetElement = null;\n\t\t}\n\n\t\treturn true;\n\t};\n\n\n\t/**\n\t * Attempt to find the labelled control for the given label element.\n\t *\n\t * @param {EventTarget|HTMLLabelElement} labelElement\n\t * @returns {Element|null}\n\t */\n\tFastClick.prototype.findControl = function(labelElement) {\n\n\t\t// Fast path for newer browsers supporting the HTML5 control attribute\n\t\tif (labelElement.control !== undefined) {\n\t\t\treturn labelElement.control;\n\t\t}\n\n\t\t// All browsers under test that support touch events also support the HTML5 htmlFor attribute\n\t\tif (labelElement.htmlFor) {\n\t\t\treturn document.getElementById(labelElement.htmlFor);\n\t\t}\n\n\t\t// If no for attribute exists, attempt to retrieve the first labellable descendant element\n\t\t// the list of which is defined here: http://www.w3.org/TR/html5/forms.html#category-label\n\t\treturn labelElement.querySelector('button, input:not([type=hidden]), keygen, meter, output, progress, select, textarea');\n\t};\n\n\n\t/**\n\t * On touch end, determine whether to send a click event at once.\n\t *\n\t * @param {Event} event\n\t * @returns {boolean}\n\t */\n\tFastClick.prototype.onTouchEnd = function(event) {\n\t\tvar forElement, trackingClickStart, targetTagName, scrollParent, touch, targetElement = this.targetElement;\n\n\t\tif (!this.trackingClick) {\n\t\t\treturn true;\n\t\t}\n\n\t\t// Prevent phantom clicks on fast double-tap (issue #36)\n\t\tif ((event.timeStamp - this.lastClickTime) < this.tapDelay) {\n\t\t\tthis.cancelNextClick = true;\n\t\t\treturn true;\n\t\t}\n\n\t\tif ((event.timeStamp - this.trackingClickStart) > this.tapTimeout) {\n\t\t\treturn true;\n\t\t}\n\n\t\t// Reset to prevent wrong click cancel on input (issue #156).\n\t\tthis.cancelNextClick = false;\n\n\t\tthis.lastClickTime = event.timeStamp;\n\n\t\ttrackingClickStart = this.trackingClickStart;\n\t\tthis.trackingClick = false;\n\t\tthis.trackingClickStart = 0;\n\n\t\t// On some iOS devices, the targetElement supplied with the event is invalid if the layer\n\t\t// is performing a transition or scroll, and has to be re-detected manually. Note that\n\t\t// for this to function correctly, it must be called *after* the event target is checked!\n\t\t// See issue #57; also filed as rdar://13048589 .\n\t\tif (deviceIsIOSWithBadTarget) {\n\t\t\ttouch = event.changedTouches[0];\n\n\t\t\t// In certain cases arguments of elementFromPoint can be negative, so prevent setting targetElement to null\n\t\t\ttargetElement = document.elementFromPoint(touch.pageX - window.pageXOffset, touch.pageY - window.pageYOffset) || targetElement;\n\t\t\ttargetElement.fastClickScrollParent = this.targetElement.fastClickScrollParent;\n\t\t}\n\n\t\ttargetTagName = targetElement.tagName.toLowerCase();\n\t\tif (targetTagName === 'label') {\n\t\t\tforElement = this.findControl(targetElement);\n\t\t\tif (forElement) {\n\t\t\t\tthis.focus(targetElement);\n\t\t\t\tif (deviceIsAndroid) {\n\t\t\t\t\treturn false;\n\t\t\t\t}\n\n\t\t\t\ttargetElement = forElement;\n\t\t\t}\n\t\t} else if (this.needsFocus(targetElement)) {\n\n\t\t\t// Case 1: If the touch started a while ago (best guess is 100ms based on tests for issue #36) then focus will be triggered anyway. Return early and unset the target element reference so that the subsequent click will be allowed through.\n\t\t\t// Case 2: Without this exception for input elements tapped when the document is contained in an iframe, then any inputted text won't be visible even though the value attribute is updated as the user types (issue #37).\n\t\t\tif ((event.timeStamp - trackingClickStart) > 100 || (deviceIsIOS && window.top !== window && targetTagName === 'input')) {\n\t\t\t\tthis.targetElement = null;\n\t\t\t\treturn false;\n\t\t\t}\n\n\t\t\tthis.focus(targetElement);\n\t\t\tthis.sendClick(targetElement, event);\n\n\t\t\t// Select elements need the event to go through on iOS 4, otherwise the selector menu won't open.\n\t\t\t// Also this breaks opening selects when VoiceOver is active on iOS6, iOS7 (and possibly others)\n\t\t\tif (!deviceIsIOS || targetTagName !== 'select') {\n\t\t\t\tthis.targetElement = null;\n\t\t\t\tevent.preventDefault();\n\t\t\t}\n\n\t\t\treturn false;\n\t\t}\n\n\t\tif (deviceIsIOS && !deviceIsIOS4) {\n\n\t\t\t// Don't send a synthetic click event if the target element is contained within a parent layer that was scrolled\n\t\t\t// and this tap is being used to stop the scrolling (usually initiated by a fling - issue #42).\n\t\t\tscrollParent = targetElement.fastClickScrollParent;\n\t\t\tif (scrollParent && scrollParent.fastClickLastScrollTop !== scrollParent.scrollTop) {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t}\n\n\t\t// Prevent the actual click from going though - unless the target node is marked as requiring\n\t\t// real clicks or if it is in the whitelist in which case only non-programmatic clicks are permitted.\n\t\tif (!this.needsClick(targetElement)) {\n\t\t\tevent.preventDefault();\n\t\t\tthis.sendClick(targetElement, event);\n\t\t}\n\n\t\treturn false;\n\t};\n\n\n\t/**\n\t * On touch cancel, stop tracking the click.\n\t *\n\t * @returns {void}\n\t */\n\tFastClick.prototype.onTouchCancel = function() {\n\t\tthis.trackingClick = false;\n\t\tthis.targetElement = null;\n\t};\n\n\n\t/**\n\t * Determine mouse events which should be permitted.\n\t *\n\t * @param {Event} event\n\t * @returns {boolean}\n\t */\n\tFastClick.prototype.onMouse = function(event) {\n\n\t\t// If a target element was never set (because a touch event was never fired) allow the event\n\t\tif (!this.targetElement) {\n\t\t\treturn true;\n\t\t}\n\n\t\tif (event.forwardedTouchEvent) {\n\t\t\treturn true;\n\t\t}\n\n\t\t// Programmatically generated events targeting a specific element should be permitted\n\t\tif (!event.cancelable) {\n\t\t\treturn true;\n\t\t}\n\n\t\t// Derive and check the target element to see whether the mouse event needs to be permitted;\n\t\t// unless explicitly enabled, prevent non-touch click events from triggering actions,\n\t\t// to prevent ghost/doubleclicks.\n\t\tif (!this.needsClick(this.targetElement) || this.cancelNextClick) {\n\n\t\t\t// Prevent any user-added listeners declared on FastClick element from being fired.\n\t\t\tif (event.stopImmediatePropagation) {\n\t\t\t\tevent.stopImmediatePropagation();\n\t\t\t} else {\n\n\t\t\t\t// Part of the hack for browsers that don't support Event#stopImmediatePropagation (e.g. Android 2)\n\t\t\t\tevent.propagationStopped = true;\n\t\t\t}\n\n\t\t\t// Cancel the event\n\t\t\tevent.stopPropagation();\n\t\t\tevent.preventDefault();\n\n\t\t\treturn false;\n\t\t}\n\n\t\t// If the mouse event is permitted, return true for the action to go through.\n\t\treturn true;\n\t};\n\n\n\t/**\n\t * On actual clicks, determine whether this is a touch-generated click, a click action occurring\n\t * naturally after a delay after a touch (which needs to be cancelled to avoid duplication), or\n\t * an actual click which should be permitted.\n\t *\n\t * @param {Event} event\n\t * @returns {boolean}\n\t */\n\tFastClick.prototype.onClick = function(event) {\n\t\tvar permitted;\n\n\t\t// It's possible for another FastClick-like library delivered with third-party code to fire a click event before FastClick does (issue #44). In that case, set the click-tracking flag back to false and return early. This will cause onTouchEnd to return early.\n\t\tif (this.trackingClick) {\n\t\t\tthis.targetElement = null;\n\t\t\tthis.trackingClick = false;\n\t\t\treturn true;\n\t\t}\n\n\t\t// Very odd behaviour on iOS (issue #18): if a submit element is present inside a form and the user hits enter in the iOS simulator or clicks the Go button on the pop-up OS keyboard the a kind of 'fake' click event will be triggered with the submit-type input element as the target.\n\t\tif (event.target.type === 'submit' && event.detail === 0) {\n\t\t\treturn true;\n\t\t}\n\n\t\tpermitted = this.onMouse(event);\n\n\t\t// Only unset targetElement if the click is not permitted. This will ensure that the check for !targetElement in onMouse fails and the browser's click doesn't go through.\n\t\tif (!permitted) {\n\t\t\tthis.targetElement = null;\n\t\t}\n\n\t\t// If clicks are permitted, return true for the action to go through.\n\t\treturn permitted;\n\t};\n\n\n\t/**\n\t * Remove all FastClick's event listeners.\n\t *\n\t * @returns {void}\n\t */\n\tFastClick.prototype.destroy = function() {\n\t\tvar layer = this.layer;\n\n\t\tif (deviceIsAndroid) {\n\t\t\tlayer.removeEventListener('mouseover', this.onMouse, true);\n\t\t\tlayer.removeEventListener('mousedown', this.onMouse, true);\n\t\t\tlayer.removeEventListener('mouseup', this.onMouse, true);\n\t\t}\n\n\t\tlayer.removeEventListener('click', this.onClick, true);\n\t\tlayer.removeEventListener('touchstart', this.onTouchStart, false);\n\t\tlayer.removeEventListener('touchmove', this.onTouchMove, false);\n\t\tlayer.removeEventListener('touchend', this.onTouchEnd, false);\n\t\tlayer.removeEventListener('touchcancel', this.onTouchCancel, false);\n\t};\n\n\n\t/**\n\t * Check whether FastClick is needed.\n\t *\n\t * @param {Element} layer The layer to listen on\n\t */\n\tFastClick.notNeeded = function(layer) {\n\t\tvar metaViewport;\n\t\tvar chromeVersion;\n\t\tvar blackberryVersion;\n\t\tvar firefoxVersion;\n\n\t\t// Devices that don't support touch don't need FastClick\n\t\tif (typeof window.ontouchstart === 'undefined') {\n\t\t\treturn true;\n\t\t}\n\n\t\t// Chrome version - zero for other browsers\n\t\tchromeVersion = +(/Chrome\\/([0-9]+)/.exec(navigator.userAgent) || [,0])[1];\n\n\t\tif (chromeVersion) {\n\n\t\t\tif (deviceIsAndroid) {\n\t\t\t\tmetaViewport = document.querySelector('meta[name=viewport]');\n\n\t\t\t\tif (metaViewport) {\n\t\t\t\t\t// Chrome on Android with user-scalable=\"no\" doesn't need FastClick (issue #89)\n\t\t\t\t\tif (metaViewport.content.indexOf('user-scalable=no') !== -1) {\n\t\t\t\t\t\treturn true;\n\t\t\t\t\t}\n\t\t\t\t\t// Chrome 32 and above with width=device-width or less don't need FastClick\n\t\t\t\t\tif (chromeVersion > 31 && document.documentElement.scrollWidth <= window.outerWidth) {\n\t\t\t\t\t\treturn true;\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t// Chrome desktop doesn't need FastClick (issue #15)\n\t\t\t} else {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t}\n\n\t\tif (deviceIsBlackBerry10) {\n\t\t\tblackberryVersion = navigator.userAgent.match(/Version\\/([0-9]*)\\.([0-9]*)/);\n\n\t\t\t// BlackBerry 10.3+ does not require Fastclick library.\n\t\t\t// https://github.com/ftlabs/fastclick/issues/251\n\t\t\tif (blackberryVersion[1] >= 10 && blackberryVersion[2] >= 3) {\n\t\t\t\tmetaViewport = document.querySelector('meta[name=viewport]');\n\n\t\t\t\tif (metaViewport) {\n\t\t\t\t\t// user-scalable=no eliminates click delay.\n\t\t\t\t\tif (metaViewport.content.indexOf('user-scalable=no') !== -1) {\n\t\t\t\t\t\treturn true;\n\t\t\t\t\t}\n\t\t\t\t\t// width=device-width (or less than device-width) eliminates click delay.\n\t\t\t\t\tif (document.documentElement.scrollWidth <= window.outerWidth) {\n\t\t\t\t\t\treturn true;\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t\t// IE10 with -ms-touch-action: none or manipulation, which disables double-tap-to-zoom (issue #97)\n\t\tif (layer.style.msTouchAction === 'none' || layer.style.touchAction === 'manipulation') {\n\t\t\treturn true;\n\t\t}\n\n\t\t// Firefox version - zero for other browsers\n\t\tfirefoxVersion = +(/Firefox\\/([0-9]+)/.exec(navigator.userAgent) || [,0])[1];\n\n\t\tif (firefoxVersion >= 27) {\n\t\t\t// Firefox 27+ does not have tap delay if the content is not zoomable - https://bugzilla.mozilla.org/show_bug.cgi?id=922896\n\n\t\t\tmetaViewport = document.querySelector('meta[name=viewport]');\n\t\t\tif (metaViewport && (metaViewport.content.indexOf('user-scalable=no') !== -1 || document.documentElement.scrollWidth <= window.outerWidth)) {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t}\n\n\t\t// IE11: prefixed -ms-touch-action is no longer supported and it's recomended to use non-prefixed version\n\t\t// http://msdn.microsoft.com/en-us/library/windows/apps/Hh767313.aspx\n\t\tif (layer.style.touchAction === 'none' || layer.style.touchAction === 'manipulation') {\n\t\t\treturn true;\n\t\t}\n\n\t\treturn false;\n\t};\n\n\n\t/**\n\t * Factory method for creating a FastClick object\n\t *\n\t * @param {Element} layer The layer to listen on\n\t * @param {Object} [options={}] The options to override the defaults\n\t */\n\tFastClick.attach = function(layer, options) {\n\t\treturn new FastClick(layer, options);\n\t};\n\n\n\tif (true) {\n\n\t\t// AMD. Register as an anonymous module.\n\t\t!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {\n\t\t\treturn FastClick;\n\t\t}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));\n\t} else if (typeof module !== 'undefined' && module.exports) {\n\t\tmodule.exports = FastClick.attach;\n\t\tmodule.exports.FastClick = FastClick;\n\t} else {\n\t\twindow.FastClick = FastClick;\n\t}\n}());\n\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9+Ly4xLjAuNkBmYXN0Y2xpY2svbGliL2Zhc3RjbGljay5qcz9iZDQyIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLG1DQUFDO0FBQ0Q7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTs7O0FBR0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxZQUFZLFFBQVE7QUFDcEIsWUFBWSxPQUFPLFlBQVk7QUFDL0I7QUFDQTtBQUNBOztBQUVBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7O0FBR0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOzs7QUFHQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7OztBQUdBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7O0FBR0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOzs7QUFHQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7OztBQUdBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7O0FBR0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQSxzQkFBc0IseUNBQXlDO0FBQy9EOzs7QUFHQTtBQUNBO0FBQ0EscUNBQXFDLE9BQU87QUFDNUM7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsS0FBSztBQUNMO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLE1BQU07QUFDTixLQUFLO0FBQ0w7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLElBQUk7QUFDSjtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7O0FBR0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOzs7QUFHQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7OztBQUdBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0EsWUFBWSxvQkFBb0I7QUFDaEMsY0FBYyxRQUFRO0FBQ3RCO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBOzs7QUFHQTtBQUNBO0FBQ0E7QUFDQSxZQUFZLG9CQUFvQjtBQUNoQyxjQUFjLFFBQVE7QUFDdEI7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7OztBQUdBO0FBQ0E7QUFDQTtBQUNBLFlBQVksb0JBQW9CO0FBQ2hDLFlBQVksTUFBTTtBQUNsQjtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7OztBQUdBO0FBQ0EsWUFBWSxvQkFBb0I7QUFDaEM7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsR0FBRztBQUNIO0FBQ0E7QUFDQTs7O0FBR0E7QUFDQTtBQUNBO0FBQ0EsWUFBWSxvQkFBb0I7QUFDaEM7QUFDQTtBQUNBOztBQUVBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0EsSUFBSTtBQUNKOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7OztBQUdBO0FBQ0EsWUFBWSxZQUFZO0FBQ3hCLGNBQWM7QUFDZDtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7OztBQUdBO0FBQ0E7QUFDQTtBQUNBLFlBQVksTUFBTTtBQUNsQixjQUFjO0FBQ2Q7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7OztBQUdBO0FBQ0E7QUFDQTtBQUNBLFlBQVksTUFBTTtBQUNsQixjQUFjO0FBQ2Q7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBOzs7QUFHQTtBQUNBO0FBQ0E7QUFDQSxZQUFZLE1BQU07QUFDbEIsY0FBYztBQUNkO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBOzs7QUFHQTtBQUNBO0FBQ0E7QUFDQSxZQUFZLDZCQUE2QjtBQUN6QyxjQUFjO0FBQ2Q7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7O0FBR0E7QUFDQTtBQUNBO0FBQ0EsWUFBWSxNQUFNO0FBQ2xCLGNBQWM7QUFDZDtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7O0FBRUE7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBLG1CQUFtQjtBQUNuQjtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBLEdBQUc7O0FBRUg7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7OztBQUdBO0FBQ0E7QUFDQTtBQUNBLGNBQWM7QUFDZDtBQUNBO0FBQ0E7QUFDQTtBQUNBOzs7QUFHQTtBQUNBO0FBQ0E7QUFDQSxZQUFZLE1BQU07QUFDbEIsY0FBYztBQUNkO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBLElBQUk7O0FBRUo7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7O0FBR0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFlBQVksTUFBTTtBQUNsQixjQUFjO0FBQ2Q7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7OztBQUdBO0FBQ0E7QUFDQTtBQUNBLGNBQWM7QUFDZDtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7OztBQUdBO0FBQ0E7QUFDQTtBQUNBLFlBQVksUUFBUTtBQUNwQjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTs7QUFFQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0EsSUFBSTtBQUNKO0FBQ0E7QUFDQTs7QUFFQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7OztBQUdBO0FBQ0E7QUFDQTtBQUNBLFlBQVksUUFBUTtBQUNwQixZQUFZLE9BQU8sWUFBWTtBQUMvQjtBQUNBO0FBQ0E7QUFDQTs7O0FBR0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0EsR0FBRztBQUNILEVBQUU7QUFDRjtBQUNBO0FBQ0EsRUFBRTtBQUNGO0FBQ0E7QUFDQSxDQUFDIiwiZmlsZSI6IjIuanMiLCJzb3VyY2VzQ29udGVudCI6WyI7KGZ1bmN0aW9uICgpIHtcblx0J3VzZSBzdHJpY3QnO1xuXG5cdC8qKlxuXHQgKiBAcHJlc2VydmUgRmFzdENsaWNrOiBwb2x5ZmlsbCB0byByZW1vdmUgY2xpY2sgZGVsYXlzIG9uIGJyb3dzZXJzIHdpdGggdG91Y2ggVUlzLlxuXHQgKlxuXHQgKiBAY29kaW5nc3RhbmRhcmQgZnRsYWJzLWpzdjJcblx0ICogQGNvcHlyaWdodCBUaGUgRmluYW5jaWFsIFRpbWVzIExpbWl0ZWQgW0FsbCBSaWdodHMgUmVzZXJ2ZWRdXG5cdCAqIEBsaWNlbnNlIE1JVCBMaWNlbnNlIChzZWUgTElDRU5TRS50eHQpXG5cdCAqL1xuXG5cdC8qanNsaW50IGJyb3dzZXI6dHJ1ZSwgbm9kZTp0cnVlKi9cblx0LypnbG9iYWwgZGVmaW5lLCBFdmVudCwgTm9kZSovXG5cblxuXHQvKipcblx0ICogSW5zdGFudGlhdGUgZmFzdC1jbGlja2luZyBsaXN0ZW5lcnMgb24gdGhlIHNwZWNpZmllZCBsYXllci5cblx0ICpcblx0ICogQGNvbnN0cnVjdG9yXG5cdCAqIEBwYXJhbSB7RWxlbWVudH0gbGF5ZXIgVGhlIGxheWVyIHRvIGxpc3RlbiBvblxuXHQgKiBAcGFyYW0ge09iamVjdH0gW29wdGlvbnM9e31dIFRoZSBvcHRpb25zIHRvIG92ZXJyaWRlIHRoZSBkZWZhdWx0c1xuXHQgKi9cblx0ZnVuY3Rpb24gRmFzdENsaWNrKGxheWVyLCBvcHRpb25zKSB7XG5cdFx0dmFyIG9sZE9uQ2xpY2s7XG5cblx0XHRvcHRpb25zID0gb3B0aW9ucyB8fCB7fTtcblxuXHRcdC8qKlxuXHRcdCAqIFdoZXRoZXIgYSBjbGljayBpcyBjdXJyZW50bHkgYmVpbmcgdHJhY2tlZC5cblx0XHQgKlxuXHRcdCAqIEB0eXBlIGJvb2xlYW5cblx0XHQgKi9cblx0XHR0aGlzLnRyYWNraW5nQ2xpY2sgPSBmYWxzZTtcblxuXG5cdFx0LyoqXG5cdFx0ICogVGltZXN0YW1wIGZvciB3aGVuIGNsaWNrIHRyYWNraW5nIHN0YXJ0ZWQuXG5cdFx0ICpcblx0XHQgKiBAdHlwZSBudW1iZXJcblx0XHQgKi9cblx0XHR0aGlzLnRyYWNraW5nQ2xpY2tTdGFydCA9IDA7XG5cblxuXHRcdC8qKlxuXHRcdCAqIFRoZSBlbGVtZW50IGJlaW5nIHRyYWNrZWQgZm9yIGEgY2xpY2suXG5cdFx0ICpcblx0XHQgKiBAdHlwZSBFdmVudFRhcmdldFxuXHRcdCAqL1xuXHRcdHRoaXMudGFyZ2V0RWxlbWVudCA9IG51bGw7XG5cblxuXHRcdC8qKlxuXHRcdCAqIFgtY29vcmRpbmF0ZSBvZiB0b3VjaCBzdGFydCBldmVudC5cblx0XHQgKlxuXHRcdCAqIEB0eXBlIG51bWJlclxuXHRcdCAqL1xuXHRcdHRoaXMudG91Y2hTdGFydFggPSAwO1xuXG5cblx0XHQvKipcblx0XHQgKiBZLWNvb3JkaW5hdGUgb2YgdG91Y2ggc3RhcnQgZXZlbnQuXG5cdFx0ICpcblx0XHQgKiBAdHlwZSBudW1iZXJcblx0XHQgKi9cblx0XHR0aGlzLnRvdWNoU3RhcnRZID0gMDtcblxuXG5cdFx0LyoqXG5cdFx0ICogSUQgb2YgdGhlIGxhc3QgdG91Y2gsIHJldHJpZXZlZCBmcm9tIFRvdWNoLmlkZW50aWZpZXIuXG5cdFx0ICpcblx0XHQgKiBAdHlwZSBudW1iZXJcblx0XHQgKi9cblx0XHR0aGlzLmxhc3RUb3VjaElkZW50aWZpZXIgPSAwO1xuXG5cblx0XHQvKipcblx0XHQgKiBUb3VjaG1vdmUgYm91bmRhcnksIGJleW9uZCB3aGljaCBhIGNsaWNrIHdpbGwgYmUgY2FuY2VsbGVkLlxuXHRcdCAqXG5cdFx0ICogQHR5cGUgbnVtYmVyXG5cdFx0ICovXG5cdFx0dGhpcy50b3VjaEJvdW5kYXJ5ID0gb3B0aW9ucy50b3VjaEJvdW5kYXJ5IHx8IDEwO1xuXG5cblx0XHQvKipcblx0XHQgKiBUaGUgRmFzdENsaWNrIGxheWVyLlxuXHRcdCAqXG5cdFx0ICogQHR5cGUgRWxlbWVudFxuXHRcdCAqL1xuXHRcdHRoaXMubGF5ZXIgPSBsYXllcjtcblxuXHRcdC8qKlxuXHRcdCAqIFRoZSBtaW5pbXVtIHRpbWUgYmV0d2VlbiB0YXAodG91Y2hzdGFydCBhbmQgdG91Y2hlbmQpIGV2ZW50c1xuXHRcdCAqXG5cdFx0ICogQHR5cGUgbnVtYmVyXG5cdFx0ICovXG5cdFx0dGhpcy50YXBEZWxheSA9IG9wdGlvbnMudGFwRGVsYXkgfHwgMjAwO1xuXG5cdFx0LyoqXG5cdFx0ICogVGhlIG1heGltdW0gdGltZSBmb3IgYSB0YXBcblx0XHQgKlxuXHRcdCAqIEB0eXBlIG51bWJlclxuXHRcdCAqL1xuXHRcdHRoaXMudGFwVGltZW91dCA9IG9wdGlvbnMudGFwVGltZW91dCB8fCA3MDA7XG5cblx0XHRpZiAoRmFzdENsaWNrLm5vdE5lZWRlZChsYXllcikpIHtcblx0XHRcdHJldHVybjtcblx0XHR9XG5cblx0XHQvLyBTb21lIG9sZCB2ZXJzaW9ucyBvZiBBbmRyb2lkIGRvbid0IGhhdmUgRnVuY3Rpb24ucHJvdG90eXBlLmJpbmRcblx0XHRmdW5jdGlvbiBiaW5kKG1ldGhvZCwgY29udGV4dCkge1xuXHRcdFx0cmV0dXJuIGZ1bmN0aW9uKCkgeyByZXR1cm4gbWV0aG9kLmFwcGx5KGNvbnRleHQsIGFyZ3VtZW50cyk7IH07XG5cdFx0fVxuXG5cblx0XHR2YXIgbWV0aG9kcyA9IFsnb25Nb3VzZScsICdvbkNsaWNrJywgJ29uVG91Y2hTdGFydCcsICdvblRvdWNoTW92ZScsICdvblRvdWNoRW5kJywgJ29uVG91Y2hDYW5jZWwnXTtcblx0XHR2YXIgY29udGV4dCA9IHRoaXM7XG5cdFx0Zm9yICh2YXIgaSA9IDAsIGwgPSBtZXRob2RzLmxlbmd0aDsgaSA8IGw7IGkrKykge1xuXHRcdFx0Y29udGV4dFttZXRob2RzW2ldXSA9IGJpbmQoY29udGV4dFttZXRob2RzW2ldXSwgY29udGV4dCk7XG5cdFx0fVxuXG5cdFx0Ly8gU2V0IHVwIGV2ZW50IGhhbmRsZXJzIGFzIHJlcXVpcmVkXG5cdFx0aWYgKGRldmljZUlzQW5kcm9pZCkge1xuXHRcdFx0bGF5ZXIuYWRkRXZlbnRMaXN0ZW5lcignbW91c2VvdmVyJywgdGhpcy5vbk1vdXNlLCB0cnVlKTtcblx0XHRcdGxheWVyLmFkZEV2ZW50TGlzdGVuZXIoJ21vdXNlZG93bicsIHRoaXMub25Nb3VzZSwgdHJ1ZSk7XG5cdFx0XHRsYXllci5hZGRFdmVudExpc3RlbmVyKCdtb3VzZXVwJywgdGhpcy5vbk1vdXNlLCB0cnVlKTtcblx0XHR9XG5cblx0XHRsYXllci5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsIHRoaXMub25DbGljaywgdHJ1ZSk7XG5cdFx0bGF5ZXIuYWRkRXZlbnRMaXN0ZW5lcigndG91Y2hzdGFydCcsIHRoaXMub25Ub3VjaFN0YXJ0LCBmYWxzZSk7XG5cdFx0bGF5ZXIuYWRkRXZlbnRMaXN0ZW5lcigndG91Y2htb3ZlJywgdGhpcy5vblRvdWNoTW92ZSwgZmFsc2UpO1xuXHRcdGxheWVyLmFkZEV2ZW50TGlzdGVuZXIoJ3RvdWNoZW5kJywgdGhpcy5vblRvdWNoRW5kLCBmYWxzZSk7XG5cdFx0bGF5ZXIuYWRkRXZlbnRMaXN0ZW5lcigndG91Y2hjYW5jZWwnLCB0aGlzLm9uVG91Y2hDYW5jZWwsIGZhbHNlKTtcblxuXHRcdC8vIEhhY2sgaXMgcmVxdWlyZWQgZm9yIGJyb3dzZXJzIHRoYXQgZG9uJ3Qgc3VwcG9ydCBFdmVudCNzdG9wSW1tZWRpYXRlUHJvcGFnYXRpb24gKGUuZy4gQW5kcm9pZCAyKVxuXHRcdC8vIHdoaWNoIGlzIGhvdyBGYXN0Q2xpY2sgbm9ybWFsbHkgc3RvcHMgY2xpY2sgZXZlbnRzIGJ1YmJsaW5nIHRvIGNhbGxiYWNrcyByZWdpc3RlcmVkIG9uIHRoZSBGYXN0Q2xpY2tcblx0XHQvLyBsYXllciB3aGVuIHRoZXkgYXJlIGNhbmNlbGxlZC5cblx0XHRpZiAoIUV2ZW50LnByb3RvdHlwZS5zdG9wSW1tZWRpYXRlUHJvcGFnYXRpb24pIHtcblx0XHRcdGxheWVyLnJlbW92ZUV2ZW50TGlzdGVuZXIgPSBmdW5jdGlvbih0eXBlLCBjYWxsYmFjaywgY2FwdHVyZSkge1xuXHRcdFx0XHR2YXIgcm12ID0gTm9kZS5wcm90b3R5cGUucmVtb3ZlRXZlbnRMaXN0ZW5lcjtcblx0XHRcdFx0aWYgKHR5cGUgPT09ICdjbGljaycpIHtcblx0XHRcdFx0XHRybXYuY2FsbChsYXllciwgdHlwZSwgY2FsbGJhY2suaGlqYWNrZWQgfHwgY2FsbGJhY2ssIGNhcHR1cmUpO1xuXHRcdFx0XHR9IGVsc2Uge1xuXHRcdFx0XHRcdHJtdi5jYWxsKGxheWVyLCB0eXBlLCBjYWxsYmFjaywgY2FwdHVyZSk7XG5cdFx0XHRcdH1cblx0XHRcdH07XG5cblx0XHRcdGxheWVyLmFkZEV2ZW50TGlzdGVuZXIgPSBmdW5jdGlvbih0eXBlLCBjYWxsYmFjaywgY2FwdHVyZSkge1xuXHRcdFx0XHR2YXIgYWR2ID0gTm9kZS5wcm90b3R5cGUuYWRkRXZlbnRMaXN0ZW5lcjtcblx0XHRcdFx0aWYgKHR5cGUgPT09ICdjbGljaycpIHtcblx0XHRcdFx0XHRhZHYuY2FsbChsYXllciwgdHlwZSwgY2FsbGJhY2suaGlqYWNrZWQgfHwgKGNhbGxiYWNrLmhpamFja2VkID0gZnVuY3Rpb24oZXZlbnQpIHtcblx0XHRcdFx0XHRcdGlmICghZXZlbnQucHJvcGFnYXRpb25TdG9wcGVkKSB7XG5cdFx0XHRcdFx0XHRcdGNhbGxiYWNrKGV2ZW50KTtcblx0XHRcdFx0XHRcdH1cblx0XHRcdFx0XHR9KSwgY2FwdHVyZSk7XG5cdFx0XHRcdH0gZWxzZSB7XG5cdFx0XHRcdFx0YWR2LmNhbGwobGF5ZXIsIHR5cGUsIGNhbGxiYWNrLCBjYXB0dXJlKTtcblx0XHRcdFx0fVxuXHRcdFx0fTtcblx0XHR9XG5cblx0XHQvLyBJZiBhIGhhbmRsZXIgaXMgYWxyZWFkeSBkZWNsYXJlZCBpbiB0aGUgZWxlbWVudCdzIG9uY2xpY2sgYXR0cmlidXRlLCBpdCB3aWxsIGJlIGZpcmVkIGJlZm9yZVxuXHRcdC8vIEZhc3RDbGljaydzIG9uQ2xpY2sgaGFuZGxlci4gRml4IHRoaXMgYnkgcHVsbGluZyBvdXQgdGhlIHVzZXItZGVmaW5lZCBoYW5kbGVyIGZ1bmN0aW9uIGFuZFxuXHRcdC8vIGFkZGluZyBpdCBhcyBsaXN0ZW5lci5cblx0XHRpZiAodHlwZW9mIGxheWVyLm9uY2xpY2sgPT09ICdmdW5jdGlvbicpIHtcblxuXHRcdFx0Ly8gQW5kcm9pZCBicm93c2VyIG9uIGF0IGxlYXN0IDMuMiByZXF1aXJlcyBhIG5ldyByZWZlcmVuY2UgdG8gdGhlIGZ1bmN0aW9uIGluIGxheWVyLm9uY2xpY2tcblx0XHRcdC8vIC0gdGhlIG9sZCBvbmUgd29uJ3Qgd29yayBpZiBwYXNzZWQgdG8gYWRkRXZlbnRMaXN0ZW5lciBkaXJlY3RseS5cblx0XHRcdG9sZE9uQ2xpY2sgPSBsYXllci5vbmNsaWNrO1xuXHRcdFx0bGF5ZXIuYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCBmdW5jdGlvbihldmVudCkge1xuXHRcdFx0XHRvbGRPbkNsaWNrKGV2ZW50KTtcblx0XHRcdH0sIGZhbHNlKTtcblx0XHRcdGxheWVyLm9uY2xpY2sgPSBudWxsO1xuXHRcdH1cblx0fVxuXG5cdC8qKlxuXHQqIFdpbmRvd3MgUGhvbmUgOC4xIGZha2VzIHVzZXIgYWdlbnQgc3RyaW5nIHRvIGxvb2sgbGlrZSBBbmRyb2lkIGFuZCBpUGhvbmUuXG5cdCpcblx0KiBAdHlwZSBib29sZWFuXG5cdCovXG5cdHZhciBkZXZpY2VJc1dpbmRvd3NQaG9uZSA9IG5hdmlnYXRvci51c2VyQWdlbnQuaW5kZXhPZihcIldpbmRvd3MgUGhvbmVcIikgPj0gMDtcblxuXHQvKipcblx0ICogQW5kcm9pZCByZXF1aXJlcyBleGNlcHRpb25zLlxuXHQgKlxuXHQgKiBAdHlwZSBib29sZWFuXG5cdCAqL1xuXHR2YXIgZGV2aWNlSXNBbmRyb2lkID0gbmF2aWdhdG9yLnVzZXJBZ2VudC5pbmRleE9mKCdBbmRyb2lkJykgPiAwICYmICFkZXZpY2VJc1dpbmRvd3NQaG9uZTtcblxuXG5cdC8qKlxuXHQgKiBpT1MgcmVxdWlyZXMgZXhjZXB0aW9ucy5cblx0ICpcblx0ICogQHR5cGUgYm9vbGVhblxuXHQgKi9cblx0dmFyIGRldmljZUlzSU9TID0gL2lQKGFkfGhvbmV8b2QpLy50ZXN0KG5hdmlnYXRvci51c2VyQWdlbnQpICYmICFkZXZpY2VJc1dpbmRvd3NQaG9uZTtcblxuXG5cdC8qKlxuXHQgKiBpT1MgNCByZXF1aXJlcyBhbiBleGNlcHRpb24gZm9yIHNlbGVjdCBlbGVtZW50cy5cblx0ICpcblx0ICogQHR5cGUgYm9vbGVhblxuXHQgKi9cblx0dmFyIGRldmljZUlzSU9TNCA9IGRldmljZUlzSU9TICYmICgvT1MgNF9cXGQoX1xcZCk/LykudGVzdChuYXZpZ2F0b3IudXNlckFnZW50KTtcblxuXG5cdC8qKlxuXHQgKiBpT1MgNi4wLTcuKiByZXF1aXJlcyB0aGUgdGFyZ2V0IGVsZW1lbnQgdG8gYmUgbWFudWFsbHkgZGVyaXZlZFxuXHQgKlxuXHQgKiBAdHlwZSBib29sZWFuXG5cdCAqL1xuXHR2YXIgZGV2aWNlSXNJT1NXaXRoQmFkVGFyZ2V0ID0gZGV2aWNlSXNJT1MgJiYgKC9PUyBbNi03XV9cXGQvKS50ZXN0KG5hdmlnYXRvci51c2VyQWdlbnQpO1xuXG5cdC8qKlxuXHQgKiBCbGFja0JlcnJ5IHJlcXVpcmVzIGV4Y2VwdGlvbnMuXG5cdCAqXG5cdCAqIEB0eXBlIGJvb2xlYW5cblx0ICovXG5cdHZhciBkZXZpY2VJc0JsYWNrQmVycnkxMCA9IG5hdmlnYXRvci51c2VyQWdlbnQuaW5kZXhPZignQkIxMCcpID4gMDtcblxuXHQvKipcblx0ICogRGV0ZXJtaW5lIHdoZXRoZXIgYSBnaXZlbiBlbGVtZW50IHJlcXVpcmVzIGEgbmF0aXZlIGNsaWNrLlxuXHQgKlxuXHQgKiBAcGFyYW0ge0V2ZW50VGFyZ2V0fEVsZW1lbnR9IHRhcmdldCBUYXJnZXQgRE9NIGVsZW1lbnRcblx0ICogQHJldHVybnMge2Jvb2xlYW59IFJldHVybnMgdHJ1ZSBpZiB0aGUgZWxlbWVudCBuZWVkcyBhIG5hdGl2ZSBjbGlja1xuXHQgKi9cblx0RmFzdENsaWNrLnByb3RvdHlwZS5uZWVkc0NsaWNrID0gZnVuY3Rpb24odGFyZ2V0KSB7XG5cdFx0c3dpdGNoICh0YXJnZXQubm9kZU5hbWUudG9Mb3dlckNhc2UoKSkge1xuXG5cdFx0Ly8gRG9uJ3Qgc2VuZCBhIHN5bnRoZXRpYyBjbGljayB0byBkaXNhYmxlZCBpbnB1dHMgKGlzc3VlICM2Milcblx0XHRjYXNlICdidXR0b24nOlxuXHRcdGNhc2UgJ3NlbGVjdCc6XG5cdFx0Y2FzZSAndGV4dGFyZWEnOlxuXHRcdFx0aWYgKHRhcmdldC5kaXNhYmxlZCkge1xuXHRcdFx0XHRyZXR1cm4gdHJ1ZTtcblx0XHRcdH1cblxuXHRcdFx0YnJlYWs7XG5cdFx0Y2FzZSAnaW5wdXQnOlxuXG5cdFx0XHQvLyBGaWxlIGlucHV0cyBuZWVkIHJlYWwgY2xpY2tzIG9uIGlPUyA2IGR1ZSB0byBhIGJyb3dzZXIgYnVnIChpc3N1ZSAjNjgpXG5cdFx0XHRpZiAoKGRldmljZUlzSU9TICYmIHRhcmdldC50eXBlID09PSAnZmlsZScpIHx8IHRhcmdldC5kaXNhYmxlZCkge1xuXHRcdFx0XHRyZXR1cm4gdHJ1ZTtcblx0XHRcdH1cblxuXHRcdFx0YnJlYWs7XG5cdFx0Y2FzZSAnbGFiZWwnOlxuXHRcdGNhc2UgJ2lmcmFtZSc6IC8vIGlPUzggaG9tZXNjcmVlbiBhcHBzIGNhbiBwcmV2ZW50IGV2ZW50cyBidWJibGluZyBpbnRvIGZyYW1lc1xuXHRcdGNhc2UgJ3ZpZGVvJzpcblx0XHRcdHJldHVybiB0cnVlO1xuXHRcdH1cblxuXHRcdHJldHVybiAoL1xcYm5lZWRzY2xpY2tcXGIvKS50ZXN0KHRhcmdldC5jbGFzc05hbWUpO1xuXHR9O1xuXG5cblx0LyoqXG5cdCAqIERldGVybWluZSB3aGV0aGVyIGEgZ2l2ZW4gZWxlbWVudCByZXF1aXJlcyBhIGNhbGwgdG8gZm9jdXMgdG8gc2ltdWxhdGUgY2xpY2sgaW50byBlbGVtZW50LlxuXHQgKlxuXHQgKiBAcGFyYW0ge0V2ZW50VGFyZ2V0fEVsZW1lbnR9IHRhcmdldCBUYXJnZXQgRE9NIGVsZW1lbnRcblx0ICogQHJldHVybnMge2Jvb2xlYW59IFJldHVybnMgdHJ1ZSBpZiB0aGUgZWxlbWVudCByZXF1aXJlcyBhIGNhbGwgdG8gZm9jdXMgdG8gc2ltdWxhdGUgbmF0aXZlIGNsaWNrLlxuXHQgKi9cblx0RmFzdENsaWNrLnByb3RvdHlwZS5uZWVkc0ZvY3VzID0gZnVuY3Rpb24odGFyZ2V0KSB7XG5cdFx0c3dpdGNoICh0YXJnZXQubm9kZU5hbWUudG9Mb3dlckNhc2UoKSkge1xuXHRcdGNhc2UgJ3RleHRhcmVhJzpcblx0XHRcdHJldHVybiB0cnVlO1xuXHRcdGNhc2UgJ3NlbGVjdCc6XG5cdFx0XHRyZXR1cm4gIWRldmljZUlzQW5kcm9pZDtcblx0XHRjYXNlICdpbnB1dCc6XG5cdFx0XHRzd2l0Y2ggKHRhcmdldC50eXBlKSB7XG5cdFx0XHRjYXNlICdidXR0b24nOlxuXHRcdFx0Y2FzZSAnY2hlY2tib3gnOlxuXHRcdFx0Y2FzZSAnZmlsZSc6XG5cdFx0XHRjYXNlICdpbWFnZSc6XG5cdFx0XHRjYXNlICdyYWRpbyc6XG5cdFx0XHRjYXNlICdzdWJtaXQnOlxuXHRcdFx0XHRyZXR1cm4gZmFsc2U7XG5cdFx0XHR9XG5cblx0XHRcdC8vIE5vIHBvaW50IGluIGF0dGVtcHRpbmcgdG8gZm9jdXMgZGlzYWJsZWQgaW5wdXRzXG5cdFx0XHRyZXR1cm4gIXRhcmdldC5kaXNhYmxlZCAmJiAhdGFyZ2V0LnJlYWRPbmx5O1xuXHRcdGRlZmF1bHQ6XG5cdFx0XHRyZXR1cm4gKC9cXGJuZWVkc2ZvY3VzXFxiLykudGVzdCh0YXJnZXQuY2xhc3NOYW1lKTtcblx0XHR9XG5cdH07XG5cblxuXHQvKipcblx0ICogU2VuZCBhIGNsaWNrIGV2ZW50IHRvIHRoZSBzcGVjaWZpZWQgZWxlbWVudC5cblx0ICpcblx0ICogQHBhcmFtIHtFdmVudFRhcmdldHxFbGVtZW50fSB0YXJnZXRFbGVtZW50XG5cdCAqIEBwYXJhbSB7RXZlbnR9IGV2ZW50XG5cdCAqL1xuXHRGYXN0Q2xpY2sucHJvdG90eXBlLnNlbmRDbGljayA9IGZ1bmN0aW9uKHRhcmdldEVsZW1lbnQsIGV2ZW50KSB7XG5cdFx0dmFyIGNsaWNrRXZlbnQsIHRvdWNoO1xuXG5cdFx0Ly8gT24gc29tZSBBbmRyb2lkIGRldmljZXMgYWN0aXZlRWxlbWVudCBuZWVkcyB0byBiZSBibHVycmVkIG90aGVyd2lzZSB0aGUgc3ludGhldGljIGNsaWNrIHdpbGwgaGF2ZSBubyBlZmZlY3QgKCMyNClcblx0XHRpZiAoZG9jdW1lbnQuYWN0aXZlRWxlbWVudCAmJiBkb2N1bWVudC5hY3RpdmVFbGVtZW50ICE9PSB0YXJnZXRFbGVtZW50KSB7XG5cdFx0XHRkb2N1bWVudC5hY3RpdmVFbGVtZW50LmJsdXIoKTtcblx0XHR9XG5cblx0XHR0b3VjaCA9IGV2ZW50LmNoYW5nZWRUb3VjaGVzWzBdO1xuXG5cdFx0Ly8gU3ludGhlc2lzZSBhIGNsaWNrIGV2ZW50LCB3aXRoIGFuIGV4dHJhIGF0dHJpYnV0ZSBzbyBpdCBjYW4gYmUgdHJhY2tlZFxuXHRcdGNsaWNrRXZlbnQgPSBkb2N1bWVudC5jcmVhdGVFdmVudCgnTW91c2VFdmVudHMnKTtcblx0XHRjbGlja0V2ZW50LmluaXRNb3VzZUV2ZW50KHRoaXMuZGV0ZXJtaW5lRXZlbnRUeXBlKHRhcmdldEVsZW1lbnQpLCB0cnVlLCB0cnVlLCB3aW5kb3csIDEsIHRvdWNoLnNjcmVlblgsIHRvdWNoLnNjcmVlblksIHRvdWNoLmNsaWVudFgsIHRvdWNoLmNsaWVudFksIGZhbHNlLCBmYWxzZSwgZmFsc2UsIGZhbHNlLCAwLCBudWxsKTtcblx0XHRjbGlja0V2ZW50LmZvcndhcmRlZFRvdWNoRXZlbnQgPSB0cnVlO1xuXHRcdHRhcmdldEVsZW1lbnQuZGlzcGF0Y2hFdmVudChjbGlja0V2ZW50KTtcblx0fTtcblxuXHRGYXN0Q2xpY2sucHJvdG90eXBlLmRldGVybWluZUV2ZW50VHlwZSA9IGZ1bmN0aW9uKHRhcmdldEVsZW1lbnQpIHtcblxuXHRcdC8vSXNzdWUgIzE1OTogQW5kcm9pZCBDaHJvbWUgU2VsZWN0IEJveCBkb2VzIG5vdCBvcGVuIHdpdGggYSBzeW50aGV0aWMgY2xpY2sgZXZlbnRcblx0XHRpZiAoZGV2aWNlSXNBbmRyb2lkICYmIHRhcmdldEVsZW1lbnQudGFnTmFtZS50b0xvd2VyQ2FzZSgpID09PSAnc2VsZWN0Jykge1xuXHRcdFx0cmV0dXJuICdtb3VzZWRvd24nO1xuXHRcdH1cblxuXHRcdHJldHVybiAnY2xpY2snO1xuXHR9O1xuXG5cblx0LyoqXG5cdCAqIEBwYXJhbSB7RXZlbnRUYXJnZXR8RWxlbWVudH0gdGFyZ2V0RWxlbWVudFxuXHQgKi9cblx0RmFzdENsaWNrLnByb3RvdHlwZS5mb2N1cyA9IGZ1bmN0aW9uKHRhcmdldEVsZW1lbnQpIHtcblx0XHR2YXIgbGVuZ3RoO1xuXG5cdFx0Ly8gSXNzdWUgIzE2MDogb24gaU9TIDcsIHNvbWUgaW5wdXQgZWxlbWVudHMgKGUuZy4gZGF0ZSBkYXRldGltZSBtb250aCkgdGhyb3cgYSB2YWd1ZSBUeXBlRXJyb3Igb24gc2V0U2VsZWN0aW9uUmFuZ2UuIFRoZXNlIGVsZW1lbnRzIGRvbid0IGhhdmUgYW4gaW50ZWdlciB2YWx1ZSBmb3IgdGhlIHNlbGVjdGlvblN0YXJ0IGFuZCBzZWxlY3Rpb25FbmQgcHJvcGVydGllcywgYnV0IHVuZm9ydHVuYXRlbHkgdGhhdCBjYW4ndCBiZSB1c2VkIGZvciBkZXRlY3Rpb24gYmVjYXVzZSBhY2Nlc3NpbmcgdGhlIHByb3BlcnRpZXMgYWxzbyB0aHJvd3MgYSBUeXBlRXJyb3IuIEp1c3QgY2hlY2sgdGhlIHR5cGUgaW5zdGVhZC4gRmlsZWQgYXMgQXBwbGUgYnVnICMxNTEyMjcyNC5cblx0XHRpZiAoZGV2aWNlSXNJT1MgJiYgdGFyZ2V0RWxlbWVudC5zZXRTZWxlY3Rpb25SYW5nZSAmJiB0YXJnZXRFbGVtZW50LnR5cGUuaW5kZXhPZignZGF0ZScpICE9PSAwICYmIHRhcmdldEVsZW1lbnQudHlwZSAhPT0gJ3RpbWUnICYmIHRhcmdldEVsZW1lbnQudHlwZSAhPT0gJ21vbnRoJykge1xuXHRcdFx0bGVuZ3RoID0gdGFyZ2V0RWxlbWVudC52YWx1ZS5sZW5ndGg7XG5cdFx0XHR0YXJnZXRFbGVtZW50LnNldFNlbGVjdGlvblJhbmdlKGxlbmd0aCwgbGVuZ3RoKTtcblx0XHR9IGVsc2Uge1xuXHRcdFx0dGFyZ2V0RWxlbWVudC5mb2N1cygpO1xuXHRcdH1cblx0fTtcblxuXG5cdC8qKlxuXHQgKiBDaGVjayB3aGV0aGVyIHRoZSBnaXZlbiB0YXJnZXQgZWxlbWVudCBpcyBhIGNoaWxkIG9mIGEgc2Nyb2xsYWJsZSBsYXllciBhbmQgaWYgc28sIHNldCBhIGZsYWcgb24gaXQuXG5cdCAqXG5cdCAqIEBwYXJhbSB7RXZlbnRUYXJnZXR8RWxlbWVudH0gdGFyZ2V0RWxlbWVudFxuXHQgKi9cblx0RmFzdENsaWNrLnByb3RvdHlwZS51cGRhdGVTY3JvbGxQYXJlbnQgPSBmdW5jdGlvbih0YXJnZXRFbGVtZW50KSB7XG5cdFx0dmFyIHNjcm9sbFBhcmVudCwgcGFyZW50RWxlbWVudDtcblxuXHRcdHNjcm9sbFBhcmVudCA9IHRhcmdldEVsZW1lbnQuZmFzdENsaWNrU2Nyb2xsUGFyZW50O1xuXG5cdFx0Ly8gQXR0ZW1wdCB0byBkaXNjb3ZlciB3aGV0aGVyIHRoZSB0YXJnZXQgZWxlbWVudCBpcyBjb250YWluZWQgd2l0aGluIGEgc2Nyb2xsYWJsZSBsYXllci4gUmUtY2hlY2sgaWYgdGhlXG5cdFx0Ly8gdGFyZ2V0IGVsZW1lbnQgd2FzIG1vdmVkIHRvIGFub3RoZXIgcGFyZW50LlxuXHRcdGlmICghc2Nyb2xsUGFyZW50IHx8ICFzY3JvbGxQYXJlbnQuY29udGFpbnModGFyZ2V0RWxlbWVudCkpIHtcblx0XHRcdHBhcmVudEVsZW1lbnQgPSB0YXJnZXRFbGVtZW50O1xuXHRcdFx0ZG8ge1xuXHRcdFx0XHRpZiAocGFyZW50RWxlbWVudC5zY3JvbGxIZWlnaHQgPiBwYXJlbnRFbGVtZW50Lm9mZnNldEhlaWdodCkge1xuXHRcdFx0XHRcdHNjcm9sbFBhcmVudCA9IHBhcmVudEVsZW1lbnQ7XG5cdFx0XHRcdFx0dGFyZ2V0RWxlbWVudC5mYXN0Q2xpY2tTY3JvbGxQYXJlbnQgPSBwYXJlbnRFbGVtZW50O1xuXHRcdFx0XHRcdGJyZWFrO1xuXHRcdFx0XHR9XG5cblx0XHRcdFx0cGFyZW50RWxlbWVudCA9IHBhcmVudEVsZW1lbnQucGFyZW50RWxlbWVudDtcblx0XHRcdH0gd2hpbGUgKHBhcmVudEVsZW1lbnQpO1xuXHRcdH1cblxuXHRcdC8vIEFsd2F5cyB1cGRhdGUgdGhlIHNjcm9sbCB0b3AgdHJhY2tlciBpZiBwb3NzaWJsZS5cblx0XHRpZiAoc2Nyb2xsUGFyZW50KSB7XG5cdFx0XHRzY3JvbGxQYXJlbnQuZmFzdENsaWNrTGFzdFNjcm9sbFRvcCA9IHNjcm9sbFBhcmVudC5zY3JvbGxUb3A7XG5cdFx0fVxuXHR9O1xuXG5cblx0LyoqXG5cdCAqIEBwYXJhbSB7RXZlbnRUYXJnZXR9IHRhcmdldEVsZW1lbnRcblx0ICogQHJldHVybnMge0VsZW1lbnR8RXZlbnRUYXJnZXR9XG5cdCAqL1xuXHRGYXN0Q2xpY2sucHJvdG90eXBlLmdldFRhcmdldEVsZW1lbnRGcm9tRXZlbnRUYXJnZXQgPSBmdW5jdGlvbihldmVudFRhcmdldCkge1xuXG5cdFx0Ly8gT24gc29tZSBvbGRlciBicm93c2VycyAobm90YWJseSBTYWZhcmkgb24gaU9TIDQuMSAtIHNlZSBpc3N1ZSAjNTYpIHRoZSBldmVudCB0YXJnZXQgbWF5IGJlIGEgdGV4dCBub2RlLlxuXHRcdGlmIChldmVudFRhcmdldC5ub2RlVHlwZSA9PT0gTm9kZS5URVhUX05PREUpIHtcblx0XHRcdHJldHVybiBldmVudFRhcmdldC5wYXJlbnROb2RlO1xuXHRcdH1cblxuXHRcdHJldHVybiBldmVudFRhcmdldDtcblx0fTtcblxuXG5cdC8qKlxuXHQgKiBPbiB0b3VjaCBzdGFydCwgcmVjb3JkIHRoZSBwb3NpdGlvbiBhbmQgc2Nyb2xsIG9mZnNldC5cblx0ICpcblx0ICogQHBhcmFtIHtFdmVudH0gZXZlbnRcblx0ICogQHJldHVybnMge2Jvb2xlYW59XG5cdCAqL1xuXHRGYXN0Q2xpY2sucHJvdG90eXBlLm9uVG91Y2hTdGFydCA9IGZ1bmN0aW9uKGV2ZW50KSB7XG5cdFx0dmFyIHRhcmdldEVsZW1lbnQsIHRvdWNoLCBzZWxlY3Rpb247XG5cblx0XHQvLyBJZ25vcmUgbXVsdGlwbGUgdG91Y2hlcywgb3RoZXJ3aXNlIHBpbmNoLXRvLXpvb20gaXMgcHJldmVudGVkIGlmIGJvdGggZmluZ2VycyBhcmUgb24gdGhlIEZhc3RDbGljayBlbGVtZW50IChpc3N1ZSAjMTExKS5cblx0XHRpZiAoZXZlbnQudGFyZ2V0VG91Y2hlcy5sZW5ndGggPiAxKSB7XG5cdFx0XHRyZXR1cm4gdHJ1ZTtcblx0XHR9XG5cblx0XHR0YXJnZXRFbGVtZW50ID0gdGhpcy5nZXRUYXJnZXRFbGVtZW50RnJvbUV2ZW50VGFyZ2V0KGV2ZW50LnRhcmdldCk7XG5cdFx0dG91Y2ggPSBldmVudC50YXJnZXRUb3VjaGVzWzBdO1xuXG5cdFx0aWYgKGRldmljZUlzSU9TKSB7XG5cblx0XHRcdC8vIE9ubHkgdHJ1c3RlZCBldmVudHMgd2lsbCBkZXNlbGVjdCB0ZXh0IG9uIGlPUyAoaXNzdWUgIzQ5KVxuXHRcdFx0c2VsZWN0aW9uID0gd2luZG93LmdldFNlbGVjdGlvbigpO1xuXHRcdFx0aWYgKHNlbGVjdGlvbi5yYW5nZUNvdW50ICYmICFzZWxlY3Rpb24uaXNDb2xsYXBzZWQpIHtcblx0XHRcdFx0cmV0dXJuIHRydWU7XG5cdFx0XHR9XG5cblx0XHRcdGlmICghZGV2aWNlSXNJT1M0KSB7XG5cblx0XHRcdFx0Ly8gV2VpcmQgdGhpbmdzIGhhcHBlbiBvbiBpT1Mgd2hlbiBhbiBhbGVydCBvciBjb25maXJtIGRpYWxvZyBpcyBvcGVuZWQgZnJvbSBhIGNsaWNrIGV2ZW50IGNhbGxiYWNrIChpc3N1ZSAjMjMpOlxuXHRcdFx0XHQvLyB3aGVuIHRoZSB1c2VyIG5leHQgdGFwcyBhbnl3aGVyZSBlbHNlIG9uIHRoZSBwYWdlLCBuZXcgdG91Y2hzdGFydCBhbmQgdG91Y2hlbmQgZXZlbnRzIGFyZSBkaXNwYXRjaGVkXG5cdFx0XHRcdC8vIHdpdGggdGhlIHNhbWUgaWRlbnRpZmllciBhcyB0aGUgdG91Y2ggZXZlbnQgdGhhdCBwcmV2aW91c2x5IHRyaWdnZXJlZCB0aGUgY2xpY2sgdGhhdCB0cmlnZ2VyZWQgdGhlIGFsZXJ0LlxuXHRcdFx0XHQvLyBTYWRseSwgdGhlcmUgaXMgYW4gaXNzdWUgb24gaU9TIDQgdGhhdCBjYXVzZXMgc29tZSBub3JtYWwgdG91Y2ggZXZlbnRzIHRvIGhhdmUgdGhlIHNhbWUgaWRlbnRpZmllciBhcyBhblxuXHRcdFx0XHQvLyBpbW1lZGlhdGVseSBwcmVjZWVkaW5nIHRvdWNoIGV2ZW50IChpc3N1ZSAjNTIpLCBzbyB0aGlzIGZpeCBpcyB1bmF2YWlsYWJsZSBvbiB0aGF0IHBsYXRmb3JtLlxuXHRcdFx0XHQvLyBJc3N1ZSAxMjA6IHRvdWNoLmlkZW50aWZpZXIgaXMgMCB3aGVuIENocm9tZSBkZXYgdG9vbHMgJ0VtdWxhdGUgdG91Y2ggZXZlbnRzJyBpcyBzZXQgd2l0aCBhbiBpT1MgZGV2aWNlIFVBIHN0cmluZyxcblx0XHRcdFx0Ly8gd2hpY2ggY2F1c2VzIGFsbCB0b3VjaCBldmVudHMgdG8gYmUgaWdub3JlZC4gQXMgdGhpcyBibG9jayBvbmx5IGFwcGxpZXMgdG8gaU9TLCBhbmQgaU9TIGlkZW50aWZpZXJzIGFyZSBhbHdheXMgbG9uZyxcblx0XHRcdFx0Ly8gcmFuZG9tIGludGVnZXJzLCBpdCdzIHNhZmUgdG8gdG8gY29udGludWUgaWYgdGhlIGlkZW50aWZpZXIgaXMgMCBoZXJlLlxuXHRcdFx0XHRpZiAodG91Y2guaWRlbnRpZmllciAmJiB0b3VjaC5pZGVudGlmaWVyID09PSB0aGlzLmxhc3RUb3VjaElkZW50aWZpZXIpIHtcblx0XHRcdFx0XHRldmVudC5wcmV2ZW50RGVmYXVsdCgpO1xuXHRcdFx0XHRcdHJldHVybiBmYWxzZTtcblx0XHRcdFx0fVxuXG5cdFx0XHRcdHRoaXMubGFzdFRvdWNoSWRlbnRpZmllciA9IHRvdWNoLmlkZW50aWZpZXI7XG5cblx0XHRcdFx0Ly8gSWYgdGhlIHRhcmdldCBlbGVtZW50IGlzIGEgY2hpbGQgb2YgYSBzY3JvbGxhYmxlIGxheWVyICh1c2luZyAtd2Via2l0LW92ZXJmbG93LXNjcm9sbGluZzogdG91Y2gpIGFuZDpcblx0XHRcdFx0Ly8gMSkgdGhlIHVzZXIgZG9lcyBhIGZsaW5nIHNjcm9sbCBvbiB0aGUgc2Nyb2xsYWJsZSBsYXllclxuXHRcdFx0XHQvLyAyKSB0aGUgdXNlciBzdG9wcyB0aGUgZmxpbmcgc2Nyb2xsIHdpdGggYW5vdGhlciB0YXBcblx0XHRcdFx0Ly8gdGhlbiB0aGUgZXZlbnQudGFyZ2V0IG9mIHRoZSBsYXN0ICd0b3VjaGVuZCcgZXZlbnQgd2lsbCBiZSB0aGUgZWxlbWVudCB0aGF0IHdhcyB1bmRlciB0aGUgdXNlcidzIGZpbmdlclxuXHRcdFx0XHQvLyB3aGVuIHRoZSBmbGluZyBzY3JvbGwgd2FzIHN0YXJ0ZWQsIGNhdXNpbmcgRmFzdENsaWNrIHRvIHNlbmQgYSBjbGljayBldmVudCB0byB0aGF0IGxheWVyIC0gdW5sZXNzIGEgY2hlY2tcblx0XHRcdFx0Ly8gaXMgbWFkZSB0byBlbnN1cmUgdGhhdCBhIHBhcmVudCBsYXllciB3YXMgbm90IHNjcm9sbGVkIGJlZm9yZSBzZW5kaW5nIGEgc3ludGhldGljIGNsaWNrIChpc3N1ZSAjNDIpLlxuXHRcdFx0XHR0aGlzLnVwZGF0ZVNjcm9sbFBhcmVudCh0YXJnZXRFbGVtZW50KTtcblx0XHRcdH1cblx0XHR9XG5cblx0XHR0aGlzLnRyYWNraW5nQ2xpY2sgPSB0cnVlO1xuXHRcdHRoaXMudHJhY2tpbmdDbGlja1N0YXJ0ID0gZXZlbnQudGltZVN0YW1wO1xuXHRcdHRoaXMudGFyZ2V0RWxlbWVudCA9IHRhcmdldEVsZW1lbnQ7XG5cblx0XHR0aGlzLnRvdWNoU3RhcnRYID0gdG91Y2gucGFnZVg7XG5cdFx0dGhpcy50b3VjaFN0YXJ0WSA9IHRvdWNoLnBhZ2VZO1xuXG5cdFx0Ly8gUHJldmVudCBwaGFudG9tIGNsaWNrcyBvbiBmYXN0IGRvdWJsZS10YXAgKGlzc3VlICMzNilcblx0XHRpZiAoKGV2ZW50LnRpbWVTdGFtcCAtIHRoaXMubGFzdENsaWNrVGltZSkgPCB0aGlzLnRhcERlbGF5KSB7XG5cdFx0XHRldmVudC5wcmV2ZW50RGVmYXVsdCgpO1xuXHRcdH1cblxuXHRcdHJldHVybiB0cnVlO1xuXHR9O1xuXG5cblx0LyoqXG5cdCAqIEJhc2VkIG9uIGEgdG91Y2htb3ZlIGV2ZW50IG9iamVjdCwgY2hlY2sgd2hldGhlciB0aGUgdG91Y2ggaGFzIG1vdmVkIHBhc3QgYSBib3VuZGFyeSBzaW5jZSBpdCBzdGFydGVkLlxuXHQgKlxuXHQgKiBAcGFyYW0ge0V2ZW50fSBldmVudFxuXHQgKiBAcmV0dXJucyB7Ym9vbGVhbn1cblx0ICovXG5cdEZhc3RDbGljay5wcm90b3R5cGUudG91Y2hIYXNNb3ZlZCA9IGZ1bmN0aW9uKGV2ZW50KSB7XG5cdFx0dmFyIHRvdWNoID0gZXZlbnQuY2hhbmdlZFRvdWNoZXNbMF0sIGJvdW5kYXJ5ID0gdGhpcy50b3VjaEJvdW5kYXJ5O1xuXG5cdFx0aWYgKE1hdGguYWJzKHRvdWNoLnBhZ2VYIC0gdGhpcy50b3VjaFN0YXJ0WCkgPiBib3VuZGFyeSB8fCBNYXRoLmFicyh0b3VjaC5wYWdlWSAtIHRoaXMudG91Y2hTdGFydFkpID4gYm91bmRhcnkpIHtcblx0XHRcdHJldHVybiB0cnVlO1xuXHRcdH1cblxuXHRcdHJldHVybiBmYWxzZTtcblx0fTtcblxuXG5cdC8qKlxuXHQgKiBVcGRhdGUgdGhlIGxhc3QgcG9zaXRpb24uXG5cdCAqXG5cdCAqIEBwYXJhbSB7RXZlbnR9IGV2ZW50XG5cdCAqIEByZXR1cm5zIHtib29sZWFufVxuXHQgKi9cblx0RmFzdENsaWNrLnByb3RvdHlwZS5vblRvdWNoTW92ZSA9IGZ1bmN0aW9uKGV2ZW50KSB7XG5cdFx0aWYgKCF0aGlzLnRyYWNraW5nQ2xpY2spIHtcblx0XHRcdHJldHVybiB0cnVlO1xuXHRcdH1cblxuXHRcdC8vIElmIHRoZSB0b3VjaCBoYXMgbW92ZWQsIGNhbmNlbCB0aGUgY2xpY2sgdHJhY2tpbmdcblx0XHRpZiAodGhpcy50YXJnZXRFbGVtZW50ICE9PSB0aGlzLmdldFRhcmdldEVsZW1lbnRGcm9tRXZlbnRUYXJnZXQoZXZlbnQudGFyZ2V0KSB8fCB0aGlzLnRvdWNoSGFzTW92ZWQoZXZlbnQpKSB7XG5cdFx0XHR0aGlzLnRyYWNraW5nQ2xpY2sgPSBmYWxzZTtcblx0XHRcdHRoaXMudGFyZ2V0RWxlbWVudCA9IG51bGw7XG5cdFx0fVxuXG5cdFx0cmV0dXJuIHRydWU7XG5cdH07XG5cblxuXHQvKipcblx0ICogQXR0ZW1wdCB0byBmaW5kIHRoZSBsYWJlbGxlZCBjb250cm9sIGZvciB0aGUgZ2l2ZW4gbGFiZWwgZWxlbWVudC5cblx0ICpcblx0ICogQHBhcmFtIHtFdmVudFRhcmdldHxIVE1MTGFiZWxFbGVtZW50fSBsYWJlbEVsZW1lbnRcblx0ICogQHJldHVybnMge0VsZW1lbnR8bnVsbH1cblx0ICovXG5cdEZhc3RDbGljay5wcm90b3R5cGUuZmluZENvbnRyb2wgPSBmdW5jdGlvbihsYWJlbEVsZW1lbnQpIHtcblxuXHRcdC8vIEZhc3QgcGF0aCBmb3IgbmV3ZXIgYnJvd3NlcnMgc3VwcG9ydGluZyB0aGUgSFRNTDUgY29udHJvbCBhdHRyaWJ1dGVcblx0XHRpZiAobGFiZWxFbGVtZW50LmNvbnRyb2wgIT09IHVuZGVmaW5lZCkge1xuXHRcdFx0cmV0dXJuIGxhYmVsRWxlbWVudC5jb250cm9sO1xuXHRcdH1cblxuXHRcdC8vIEFsbCBicm93c2VycyB1bmRlciB0ZXN0IHRoYXQgc3VwcG9ydCB0b3VjaCBldmVudHMgYWxzbyBzdXBwb3J0IHRoZSBIVE1MNSBodG1sRm9yIGF0dHJpYnV0ZVxuXHRcdGlmIChsYWJlbEVsZW1lbnQuaHRtbEZvcikge1xuXHRcdFx0cmV0dXJuIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGxhYmVsRWxlbWVudC5odG1sRm9yKTtcblx0XHR9XG5cblx0XHQvLyBJZiBubyBmb3IgYXR0cmlidXRlIGV4aXN0cywgYXR0ZW1wdCB0byByZXRyaWV2ZSB0aGUgZmlyc3QgbGFiZWxsYWJsZSBkZXNjZW5kYW50IGVsZW1lbnRcblx0XHQvLyB0aGUgbGlzdCBvZiB3aGljaCBpcyBkZWZpbmVkIGhlcmU6IGh0dHA6Ly93d3cudzMub3JnL1RSL2h0bWw1L2Zvcm1zLmh0bWwjY2F0ZWdvcnktbGFiZWxcblx0XHRyZXR1cm4gbGFiZWxFbGVtZW50LnF1ZXJ5U2VsZWN0b3IoJ2J1dHRvbiwgaW5wdXQ6bm90KFt0eXBlPWhpZGRlbl0pLCBrZXlnZW4sIG1ldGVyLCBvdXRwdXQsIHByb2dyZXNzLCBzZWxlY3QsIHRleHRhcmVhJyk7XG5cdH07XG5cblxuXHQvKipcblx0ICogT24gdG91Y2ggZW5kLCBkZXRlcm1pbmUgd2hldGhlciB0byBzZW5kIGEgY2xpY2sgZXZlbnQgYXQgb25jZS5cblx0ICpcblx0ICogQHBhcmFtIHtFdmVudH0gZXZlbnRcblx0ICogQHJldHVybnMge2Jvb2xlYW59XG5cdCAqL1xuXHRGYXN0Q2xpY2sucHJvdG90eXBlLm9uVG91Y2hFbmQgPSBmdW5jdGlvbihldmVudCkge1xuXHRcdHZhciBmb3JFbGVtZW50LCB0cmFja2luZ0NsaWNrU3RhcnQsIHRhcmdldFRhZ05hbWUsIHNjcm9sbFBhcmVudCwgdG91Y2gsIHRhcmdldEVsZW1lbnQgPSB0aGlzLnRhcmdldEVsZW1lbnQ7XG5cblx0XHRpZiAoIXRoaXMudHJhY2tpbmdDbGljaykge1xuXHRcdFx0cmV0dXJuIHRydWU7XG5cdFx0fVxuXG5cdFx0Ly8gUHJldmVudCBwaGFudG9tIGNsaWNrcyBvbiBmYXN0IGRvdWJsZS10YXAgKGlzc3VlICMzNilcblx0XHRpZiAoKGV2ZW50LnRpbWVTdGFtcCAtIHRoaXMubGFzdENsaWNrVGltZSkgPCB0aGlzLnRhcERlbGF5KSB7XG5cdFx0XHR0aGlzLmNhbmNlbE5leHRDbGljayA9IHRydWU7XG5cdFx0XHRyZXR1cm4gdHJ1ZTtcblx0XHR9XG5cblx0XHRpZiAoKGV2ZW50LnRpbWVTdGFtcCAtIHRoaXMudHJhY2tpbmdDbGlja1N0YXJ0KSA+IHRoaXMudGFwVGltZW91dCkge1xuXHRcdFx0cmV0dXJuIHRydWU7XG5cdFx0fVxuXG5cdFx0Ly8gUmVzZXQgdG8gcHJldmVudCB3cm9uZyBjbGljayBjYW5jZWwgb24gaW5wdXQgKGlzc3VlICMxNTYpLlxuXHRcdHRoaXMuY2FuY2VsTmV4dENsaWNrID0gZmFsc2U7XG5cblx0XHR0aGlzLmxhc3RDbGlja1RpbWUgPSBldmVudC50aW1lU3RhbXA7XG5cblx0XHR0cmFja2luZ0NsaWNrU3RhcnQgPSB0aGlzLnRyYWNraW5nQ2xpY2tTdGFydDtcblx0XHR0aGlzLnRyYWNraW5nQ2xpY2sgPSBmYWxzZTtcblx0XHR0aGlzLnRyYWNraW5nQ2xpY2tTdGFydCA9IDA7XG5cblx0XHQvLyBPbiBzb21lIGlPUyBkZXZpY2VzLCB0aGUgdGFyZ2V0RWxlbWVudCBzdXBwbGllZCB3aXRoIHRoZSBldmVudCBpcyBpbnZhbGlkIGlmIHRoZSBsYXllclxuXHRcdC8vIGlzIHBlcmZvcm1pbmcgYSB0cmFuc2l0aW9uIG9yIHNjcm9sbCwgYW5kIGhhcyB0byBiZSByZS1kZXRlY3RlZCBtYW51YWxseS4gTm90ZSB0aGF0XG5cdFx0Ly8gZm9yIHRoaXMgdG8gZnVuY3Rpb24gY29ycmVjdGx5LCBpdCBtdXN0IGJlIGNhbGxlZCAqYWZ0ZXIqIHRoZSBldmVudCB0YXJnZXQgaXMgY2hlY2tlZCFcblx0XHQvLyBTZWUgaXNzdWUgIzU3OyBhbHNvIGZpbGVkIGFzIHJkYXI6Ly8xMzA0ODU4OSAuXG5cdFx0aWYgKGRldmljZUlzSU9TV2l0aEJhZFRhcmdldCkge1xuXHRcdFx0dG91Y2ggPSBldmVudC5jaGFuZ2VkVG91Y2hlc1swXTtcblxuXHRcdFx0Ly8gSW4gY2VydGFpbiBjYXNlcyBhcmd1bWVudHMgb2YgZWxlbWVudEZyb21Qb2ludCBjYW4gYmUgbmVnYXRpdmUsIHNvIHByZXZlbnQgc2V0dGluZyB0YXJnZXRFbGVtZW50IHRvIG51bGxcblx0XHRcdHRhcmdldEVsZW1lbnQgPSBkb2N1bWVudC5lbGVtZW50RnJvbVBvaW50KHRvdWNoLnBhZ2VYIC0gd2luZG93LnBhZ2VYT2Zmc2V0LCB0b3VjaC5wYWdlWSAtIHdpbmRvdy5wYWdlWU9mZnNldCkgfHwgdGFyZ2V0RWxlbWVudDtcblx0XHRcdHRhcmdldEVsZW1lbnQuZmFzdENsaWNrU2Nyb2xsUGFyZW50ID0gdGhpcy50YXJnZXRFbGVtZW50LmZhc3RDbGlja1Njcm9sbFBhcmVudDtcblx0XHR9XG5cblx0XHR0YXJnZXRUYWdOYW1lID0gdGFyZ2V0RWxlbWVudC50YWdOYW1lLnRvTG93ZXJDYXNlKCk7XG5cdFx0aWYgKHRhcmdldFRhZ05hbWUgPT09ICdsYWJlbCcpIHtcblx0XHRcdGZvckVsZW1lbnQgPSB0aGlzLmZpbmRDb250cm9sKHRhcmdldEVsZW1lbnQpO1xuXHRcdFx0aWYgKGZvckVsZW1lbnQpIHtcblx0XHRcdFx0dGhpcy5mb2N1cyh0YXJnZXRFbGVtZW50KTtcblx0XHRcdFx0aWYgKGRldmljZUlzQW5kcm9pZCkge1xuXHRcdFx0XHRcdHJldHVybiBmYWxzZTtcblx0XHRcdFx0fVxuXG5cdFx0XHRcdHRhcmdldEVsZW1lbnQgPSBmb3JFbGVtZW50O1xuXHRcdFx0fVxuXHRcdH0gZWxzZSBpZiAodGhpcy5uZWVkc0ZvY3VzKHRhcmdldEVsZW1lbnQpKSB7XG5cblx0XHRcdC8vIENhc2UgMTogSWYgdGhlIHRvdWNoIHN0YXJ0ZWQgYSB3aGlsZSBhZ28gKGJlc3QgZ3Vlc3MgaXMgMTAwbXMgYmFzZWQgb24gdGVzdHMgZm9yIGlzc3VlICMzNikgdGhlbiBmb2N1cyB3aWxsIGJlIHRyaWdnZXJlZCBhbnl3YXkuIFJldHVybiBlYXJseSBhbmQgdW5zZXQgdGhlIHRhcmdldCBlbGVtZW50IHJlZmVyZW5jZSBzbyB0aGF0IHRoZSBzdWJzZXF1ZW50IGNsaWNrIHdpbGwgYmUgYWxsb3dlZCB0aHJvdWdoLlxuXHRcdFx0Ly8gQ2FzZSAyOiBXaXRob3V0IHRoaXMgZXhjZXB0aW9uIGZvciBpbnB1dCBlbGVtZW50cyB0YXBwZWQgd2hlbiB0aGUgZG9jdW1lbnQgaXMgY29udGFpbmVkIGluIGFuIGlmcmFtZSwgdGhlbiBhbnkgaW5wdXR0ZWQgdGV4dCB3b24ndCBiZSB2aXNpYmxlIGV2ZW4gdGhvdWdoIHRoZSB2YWx1ZSBhdHRyaWJ1dGUgaXMgdXBkYXRlZCBhcyB0aGUgdXNlciB0eXBlcyAoaXNzdWUgIzM3KS5cblx0XHRcdGlmICgoZXZlbnQudGltZVN0YW1wIC0gdHJhY2tpbmdDbGlja1N0YXJ0KSA+IDEwMCB8fCAoZGV2aWNlSXNJT1MgJiYgd2luZG93LnRvcCAhPT0gd2luZG93ICYmIHRhcmdldFRhZ05hbWUgPT09ICdpbnB1dCcpKSB7XG5cdFx0XHRcdHRoaXMudGFyZ2V0RWxlbWVudCA9IG51bGw7XG5cdFx0XHRcdHJldHVybiBmYWxzZTtcblx0XHRcdH1cblxuXHRcdFx0dGhpcy5mb2N1cyh0YXJnZXRFbGVtZW50KTtcblx0XHRcdHRoaXMuc2VuZENsaWNrKHRhcmdldEVsZW1lbnQsIGV2ZW50KTtcblxuXHRcdFx0Ly8gU2VsZWN0IGVsZW1lbnRzIG5lZWQgdGhlIGV2ZW50IHRvIGdvIHRocm91Z2ggb24gaU9TIDQsIG90aGVyd2lzZSB0aGUgc2VsZWN0b3IgbWVudSB3b24ndCBvcGVuLlxuXHRcdFx0Ly8gQWxzbyB0aGlzIGJyZWFrcyBvcGVuaW5nIHNlbGVjdHMgd2hlbiBWb2ljZU92ZXIgaXMgYWN0aXZlIG9uIGlPUzYsIGlPUzcgKGFuZCBwb3NzaWJseSBvdGhlcnMpXG5cdFx0XHRpZiAoIWRldmljZUlzSU9TIHx8IHRhcmdldFRhZ05hbWUgIT09ICdzZWxlY3QnKSB7XG5cdFx0XHRcdHRoaXMudGFyZ2V0RWxlbWVudCA9IG51bGw7XG5cdFx0XHRcdGV2ZW50LnByZXZlbnREZWZhdWx0KCk7XG5cdFx0XHR9XG5cblx0XHRcdHJldHVybiBmYWxzZTtcblx0XHR9XG5cblx0XHRpZiAoZGV2aWNlSXNJT1MgJiYgIWRldmljZUlzSU9TNCkge1xuXG5cdFx0XHQvLyBEb24ndCBzZW5kIGEgc3ludGhldGljIGNsaWNrIGV2ZW50IGlmIHRoZSB0YXJnZXQgZWxlbWVudCBpcyBjb250YWluZWQgd2l0aGluIGEgcGFyZW50IGxheWVyIHRoYXQgd2FzIHNjcm9sbGVkXG5cdFx0XHQvLyBhbmQgdGhpcyB0YXAgaXMgYmVpbmcgdXNlZCB0byBzdG9wIHRoZSBzY3JvbGxpbmcgKHVzdWFsbHkgaW5pdGlhdGVkIGJ5IGEgZmxpbmcgLSBpc3N1ZSAjNDIpLlxuXHRcdFx0c2Nyb2xsUGFyZW50ID0gdGFyZ2V0RWxlbWVudC5mYXN0Q2xpY2tTY3JvbGxQYXJlbnQ7XG5cdFx0XHRpZiAoc2Nyb2xsUGFyZW50ICYmIHNjcm9sbFBhcmVudC5mYXN0Q2xpY2tMYXN0U2Nyb2xsVG9wICE9PSBzY3JvbGxQYXJlbnQuc2Nyb2xsVG9wKSB7XG5cdFx0XHRcdHJldHVybiB0cnVlO1xuXHRcdFx0fVxuXHRcdH1cblxuXHRcdC8vIFByZXZlbnQgdGhlIGFjdHVhbCBjbGljayBmcm9tIGdvaW5nIHRob3VnaCAtIHVubGVzcyB0aGUgdGFyZ2V0IG5vZGUgaXMgbWFya2VkIGFzIHJlcXVpcmluZ1xuXHRcdC8vIHJlYWwgY2xpY2tzIG9yIGlmIGl0IGlzIGluIHRoZSB3aGl0ZWxpc3QgaW4gd2hpY2ggY2FzZSBvbmx5IG5vbi1wcm9ncmFtbWF0aWMgY2xpY2tzIGFyZSBwZXJtaXR0ZWQuXG5cdFx0aWYgKCF0aGlzLm5lZWRzQ2xpY2sodGFyZ2V0RWxlbWVudCkpIHtcblx0XHRcdGV2ZW50LnByZXZlbnREZWZhdWx0KCk7XG5cdFx0XHR0aGlzLnNlbmRDbGljayh0YXJnZXRFbGVtZW50LCBldmVudCk7XG5cdFx0fVxuXG5cdFx0cmV0dXJuIGZhbHNlO1xuXHR9O1xuXG5cblx0LyoqXG5cdCAqIE9uIHRvdWNoIGNhbmNlbCwgc3RvcCB0cmFja2luZyB0aGUgY2xpY2suXG5cdCAqXG5cdCAqIEByZXR1cm5zIHt2b2lkfVxuXHQgKi9cblx0RmFzdENsaWNrLnByb3RvdHlwZS5vblRvdWNoQ2FuY2VsID0gZnVuY3Rpb24oKSB7XG5cdFx0dGhpcy50cmFja2luZ0NsaWNrID0gZmFsc2U7XG5cdFx0dGhpcy50YXJnZXRFbGVtZW50ID0gbnVsbDtcblx0fTtcblxuXG5cdC8qKlxuXHQgKiBEZXRlcm1pbmUgbW91c2UgZXZlbnRzIHdoaWNoIHNob3VsZCBiZSBwZXJtaXR0ZWQuXG5cdCAqXG5cdCAqIEBwYXJhbSB7RXZlbnR9IGV2ZW50XG5cdCAqIEByZXR1cm5zIHtib29sZWFufVxuXHQgKi9cblx0RmFzdENsaWNrLnByb3RvdHlwZS5vbk1vdXNlID0gZnVuY3Rpb24oZXZlbnQpIHtcblxuXHRcdC8vIElmIGEgdGFyZ2V0IGVsZW1lbnQgd2FzIG5ldmVyIHNldCAoYmVjYXVzZSBhIHRvdWNoIGV2ZW50IHdhcyBuZXZlciBmaXJlZCkgYWxsb3cgdGhlIGV2ZW50XG5cdFx0aWYgKCF0aGlzLnRhcmdldEVsZW1lbnQpIHtcblx0XHRcdHJldHVybiB0cnVlO1xuXHRcdH1cblxuXHRcdGlmIChldmVudC5mb3J3YXJkZWRUb3VjaEV2ZW50KSB7XG5cdFx0XHRyZXR1cm4gdHJ1ZTtcblx0XHR9XG5cblx0XHQvLyBQcm9ncmFtbWF0aWNhbGx5IGdlbmVyYXRlZCBldmVudHMgdGFyZ2V0aW5nIGEgc3BlY2lmaWMgZWxlbWVudCBzaG91bGQgYmUgcGVybWl0dGVkXG5cdFx0aWYgKCFldmVudC5jYW5jZWxhYmxlKSB7XG5cdFx0XHRyZXR1cm4gdHJ1ZTtcblx0XHR9XG5cblx0XHQvLyBEZXJpdmUgYW5kIGNoZWNrIHRoZSB0YXJnZXQgZWxlbWVudCB0byBzZWUgd2hldGhlciB0aGUgbW91c2UgZXZlbnQgbmVlZHMgdG8gYmUgcGVybWl0dGVkO1xuXHRcdC8vIHVubGVzcyBleHBsaWNpdGx5IGVuYWJsZWQsIHByZXZlbnQgbm9uLXRvdWNoIGNsaWNrIGV2ZW50cyBmcm9tIHRyaWdnZXJpbmcgYWN0aW9ucyxcblx0XHQvLyB0byBwcmV2ZW50IGdob3N0L2RvdWJsZWNsaWNrcy5cblx0XHRpZiAoIXRoaXMubmVlZHNDbGljayh0aGlzLnRhcmdldEVsZW1lbnQpIHx8IHRoaXMuY2FuY2VsTmV4dENsaWNrKSB7XG5cblx0XHRcdC8vIFByZXZlbnQgYW55IHVzZXItYWRkZWQgbGlzdGVuZXJzIGRlY2xhcmVkIG9uIEZhc3RDbGljayBlbGVtZW50IGZyb20gYmVpbmcgZmlyZWQuXG5cdFx0XHRpZiAoZXZlbnQuc3RvcEltbWVkaWF0ZVByb3BhZ2F0aW9uKSB7XG5cdFx0XHRcdGV2ZW50LnN0b3BJbW1lZGlhdGVQcm9wYWdhdGlvbigpO1xuXHRcdFx0fSBlbHNlIHtcblxuXHRcdFx0XHQvLyBQYXJ0IG9mIHRoZSBoYWNrIGZvciBicm93c2VycyB0aGF0IGRvbid0IHN1cHBvcnQgRXZlbnQjc3RvcEltbWVkaWF0ZVByb3BhZ2F0aW9uIChlLmcuIEFuZHJvaWQgMilcblx0XHRcdFx0ZXZlbnQucHJvcGFnYXRpb25TdG9wcGVkID0gdHJ1ZTtcblx0XHRcdH1cblxuXHRcdFx0Ly8gQ2FuY2VsIHRoZSBldmVudFxuXHRcdFx0ZXZlbnQuc3RvcFByb3BhZ2F0aW9uKCk7XG5cdFx0XHRldmVudC5wcmV2ZW50RGVmYXVsdCgpO1xuXG5cdFx0XHRyZXR1cm4gZmFsc2U7XG5cdFx0fVxuXG5cdFx0Ly8gSWYgdGhlIG1vdXNlIGV2ZW50IGlzIHBlcm1pdHRlZCwgcmV0dXJuIHRydWUgZm9yIHRoZSBhY3Rpb24gdG8gZ28gdGhyb3VnaC5cblx0XHRyZXR1cm4gdHJ1ZTtcblx0fTtcblxuXG5cdC8qKlxuXHQgKiBPbiBhY3R1YWwgY2xpY2tzLCBkZXRlcm1pbmUgd2hldGhlciB0aGlzIGlzIGEgdG91Y2gtZ2VuZXJhdGVkIGNsaWNrLCBhIGNsaWNrIGFjdGlvbiBvY2N1cnJpbmdcblx0ICogbmF0dXJhbGx5IGFmdGVyIGEgZGVsYXkgYWZ0ZXIgYSB0b3VjaCAod2hpY2ggbmVlZHMgdG8gYmUgY2FuY2VsbGVkIHRvIGF2b2lkIGR1cGxpY2F0aW9uKSwgb3Jcblx0ICogYW4gYWN0dWFsIGNsaWNrIHdoaWNoIHNob3VsZCBiZSBwZXJtaXR0ZWQuXG5cdCAqXG5cdCAqIEBwYXJhbSB7RXZlbnR9IGV2ZW50XG5cdCAqIEByZXR1cm5zIHtib29sZWFufVxuXHQgKi9cblx0RmFzdENsaWNrLnByb3RvdHlwZS5vbkNsaWNrID0gZnVuY3Rpb24oZXZlbnQpIHtcblx0XHR2YXIgcGVybWl0dGVkO1xuXG5cdFx0Ly8gSXQncyBwb3NzaWJsZSBmb3IgYW5vdGhlciBGYXN0Q2xpY2stbGlrZSBsaWJyYXJ5IGRlbGl2ZXJlZCB3aXRoIHRoaXJkLXBhcnR5IGNvZGUgdG8gZmlyZSBhIGNsaWNrIGV2ZW50IGJlZm9yZSBGYXN0Q2xpY2sgZG9lcyAoaXNzdWUgIzQ0KS4gSW4gdGhhdCBjYXNlLCBzZXQgdGhlIGNsaWNrLXRyYWNraW5nIGZsYWcgYmFjayB0byBmYWxzZSBhbmQgcmV0dXJuIGVhcmx5LiBUaGlzIHdpbGwgY2F1c2Ugb25Ub3VjaEVuZCB0byByZXR1cm4gZWFybHkuXG5cdFx0aWYgKHRoaXMudHJhY2tpbmdDbGljaykge1xuXHRcdFx0dGhpcy50YXJnZXRFbGVtZW50ID0gbnVsbDtcblx0XHRcdHRoaXMudHJhY2tpbmdDbGljayA9IGZhbHNlO1xuXHRcdFx0cmV0dXJuIHRydWU7XG5cdFx0fVxuXG5cdFx0Ly8gVmVyeSBvZGQgYmVoYXZpb3VyIG9uIGlPUyAoaXNzdWUgIzE4KTogaWYgYSBzdWJtaXQgZWxlbWVudCBpcyBwcmVzZW50IGluc2lkZSBhIGZvcm0gYW5kIHRoZSB1c2VyIGhpdHMgZW50ZXIgaW4gdGhlIGlPUyBzaW11bGF0b3Igb3IgY2xpY2tzIHRoZSBHbyBidXR0b24gb24gdGhlIHBvcC11cCBPUyBrZXlib2FyZCB0aGUgYSBraW5kIG9mICdmYWtlJyBjbGljayBldmVudCB3aWxsIGJlIHRyaWdnZXJlZCB3aXRoIHRoZSBzdWJtaXQtdHlwZSBpbnB1dCBlbGVtZW50IGFzIHRoZSB0YXJnZXQuXG5cdFx0aWYgKGV2ZW50LnRhcmdldC50eXBlID09PSAnc3VibWl0JyAmJiBldmVudC5kZXRhaWwgPT09IDApIHtcblx0XHRcdHJldHVybiB0cnVlO1xuXHRcdH1cblxuXHRcdHBlcm1pdHRlZCA9IHRoaXMub25Nb3VzZShldmVudCk7XG5cblx0XHQvLyBPbmx5IHVuc2V0IHRhcmdldEVsZW1lbnQgaWYgdGhlIGNsaWNrIGlzIG5vdCBwZXJtaXR0ZWQuIFRoaXMgd2lsbCBlbnN1cmUgdGhhdCB0aGUgY2hlY2sgZm9yICF0YXJnZXRFbGVtZW50IGluIG9uTW91c2UgZmFpbHMgYW5kIHRoZSBicm93c2VyJ3MgY2xpY2sgZG9lc24ndCBnbyB0aHJvdWdoLlxuXHRcdGlmICghcGVybWl0dGVkKSB7XG5cdFx0XHR0aGlzLnRhcmdldEVsZW1lbnQgPSBudWxsO1xuXHRcdH1cblxuXHRcdC8vIElmIGNsaWNrcyBhcmUgcGVybWl0dGVkLCByZXR1cm4gdHJ1ZSBmb3IgdGhlIGFjdGlvbiB0byBnbyB0aHJvdWdoLlxuXHRcdHJldHVybiBwZXJtaXR0ZWQ7XG5cdH07XG5cblxuXHQvKipcblx0ICogUmVtb3ZlIGFsbCBGYXN0Q2xpY2sncyBldmVudCBsaXN0ZW5lcnMuXG5cdCAqXG5cdCAqIEByZXR1cm5zIHt2b2lkfVxuXHQgKi9cblx0RmFzdENsaWNrLnByb3RvdHlwZS5kZXN0cm95ID0gZnVuY3Rpb24oKSB7XG5cdFx0dmFyIGxheWVyID0gdGhpcy5sYXllcjtcblxuXHRcdGlmIChkZXZpY2VJc0FuZHJvaWQpIHtcblx0XHRcdGxheWVyLnJlbW92ZUV2ZW50TGlzdGVuZXIoJ21vdXNlb3ZlcicsIHRoaXMub25Nb3VzZSwgdHJ1ZSk7XG5cdFx0XHRsYXllci5yZW1vdmVFdmVudExpc3RlbmVyKCdtb3VzZWRvd24nLCB0aGlzLm9uTW91c2UsIHRydWUpO1xuXHRcdFx0bGF5ZXIucmVtb3ZlRXZlbnRMaXN0ZW5lcignbW91c2V1cCcsIHRoaXMub25Nb3VzZSwgdHJ1ZSk7XG5cdFx0fVxuXG5cdFx0bGF5ZXIucmVtb3ZlRXZlbnRMaXN0ZW5lcignY2xpY2snLCB0aGlzLm9uQ2xpY2ssIHRydWUpO1xuXHRcdGxheWVyLnJlbW92ZUV2ZW50TGlzdGVuZXIoJ3RvdWNoc3RhcnQnLCB0aGlzLm9uVG91Y2hTdGFydCwgZmFsc2UpO1xuXHRcdGxheWVyLnJlbW92ZUV2ZW50TGlzdGVuZXIoJ3RvdWNobW92ZScsIHRoaXMub25Ub3VjaE1vdmUsIGZhbHNlKTtcblx0XHRsYXllci5yZW1vdmVFdmVudExpc3RlbmVyKCd0b3VjaGVuZCcsIHRoaXMub25Ub3VjaEVuZCwgZmFsc2UpO1xuXHRcdGxheWVyLnJlbW92ZUV2ZW50TGlzdGVuZXIoJ3RvdWNoY2FuY2VsJywgdGhpcy5vblRvdWNoQ2FuY2VsLCBmYWxzZSk7XG5cdH07XG5cblxuXHQvKipcblx0ICogQ2hlY2sgd2hldGhlciBGYXN0Q2xpY2sgaXMgbmVlZGVkLlxuXHQgKlxuXHQgKiBAcGFyYW0ge0VsZW1lbnR9IGxheWVyIFRoZSBsYXllciB0byBsaXN0ZW4gb25cblx0ICovXG5cdEZhc3RDbGljay5ub3ROZWVkZWQgPSBmdW5jdGlvbihsYXllcikge1xuXHRcdHZhciBtZXRhVmlld3BvcnQ7XG5cdFx0dmFyIGNocm9tZVZlcnNpb247XG5cdFx0dmFyIGJsYWNrYmVycnlWZXJzaW9uO1xuXHRcdHZhciBmaXJlZm94VmVyc2lvbjtcblxuXHRcdC8vIERldmljZXMgdGhhdCBkb24ndCBzdXBwb3J0IHRvdWNoIGRvbid0IG5lZWQgRmFzdENsaWNrXG5cdFx0aWYgKHR5cGVvZiB3aW5kb3cub250b3VjaHN0YXJ0ID09PSAndW5kZWZpbmVkJykge1xuXHRcdFx0cmV0dXJuIHRydWU7XG5cdFx0fVxuXG5cdFx0Ly8gQ2hyb21lIHZlcnNpb24gLSB6ZXJvIGZvciBvdGhlciBicm93c2Vyc1xuXHRcdGNocm9tZVZlcnNpb24gPSArKC9DaHJvbWVcXC8oWzAtOV0rKS8uZXhlYyhuYXZpZ2F0b3IudXNlckFnZW50KSB8fCBbLDBdKVsxXTtcblxuXHRcdGlmIChjaHJvbWVWZXJzaW9uKSB7XG5cblx0XHRcdGlmIChkZXZpY2VJc0FuZHJvaWQpIHtcblx0XHRcdFx0bWV0YVZpZXdwb3J0ID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignbWV0YVtuYW1lPXZpZXdwb3J0XScpO1xuXG5cdFx0XHRcdGlmIChtZXRhVmlld3BvcnQpIHtcblx0XHRcdFx0XHQvLyBDaHJvbWUgb24gQW5kcm9pZCB3aXRoIHVzZXItc2NhbGFibGU9XCJub1wiIGRvZXNuJ3QgbmVlZCBGYXN0Q2xpY2sgKGlzc3VlICM4OSlcblx0XHRcdFx0XHRpZiAobWV0YVZpZXdwb3J0LmNvbnRlbnQuaW5kZXhPZigndXNlci1zY2FsYWJsZT1ubycpICE9PSAtMSkge1xuXHRcdFx0XHRcdFx0cmV0dXJuIHRydWU7XG5cdFx0XHRcdFx0fVxuXHRcdFx0XHRcdC8vIENocm9tZSAzMiBhbmQgYWJvdmUgd2l0aCB3aWR0aD1kZXZpY2Utd2lkdGggb3IgbGVzcyBkb24ndCBuZWVkIEZhc3RDbGlja1xuXHRcdFx0XHRcdGlmIChjaHJvbWVWZXJzaW9uID4gMzEgJiYgZG9jdW1lbnQuZG9jdW1lbnRFbGVtZW50LnNjcm9sbFdpZHRoIDw9IHdpbmRvdy5vdXRlcldpZHRoKSB7XG5cdFx0XHRcdFx0XHRyZXR1cm4gdHJ1ZTtcblx0XHRcdFx0XHR9XG5cdFx0XHRcdH1cblxuXHRcdFx0Ly8gQ2hyb21lIGRlc2t0b3AgZG9lc24ndCBuZWVkIEZhc3RDbGljayAoaXNzdWUgIzE1KVxuXHRcdFx0fSBlbHNlIHtcblx0XHRcdFx0cmV0dXJuIHRydWU7XG5cdFx0XHR9XG5cdFx0fVxuXG5cdFx0aWYgKGRldmljZUlzQmxhY2tCZXJyeTEwKSB7XG5cdFx0XHRibGFja2JlcnJ5VmVyc2lvbiA9IG5hdmlnYXRvci51c2VyQWdlbnQubWF0Y2goL1ZlcnNpb25cXC8oWzAtOV0qKVxcLihbMC05XSopLyk7XG5cblx0XHRcdC8vIEJsYWNrQmVycnkgMTAuMysgZG9lcyBub3QgcmVxdWlyZSBGYXN0Y2xpY2sgbGlicmFyeS5cblx0XHRcdC8vIGh0dHBzOi8vZ2l0aHViLmNvbS9mdGxhYnMvZmFzdGNsaWNrL2lzc3Vlcy8yNTFcblx0XHRcdGlmIChibGFja2JlcnJ5VmVyc2lvblsxXSA+PSAxMCAmJiBibGFja2JlcnJ5VmVyc2lvblsyXSA+PSAzKSB7XG5cdFx0XHRcdG1ldGFWaWV3cG9ydCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJ21ldGFbbmFtZT12aWV3cG9ydF0nKTtcblxuXHRcdFx0XHRpZiAobWV0YVZpZXdwb3J0KSB7XG5cdFx0XHRcdFx0Ly8gdXNlci1zY2FsYWJsZT1ubyBlbGltaW5hdGVzIGNsaWNrIGRlbGF5LlxuXHRcdFx0XHRcdGlmIChtZXRhVmlld3BvcnQuY29udGVudC5pbmRleE9mKCd1c2VyLXNjYWxhYmxlPW5vJykgIT09IC0xKSB7XG5cdFx0XHRcdFx0XHRyZXR1cm4gdHJ1ZTtcblx0XHRcdFx0XHR9XG5cdFx0XHRcdFx0Ly8gd2lkdGg9ZGV2aWNlLXdpZHRoIChvciBsZXNzIHRoYW4gZGV2aWNlLXdpZHRoKSBlbGltaW5hdGVzIGNsaWNrIGRlbGF5LlxuXHRcdFx0XHRcdGlmIChkb2N1bWVudC5kb2N1bWVudEVsZW1lbnQuc2Nyb2xsV2lkdGggPD0gd2luZG93Lm91dGVyV2lkdGgpIHtcblx0XHRcdFx0XHRcdHJldHVybiB0cnVlO1xuXHRcdFx0XHRcdH1cblx0XHRcdFx0fVxuXHRcdFx0fVxuXHRcdH1cblxuXHRcdC8vIElFMTAgd2l0aCAtbXMtdG91Y2gtYWN0aW9uOiBub25lIG9yIG1hbmlwdWxhdGlvbiwgd2hpY2ggZGlzYWJsZXMgZG91YmxlLXRhcC10by16b29tIChpc3N1ZSAjOTcpXG5cdFx0aWYgKGxheWVyLnN0eWxlLm1zVG91Y2hBY3Rpb24gPT09ICdub25lJyB8fCBsYXllci5zdHlsZS50b3VjaEFjdGlvbiA9PT0gJ21hbmlwdWxhdGlvbicpIHtcblx0XHRcdHJldHVybiB0cnVlO1xuXHRcdH1cblxuXHRcdC8vIEZpcmVmb3ggdmVyc2lvbiAtIHplcm8gZm9yIG90aGVyIGJyb3dzZXJzXG5cdFx0ZmlyZWZveFZlcnNpb24gPSArKC9GaXJlZm94XFwvKFswLTldKykvLmV4ZWMobmF2aWdhdG9yLnVzZXJBZ2VudCkgfHwgWywwXSlbMV07XG5cblx0XHRpZiAoZmlyZWZveFZlcnNpb24gPj0gMjcpIHtcblx0XHRcdC8vIEZpcmVmb3ggMjcrIGRvZXMgbm90IGhhdmUgdGFwIGRlbGF5IGlmIHRoZSBjb250ZW50IGlzIG5vdCB6b29tYWJsZSAtIGh0dHBzOi8vYnVnemlsbGEubW96aWxsYS5vcmcvc2hvd19idWcuY2dpP2lkPTkyMjg5NlxuXG5cdFx0XHRtZXRhVmlld3BvcnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCdtZXRhW25hbWU9dmlld3BvcnRdJyk7XG5cdFx0XHRpZiAobWV0YVZpZXdwb3J0ICYmIChtZXRhVmlld3BvcnQuY29udGVudC5pbmRleE9mKCd1c2VyLXNjYWxhYmxlPW5vJykgIT09IC0xIHx8IGRvY3VtZW50LmRvY3VtZW50RWxlbWVudC5zY3JvbGxXaWR0aCA8PSB3aW5kb3cub3V0ZXJXaWR0aCkpIHtcblx0XHRcdFx0cmV0dXJuIHRydWU7XG5cdFx0XHR9XG5cdFx0fVxuXG5cdFx0Ly8gSUUxMTogcHJlZml4ZWQgLW1zLXRvdWNoLWFjdGlvbiBpcyBubyBsb25nZXIgc3VwcG9ydGVkIGFuZCBpdCdzIHJlY29tZW5kZWQgdG8gdXNlIG5vbi1wcmVmaXhlZCB2ZXJzaW9uXG5cdFx0Ly8gaHR0cDovL21zZG4ubWljcm9zb2Z0LmNvbS9lbi11cy9saWJyYXJ5L3dpbmRvd3MvYXBwcy9IaDc2NzMxMy5hc3B4XG5cdFx0aWYgKGxheWVyLnN0eWxlLnRvdWNoQWN0aW9uID09PSAnbm9uZScgfHwgbGF5ZXIuc3R5bGUudG91Y2hBY3Rpb24gPT09ICdtYW5pcHVsYXRpb24nKSB7XG5cdFx0XHRyZXR1cm4gdHJ1ZTtcblx0XHR9XG5cblx0XHRyZXR1cm4gZmFsc2U7XG5cdH07XG5cblxuXHQvKipcblx0ICogRmFjdG9yeSBtZXRob2QgZm9yIGNyZWF0aW5nIGEgRmFzdENsaWNrIG9iamVjdFxuXHQgKlxuXHQgKiBAcGFyYW0ge0VsZW1lbnR9IGxheWVyIFRoZSBsYXllciB0byBsaXN0ZW4gb25cblx0ICogQHBhcmFtIHtPYmplY3R9IFtvcHRpb25zPXt9XSBUaGUgb3B0aW9ucyB0byBvdmVycmlkZSB0aGUgZGVmYXVsdHNcblx0ICovXG5cdEZhc3RDbGljay5hdHRhY2ggPSBmdW5jdGlvbihsYXllciwgb3B0aW9ucykge1xuXHRcdHJldHVybiBuZXcgRmFzdENsaWNrKGxheWVyLCBvcHRpb25zKTtcblx0fTtcblxuXG5cdGlmICh0eXBlb2YgZGVmaW5lID09PSAnZnVuY3Rpb24nICYmIHR5cGVvZiBkZWZpbmUuYW1kID09PSAnb2JqZWN0JyAmJiBkZWZpbmUuYW1kKSB7XG5cblx0XHQvLyBBTUQuIFJlZ2lzdGVyIGFzIGFuIGFub255bW91cyBtb2R1bGUuXG5cdFx0ZGVmaW5lKGZ1bmN0aW9uKCkge1xuXHRcdFx0cmV0dXJuIEZhc3RDbGljaztcblx0XHR9KTtcblx0fSBlbHNlIGlmICh0eXBlb2YgbW9kdWxlICE9PSAndW5kZWZpbmVkJyAmJiBtb2R1bGUuZXhwb3J0cykge1xuXHRcdG1vZHVsZS5leHBvcnRzID0gRmFzdENsaWNrLmF0dGFjaDtcblx0XHRtb2R1bGUuZXhwb3J0cy5GYXN0Q2xpY2sgPSBGYXN0Q2xpY2s7XG5cdH0gZWxzZSB7XG5cdFx0d2luZG93LkZhc3RDbGljayA9IEZhc3RDbGljaztcblx0fVxufSgpKTtcblxuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIC4vfi8uMS4wLjZAZmFzdGNsaWNrL2xpYi9mYXN0Y2xpY2suanNcbi8vIG1vZHVsZSBpZCA9IDJcbi8vIG1vZHVsZSBjaHVua3MgPSAwIl0sInNvdXJjZVJvb3QiOiIifQ==");
 
 /***/ },
 /* 3 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	// removed by extract-text-webpack-plugin
+	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _account = __webpack_require__(12);\n\nvar _account2 = _interopRequireDefault(_account);\n\nvar _accountHeader = __webpack_require__(13);\n\nvar _accountHeader2 = _interopRequireDefault(_accountHeader);\n\nvar _accountLogin = __webpack_require__(14);\n\nvar _accountLogin2 = _interopRequireDefault(_accountLogin);\n\nvar _tabPage = __webpack_require__(15);\n\nvar _tabPage2 = _interopRequireDefault(_tabPage);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n/*!\n * components\n * xiewulong <xiewulong@vip.qq.com>\n * create: 2017/01/05\n * since: 0.0.1\n */\nexports.default = {\n  account: _account2.default,\n  accountHeader: _accountHeader2.default,\n  accountLogin: _accountLogin2.default,\n  tabPage: _tabPage2.default\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi92ZW5kb3IveGlld3Vsb25nL3lpaTItYWNjb3VudC9qcy9jb21wb25lbnRzL2luZGV4LmpzP2I0ZWYiXSwibmFtZXMiOlsiYWNjb3VudCIsImFjY291bnRIZWFkZXIiLCJhY2NvdW50TG9naW4iLCJ0YWJQYWdlIl0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFNQTs7OztBQUNBOzs7O0FBQ0E7Ozs7QUFDQTs7Ozs7O0FBVEE7Ozs7OztrQkFXZTtBQUNkQSw0QkFEYztBQUVkQyx3Q0FGYztBQUdkQyxzQ0FIYztBQUlkQztBQUpjLEMiLCJmaWxlIjoiMy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIVxuICogY29tcG9uZW50c1xuICogeGlld3Vsb25nIDx4aWV3dWxvbmdAdmlwLnFxLmNvbT5cbiAqIGNyZWF0ZTogMjAxNy8wMS8wNVxuICogc2luY2U6IDAuMC4xXG4gKi9cbmltcG9ydCBhY2NvdW50IGZyb20gJy4vYWNjb3VudC52dWUnO1xuaW1wb3J0IGFjY291bnRIZWFkZXIgZnJvbSAnLi9hY2NvdW50SGVhZGVyLnZ1ZSc7XG5pbXBvcnQgYWNjb3VudExvZ2luIGZyb20gJy4vYWNjb3VudExvZ2luLnZ1ZSc7XG5pbXBvcnQgdGFiUGFnZSBmcm9tICcuL3RhYlBhZ2UudnVlJztcblxuZXhwb3J0IGRlZmF1bHQge1xuXHRhY2NvdW50LFxuXHRhY2NvdW50SGVhZGVyLFxuXHRhY2NvdW50TG9naW4sXG5cdHRhYlBhZ2UsXG59O1xuXG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIC4vdmVuZG9yL3hpZXd1bG9uZy95aWkyLWFjY291bnQvanMvY29tcG9uZW50cy9pbmRleC5qcyJdLCJzb3VyY2VSb290IjoiIn0=");
 
 /***/ },
 /* 4 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	eval("module.exports = Vue;\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJWdWVcIj81NDhhIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6IjQuanMiLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cyA9IFZ1ZTtcblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyBleHRlcm5hbCBcIlZ1ZVwiXG4vLyBtb2R1bGUgaWQgPSA0XG4vLyBtb2R1bGUgY2h1bmtzID0gMCJdLCJzb3VyY2VSb290IjoiIn0=");
 
 /***/ },
-/* 5 */
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 6 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;;(function () {
-		'use strict';
-	
-		/**
-		 * @preserve FastClick: polyfill to remove click delays on browsers with touch UIs.
-		 *
-		 * @codingstandard ftlabs-jsv2
-		 * @copyright The Financial Times Limited [All Rights Reserved]
-		 * @license MIT License (see LICENSE.txt)
-		 */
-	
-		/*jslint browser:true, node:true*/
-		/*global define, Event, Node*/
-	
-	
-		/**
-		 * Instantiate fast-clicking listeners on the specified layer.
-		 *
-		 * @constructor
-		 * @param {Element} layer The layer to listen on
-		 * @param {Object} [options={}] The options to override the defaults
-		 */
-		function FastClick(layer, options) {
-			var oldOnClick;
-	
-			options = options || {};
-	
-			/**
-			 * Whether a click is currently being tracked.
-			 *
-			 * @type boolean
-			 */
-			this.trackingClick = false;
-	
-	
-			/**
-			 * Timestamp for when click tracking started.
-			 *
-			 * @type number
-			 */
-			this.trackingClickStart = 0;
-	
-	
-			/**
-			 * The element being tracked for a click.
-			 *
-			 * @type EventTarget
-			 */
-			this.targetElement = null;
-	
-	
-			/**
-			 * X-coordinate of touch start event.
-			 *
-			 * @type number
-			 */
-			this.touchStartX = 0;
-	
-	
-			/**
-			 * Y-coordinate of touch start event.
-			 *
-			 * @type number
-			 */
-			this.touchStartY = 0;
-	
-	
-			/**
-			 * ID of the last touch, retrieved from Touch.identifier.
-			 *
-			 * @type number
-			 */
-			this.lastTouchIdentifier = 0;
-	
-	
-			/**
-			 * Touchmove boundary, beyond which a click will be cancelled.
-			 *
-			 * @type number
-			 */
-			this.touchBoundary = options.touchBoundary || 10;
-	
-	
-			/**
-			 * The FastClick layer.
-			 *
-			 * @type Element
-			 */
-			this.layer = layer;
-	
-			/**
-			 * The minimum time between tap(touchstart and touchend) events
-			 *
-			 * @type number
-			 */
-			this.tapDelay = options.tapDelay || 200;
-	
-			/**
-			 * The maximum time for a tap
-			 *
-			 * @type number
-			 */
-			this.tapTimeout = options.tapTimeout || 700;
-	
-			if (FastClick.notNeeded(layer)) {
-				return;
-			}
-	
-			// Some old versions of Android don't have Function.prototype.bind
-			function bind(method, context) {
-				return function() { return method.apply(context, arguments); };
-			}
-	
-	
-			var methods = ['onMouse', 'onClick', 'onTouchStart', 'onTouchMove', 'onTouchEnd', 'onTouchCancel'];
-			var context = this;
-			for (var i = 0, l = methods.length; i < l; i++) {
-				context[methods[i]] = bind(context[methods[i]], context);
-			}
-	
-			// Set up event handlers as required
-			if (deviceIsAndroid) {
-				layer.addEventListener('mouseover', this.onMouse, true);
-				layer.addEventListener('mousedown', this.onMouse, true);
-				layer.addEventListener('mouseup', this.onMouse, true);
-			}
-	
-			layer.addEventListener('click', this.onClick, true);
-			layer.addEventListener('touchstart', this.onTouchStart, false);
-			layer.addEventListener('touchmove', this.onTouchMove, false);
-			layer.addEventListener('touchend', this.onTouchEnd, false);
-			layer.addEventListener('touchcancel', this.onTouchCancel, false);
-	
-			// Hack is required for browsers that don't support Event#stopImmediatePropagation (e.g. Android 2)
-			// which is how FastClick normally stops click events bubbling to callbacks registered on the FastClick
-			// layer when they are cancelled.
-			if (!Event.prototype.stopImmediatePropagation) {
-				layer.removeEventListener = function(type, callback, capture) {
-					var rmv = Node.prototype.removeEventListener;
-					if (type === 'click') {
-						rmv.call(layer, type, callback.hijacked || callback, capture);
-					} else {
-						rmv.call(layer, type, callback, capture);
-					}
-				};
-	
-				layer.addEventListener = function(type, callback, capture) {
-					var adv = Node.prototype.addEventListener;
-					if (type === 'click') {
-						adv.call(layer, type, callback.hijacked || (callback.hijacked = function(event) {
-							if (!event.propagationStopped) {
-								callback(event);
-							}
-						}), capture);
-					} else {
-						adv.call(layer, type, callback, capture);
-					}
-				};
-			}
-	
-			// If a handler is already declared in the element's onclick attribute, it will be fired before
-			// FastClick's onClick handler. Fix this by pulling out the user-defined handler function and
-			// adding it as listener.
-			if (typeof layer.onclick === 'function') {
-	
-				// Android browser on at least 3.2 requires a new reference to the function in layer.onclick
-				// - the old one won't work if passed to addEventListener directly.
-				oldOnClick = layer.onclick;
-				layer.addEventListener('click', function(event) {
-					oldOnClick(event);
-				}, false);
-				layer.onclick = null;
-			}
-		}
-	
-		/**
-		* Windows Phone 8.1 fakes user agent string to look like Android and iPhone.
-		*
-		* @type boolean
-		*/
-		var deviceIsWindowsPhone = navigator.userAgent.indexOf("Windows Phone") >= 0;
-	
-		/**
-		 * Android requires exceptions.
-		 *
-		 * @type boolean
-		 */
-		var deviceIsAndroid = navigator.userAgent.indexOf('Android') > 0 && !deviceIsWindowsPhone;
-	
-	
-		/**
-		 * iOS requires exceptions.
-		 *
-		 * @type boolean
-		 */
-		var deviceIsIOS = /iP(ad|hone|od)/.test(navigator.userAgent) && !deviceIsWindowsPhone;
-	
-	
-		/**
-		 * iOS 4 requires an exception for select elements.
-		 *
-		 * @type boolean
-		 */
-		var deviceIsIOS4 = deviceIsIOS && (/OS 4_\d(_\d)?/).test(navigator.userAgent);
-	
-	
-		/**
-		 * iOS 6.0-7.* requires the target element to be manually derived
-		 *
-		 * @type boolean
-		 */
-		var deviceIsIOSWithBadTarget = deviceIsIOS && (/OS [6-7]_\d/).test(navigator.userAgent);
-	
-		/**
-		 * BlackBerry requires exceptions.
-		 *
-		 * @type boolean
-		 */
-		var deviceIsBlackBerry10 = navigator.userAgent.indexOf('BB10') > 0;
-	
-		/**
-		 * Determine whether a given element requires a native click.
-		 *
-		 * @param {EventTarget|Element} target Target DOM element
-		 * @returns {boolean} Returns true if the element needs a native click
-		 */
-		FastClick.prototype.needsClick = function(target) {
-			switch (target.nodeName.toLowerCase()) {
-	
-			// Don't send a synthetic click to disabled inputs (issue #62)
-			case 'button':
-			case 'select':
-			case 'textarea':
-				if (target.disabled) {
-					return true;
-				}
-	
-				break;
-			case 'input':
-	
-				// File inputs need real clicks on iOS 6 due to a browser bug (issue #68)
-				if ((deviceIsIOS && target.type === 'file') || target.disabled) {
-					return true;
-				}
-	
-				break;
-			case 'label':
-			case 'iframe': // iOS8 homescreen apps can prevent events bubbling into frames
-			case 'video':
-				return true;
-			}
-	
-			return (/\bneedsclick\b/).test(target.className);
-		};
-	
-	
-		/**
-		 * Determine whether a given element requires a call to focus to simulate click into element.
-		 *
-		 * @param {EventTarget|Element} target Target DOM element
-		 * @returns {boolean} Returns true if the element requires a call to focus to simulate native click.
-		 */
-		FastClick.prototype.needsFocus = function(target) {
-			switch (target.nodeName.toLowerCase()) {
-			case 'textarea':
-				return true;
-			case 'select':
-				return !deviceIsAndroid;
-			case 'input':
-				switch (target.type) {
-				case 'button':
-				case 'checkbox':
-				case 'file':
-				case 'image':
-				case 'radio':
-				case 'submit':
-					return false;
-				}
-	
-				// No point in attempting to focus disabled inputs
-				return !target.disabled && !target.readOnly;
-			default:
-				return (/\bneedsfocus\b/).test(target.className);
-			}
-		};
-	
-	
-		/**
-		 * Send a click event to the specified element.
-		 *
-		 * @param {EventTarget|Element} targetElement
-		 * @param {Event} event
-		 */
-		FastClick.prototype.sendClick = function(targetElement, event) {
-			var clickEvent, touch;
-	
-			// On some Android devices activeElement needs to be blurred otherwise the synthetic click will have no effect (#24)
-			if (document.activeElement && document.activeElement !== targetElement) {
-				document.activeElement.blur();
-			}
-	
-			touch = event.changedTouches[0];
-	
-			// Synthesise a click event, with an extra attribute so it can be tracked
-			clickEvent = document.createEvent('MouseEvents');
-			clickEvent.initMouseEvent(this.determineEventType(targetElement), true, true, window, 1, touch.screenX, touch.screenY, touch.clientX, touch.clientY, false, false, false, false, 0, null);
-			clickEvent.forwardedTouchEvent = true;
-			targetElement.dispatchEvent(clickEvent);
-		};
-	
-		FastClick.prototype.determineEventType = function(targetElement) {
-	
-			//Issue #159: Android Chrome Select Box does not open with a synthetic click event
-			if (deviceIsAndroid && targetElement.tagName.toLowerCase() === 'select') {
-				return 'mousedown';
-			}
-	
-			return 'click';
-		};
-	
-	
-		/**
-		 * @param {EventTarget|Element} targetElement
-		 */
-		FastClick.prototype.focus = function(targetElement) {
-			var length;
-	
-			// Issue #160: on iOS 7, some input elements (e.g. date datetime month) throw a vague TypeError on setSelectionRange. These elements don't have an integer value for the selectionStart and selectionEnd properties, but unfortunately that can't be used for detection because accessing the properties also throws a TypeError. Just check the type instead. Filed as Apple bug #15122724.
-			if (deviceIsIOS && targetElement.setSelectionRange && targetElement.type.indexOf('date') !== 0 && targetElement.type !== 'time' && targetElement.type !== 'month') {
-				length = targetElement.value.length;
-				targetElement.setSelectionRange(length, length);
-			} else {
-				targetElement.focus();
-			}
-		};
-	
-	
-		/**
-		 * Check whether the given target element is a child of a scrollable layer and if so, set a flag on it.
-		 *
-		 * @param {EventTarget|Element} targetElement
-		 */
-		FastClick.prototype.updateScrollParent = function(targetElement) {
-			var scrollParent, parentElement;
-	
-			scrollParent = targetElement.fastClickScrollParent;
-	
-			// Attempt to discover whether the target element is contained within a scrollable layer. Re-check if the
-			// target element was moved to another parent.
-			if (!scrollParent || !scrollParent.contains(targetElement)) {
-				parentElement = targetElement;
-				do {
-					if (parentElement.scrollHeight > parentElement.offsetHeight) {
-						scrollParent = parentElement;
-						targetElement.fastClickScrollParent = parentElement;
-						break;
-					}
-	
-					parentElement = parentElement.parentElement;
-				} while (parentElement);
-			}
-	
-			// Always update the scroll top tracker if possible.
-			if (scrollParent) {
-				scrollParent.fastClickLastScrollTop = scrollParent.scrollTop;
-			}
-		};
-	
-	
-		/**
-		 * @param {EventTarget} targetElement
-		 * @returns {Element|EventTarget}
-		 */
-		FastClick.prototype.getTargetElementFromEventTarget = function(eventTarget) {
-	
-			// On some older browsers (notably Safari on iOS 4.1 - see issue #56) the event target may be a text node.
-			if (eventTarget.nodeType === Node.TEXT_NODE) {
-				return eventTarget.parentNode;
-			}
-	
-			return eventTarget;
-		};
-	
-	
-		/**
-		 * On touch start, record the position and scroll offset.
-		 *
-		 * @param {Event} event
-		 * @returns {boolean}
-		 */
-		FastClick.prototype.onTouchStart = function(event) {
-			var targetElement, touch, selection;
-	
-			// Ignore multiple touches, otherwise pinch-to-zoom is prevented if both fingers are on the FastClick element (issue #111).
-			if (event.targetTouches.length > 1) {
-				return true;
-			}
-	
-			targetElement = this.getTargetElementFromEventTarget(event.target);
-			touch = event.targetTouches[0];
-	
-			if (deviceIsIOS) {
-	
-				// Only trusted events will deselect text on iOS (issue #49)
-				selection = window.getSelection();
-				if (selection.rangeCount && !selection.isCollapsed) {
-					return true;
-				}
-	
-				if (!deviceIsIOS4) {
-	
-					// Weird things happen on iOS when an alert or confirm dialog is opened from a click event callback (issue #23):
-					// when the user next taps anywhere else on the page, new touchstart and touchend events are dispatched
-					// with the same identifier as the touch event that previously triggered the click that triggered the alert.
-					// Sadly, there is an issue on iOS 4 that causes some normal touch events to have the same identifier as an
-					// immediately preceeding touch event (issue #52), so this fix is unavailable on that platform.
-					// Issue 120: touch.identifier is 0 when Chrome dev tools 'Emulate touch events' is set with an iOS device UA string,
-					// which causes all touch events to be ignored. As this block only applies to iOS, and iOS identifiers are always long,
-					// random integers, it's safe to to continue if the identifier is 0 here.
-					if (touch.identifier && touch.identifier === this.lastTouchIdentifier) {
-						event.preventDefault();
-						return false;
-					}
-	
-					this.lastTouchIdentifier = touch.identifier;
-	
-					// If the target element is a child of a scrollable layer (using -webkit-overflow-scrolling: touch) and:
-					// 1) the user does a fling scroll on the scrollable layer
-					// 2) the user stops the fling scroll with another tap
-					// then the event.target of the last 'touchend' event will be the element that was under the user's finger
-					// when the fling scroll was started, causing FastClick to send a click event to that layer - unless a check
-					// is made to ensure that a parent layer was not scrolled before sending a synthetic click (issue #42).
-					this.updateScrollParent(targetElement);
-				}
-			}
-	
-			this.trackingClick = true;
-			this.trackingClickStart = event.timeStamp;
-			this.targetElement = targetElement;
-	
-			this.touchStartX = touch.pageX;
-			this.touchStartY = touch.pageY;
-	
-			// Prevent phantom clicks on fast double-tap (issue #36)
-			if ((event.timeStamp - this.lastClickTime) < this.tapDelay) {
-				event.preventDefault();
-			}
-	
-			return true;
-		};
-	
-	
-		/**
-		 * Based on a touchmove event object, check whether the touch has moved past a boundary since it started.
-		 *
-		 * @param {Event} event
-		 * @returns {boolean}
-		 */
-		FastClick.prototype.touchHasMoved = function(event) {
-			var touch = event.changedTouches[0], boundary = this.touchBoundary;
-	
-			if (Math.abs(touch.pageX - this.touchStartX) > boundary || Math.abs(touch.pageY - this.touchStartY) > boundary) {
-				return true;
-			}
-	
-			return false;
-		};
-	
-	
-		/**
-		 * Update the last position.
-		 *
-		 * @param {Event} event
-		 * @returns {boolean}
-		 */
-		FastClick.prototype.onTouchMove = function(event) {
-			if (!this.trackingClick) {
-				return true;
-			}
-	
-			// If the touch has moved, cancel the click tracking
-			if (this.targetElement !== this.getTargetElementFromEventTarget(event.target) || this.touchHasMoved(event)) {
-				this.trackingClick = false;
-				this.targetElement = null;
-			}
-	
-			return true;
-		};
-	
-	
-		/**
-		 * Attempt to find the labelled control for the given label element.
-		 *
-		 * @param {EventTarget|HTMLLabelElement} labelElement
-		 * @returns {Element|null}
-		 */
-		FastClick.prototype.findControl = function(labelElement) {
-	
-			// Fast path for newer browsers supporting the HTML5 control attribute
-			if (labelElement.control !== undefined) {
-				return labelElement.control;
-			}
-	
-			// All browsers under test that support touch events also support the HTML5 htmlFor attribute
-			if (labelElement.htmlFor) {
-				return document.getElementById(labelElement.htmlFor);
-			}
-	
-			// If no for attribute exists, attempt to retrieve the first labellable descendant element
-			// the list of which is defined here: http://www.w3.org/TR/html5/forms.html#category-label
-			return labelElement.querySelector('button, input:not([type=hidden]), keygen, meter, output, progress, select, textarea');
-		};
-	
-	
-		/**
-		 * On touch end, determine whether to send a click event at once.
-		 *
-		 * @param {Event} event
-		 * @returns {boolean}
-		 */
-		FastClick.prototype.onTouchEnd = function(event) {
-			var forElement, trackingClickStart, targetTagName, scrollParent, touch, targetElement = this.targetElement;
-	
-			if (!this.trackingClick) {
-				return true;
-			}
-	
-			// Prevent phantom clicks on fast double-tap (issue #36)
-			if ((event.timeStamp - this.lastClickTime) < this.tapDelay) {
-				this.cancelNextClick = true;
-				return true;
-			}
-	
-			if ((event.timeStamp - this.trackingClickStart) > this.tapTimeout) {
-				return true;
-			}
-	
-			// Reset to prevent wrong click cancel on input (issue #156).
-			this.cancelNextClick = false;
-	
-			this.lastClickTime = event.timeStamp;
-	
-			trackingClickStart = this.trackingClickStart;
-			this.trackingClick = false;
-			this.trackingClickStart = 0;
-	
-			// On some iOS devices, the targetElement supplied with the event is invalid if the layer
-			// is performing a transition or scroll, and has to be re-detected manually. Note that
-			// for this to function correctly, it must be called *after* the event target is checked!
-			// See issue #57; also filed as rdar://13048589 .
-			if (deviceIsIOSWithBadTarget) {
-				touch = event.changedTouches[0];
-	
-				// In certain cases arguments of elementFromPoint can be negative, so prevent setting targetElement to null
-				targetElement = document.elementFromPoint(touch.pageX - window.pageXOffset, touch.pageY - window.pageYOffset) || targetElement;
-				targetElement.fastClickScrollParent = this.targetElement.fastClickScrollParent;
-			}
-	
-			targetTagName = targetElement.tagName.toLowerCase();
-			if (targetTagName === 'label') {
-				forElement = this.findControl(targetElement);
-				if (forElement) {
-					this.focus(targetElement);
-					if (deviceIsAndroid) {
-						return false;
-					}
-	
-					targetElement = forElement;
-				}
-			} else if (this.needsFocus(targetElement)) {
-	
-				// Case 1: If the touch started a while ago (best guess is 100ms based on tests for issue #36) then focus will be triggered anyway. Return early and unset the target element reference so that the subsequent click will be allowed through.
-				// Case 2: Without this exception for input elements tapped when the document is contained in an iframe, then any inputted text won't be visible even though the value attribute is updated as the user types (issue #37).
-				if ((event.timeStamp - trackingClickStart) > 100 || (deviceIsIOS && window.top !== window && targetTagName === 'input')) {
-					this.targetElement = null;
-					return false;
-				}
-	
-				this.focus(targetElement);
-				this.sendClick(targetElement, event);
-	
-				// Select elements need the event to go through on iOS 4, otherwise the selector menu won't open.
-				// Also this breaks opening selects when VoiceOver is active on iOS6, iOS7 (and possibly others)
-				if (!deviceIsIOS || targetTagName !== 'select') {
-					this.targetElement = null;
-					event.preventDefault();
-				}
-	
-				return false;
-			}
-	
-			if (deviceIsIOS && !deviceIsIOS4) {
-	
-				// Don't send a synthetic click event if the target element is contained within a parent layer that was scrolled
-				// and this tap is being used to stop the scrolling (usually initiated by a fling - issue #42).
-				scrollParent = targetElement.fastClickScrollParent;
-				if (scrollParent && scrollParent.fastClickLastScrollTop !== scrollParent.scrollTop) {
-					return true;
-				}
-			}
-	
-			// Prevent the actual click from going though - unless the target node is marked as requiring
-			// real clicks or if it is in the whitelist in which case only non-programmatic clicks are permitted.
-			if (!this.needsClick(targetElement)) {
-				event.preventDefault();
-				this.sendClick(targetElement, event);
-			}
-	
-			return false;
-		};
-	
-	
-		/**
-		 * On touch cancel, stop tracking the click.
-		 *
-		 * @returns {void}
-		 */
-		FastClick.prototype.onTouchCancel = function() {
-			this.trackingClick = false;
-			this.targetElement = null;
-		};
-	
-	
-		/**
-		 * Determine mouse events which should be permitted.
-		 *
-		 * @param {Event} event
-		 * @returns {boolean}
-		 */
-		FastClick.prototype.onMouse = function(event) {
-	
-			// If a target element was never set (because a touch event was never fired) allow the event
-			if (!this.targetElement) {
-				return true;
-			}
-	
-			if (event.forwardedTouchEvent) {
-				return true;
-			}
-	
-			// Programmatically generated events targeting a specific element should be permitted
-			if (!event.cancelable) {
-				return true;
-			}
-	
-			// Derive and check the target element to see whether the mouse event needs to be permitted;
-			// unless explicitly enabled, prevent non-touch click events from triggering actions,
-			// to prevent ghost/doubleclicks.
-			if (!this.needsClick(this.targetElement) || this.cancelNextClick) {
-	
-				// Prevent any user-added listeners declared on FastClick element from being fired.
-				if (event.stopImmediatePropagation) {
-					event.stopImmediatePropagation();
-				} else {
-	
-					// Part of the hack for browsers that don't support Event#stopImmediatePropagation (e.g. Android 2)
-					event.propagationStopped = true;
-				}
-	
-				// Cancel the event
-				event.stopPropagation();
-				event.preventDefault();
-	
-				return false;
-			}
-	
-			// If the mouse event is permitted, return true for the action to go through.
-			return true;
-		};
-	
-	
-		/**
-		 * On actual clicks, determine whether this is a touch-generated click, a click action occurring
-		 * naturally after a delay after a touch (which needs to be cancelled to avoid duplication), or
-		 * an actual click which should be permitted.
-		 *
-		 * @param {Event} event
-		 * @returns {boolean}
-		 */
-		FastClick.prototype.onClick = function(event) {
-			var permitted;
-	
-			// It's possible for another FastClick-like library delivered with third-party code to fire a click event before FastClick does (issue #44). In that case, set the click-tracking flag back to false and return early. This will cause onTouchEnd to return early.
-			if (this.trackingClick) {
-				this.targetElement = null;
-				this.trackingClick = false;
-				return true;
-			}
-	
-			// Very odd behaviour on iOS (issue #18): if a submit element is present inside a form and the user hits enter in the iOS simulator or clicks the Go button on the pop-up OS keyboard the a kind of 'fake' click event will be triggered with the submit-type input element as the target.
-			if (event.target.type === 'submit' && event.detail === 0) {
-				return true;
-			}
-	
-			permitted = this.onMouse(event);
-	
-			// Only unset targetElement if the click is not permitted. This will ensure that the check for !targetElement in onMouse fails and the browser's click doesn't go through.
-			if (!permitted) {
-				this.targetElement = null;
-			}
-	
-			// If clicks are permitted, return true for the action to go through.
-			return permitted;
-		};
-	
-	
-		/**
-		 * Remove all FastClick's event listeners.
-		 *
-		 * @returns {void}
-		 */
-		FastClick.prototype.destroy = function() {
-			var layer = this.layer;
-	
-			if (deviceIsAndroid) {
-				layer.removeEventListener('mouseover', this.onMouse, true);
-				layer.removeEventListener('mousedown', this.onMouse, true);
-				layer.removeEventListener('mouseup', this.onMouse, true);
-			}
-	
-			layer.removeEventListener('click', this.onClick, true);
-			layer.removeEventListener('touchstart', this.onTouchStart, false);
-			layer.removeEventListener('touchmove', this.onTouchMove, false);
-			layer.removeEventListener('touchend', this.onTouchEnd, false);
-			layer.removeEventListener('touchcancel', this.onTouchCancel, false);
-		};
-	
-	
-		/**
-		 * Check whether FastClick is needed.
-		 *
-		 * @param {Element} layer The layer to listen on
-		 */
-		FastClick.notNeeded = function(layer) {
-			var metaViewport;
-			var chromeVersion;
-			var blackberryVersion;
-			var firefoxVersion;
-	
-			// Devices that don't support touch don't need FastClick
-			if (typeof window.ontouchstart === 'undefined') {
-				return true;
-			}
-	
-			// Chrome version - zero for other browsers
-			chromeVersion = +(/Chrome\/([0-9]+)/.exec(navigator.userAgent) || [,0])[1];
-	
-			if (chromeVersion) {
-	
-				if (deviceIsAndroid) {
-					metaViewport = document.querySelector('meta[name=viewport]');
-	
-					if (metaViewport) {
-						// Chrome on Android with user-scalable="no" doesn't need FastClick (issue #89)
-						if (metaViewport.content.indexOf('user-scalable=no') !== -1) {
-							return true;
-						}
-						// Chrome 32 and above with width=device-width or less don't need FastClick
-						if (chromeVersion > 31 && document.documentElement.scrollWidth <= window.outerWidth) {
-							return true;
-						}
-					}
-	
-				// Chrome desktop doesn't need FastClick (issue #15)
-				} else {
-					return true;
-				}
-			}
-	
-			if (deviceIsBlackBerry10) {
-				blackberryVersion = navigator.userAgent.match(/Version\/([0-9]*)\.([0-9]*)/);
-	
-				// BlackBerry 10.3+ does not require Fastclick library.
-				// https://github.com/ftlabs/fastclick/issues/251
-				if (blackberryVersion[1] >= 10 && blackberryVersion[2] >= 3) {
-					metaViewport = document.querySelector('meta[name=viewport]');
-	
-					if (metaViewport) {
-						// user-scalable=no eliminates click delay.
-						if (metaViewport.content.indexOf('user-scalable=no') !== -1) {
-							return true;
-						}
-						// width=device-width (or less than device-width) eliminates click delay.
-						if (document.documentElement.scrollWidth <= window.outerWidth) {
-							return true;
-						}
-					}
-				}
-			}
-	
-			// IE10 with -ms-touch-action: none or manipulation, which disables double-tap-to-zoom (issue #97)
-			if (layer.style.msTouchAction === 'none' || layer.style.touchAction === 'manipulation') {
-				return true;
-			}
-	
-			// Firefox version - zero for other browsers
-			firefoxVersion = +(/Firefox\/([0-9]+)/.exec(navigator.userAgent) || [,0])[1];
-	
-			if (firefoxVersion >= 27) {
-				// Firefox 27+ does not have tap delay if the content is not zoomable - https://bugzilla.mozilla.org/show_bug.cgi?id=922896
-	
-				metaViewport = document.querySelector('meta[name=viewport]');
-				if (metaViewport && (metaViewport.content.indexOf('user-scalable=no') !== -1 || document.documentElement.scrollWidth <= window.outerWidth)) {
-					return true;
-				}
-			}
-	
-			// IE11: prefixed -ms-touch-action is no longer supported and it's recomended to use non-prefixed version
-			// http://msdn.microsoft.com/en-us/library/windows/apps/Hh767313.aspx
-			if (layer.style.touchAction === 'none' || layer.style.touchAction === 'manipulation') {
-				return true;
-			}
-	
-			return false;
-		};
-	
-	
-		/**
-		 * Factory method for creating a FastClick object
-		 *
-		 * @param {Element} layer The layer to listen on
-		 * @param {Object} [options={}] The options to override the defaults
-		 */
-		FastClick.attach = function(layer, options) {
-			return new FastClick(layer, options);
-		};
-	
-	
-		if (true) {
-	
-			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
-				return FastClick;
-			}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-		} else if (typeof module !== 'undefined' && module.exports) {
-			module.exports = FastClick.attach;
-			module.exports.FastClick = FastClick;
-		} else {
-			window.FastClick = FastClick;
-		}
-	}());
-
-
-/***/ },
-/* 7 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_exports__, __vue_options__
-	var __vue_styles__ = {}
-	
-	/* styles */
-	__webpack_require__(5)
-	
-	/* script */
-	__vue_exports__ = __webpack_require__(15)
-	
-	/* template */
-	var __vue_template__ = __webpack_require__(14)
-	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-	if (
-	  typeof __vue_exports__.default === "object" ||
-	  typeof __vue_exports__.default === "function"
-	) {
-	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-	__vue_options__ = __vue_exports__ = __vue_exports__.default
-	}
-	if (typeof __vue_options__ === "function") {
-	  __vue_options__ = __vue_options__.options
-	}
-	__vue_options__.__file = "/home/xiewulong/com.xiawanle/vendor/xiewulong/yii2-account/js/components/account.vue"
-	__vue_options__.render = __vue_template__.render
-	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-68eeb8e7"
-	
-	/* hot reload */
-	if (false) {(function () {
-	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  module.hot.accept()
-	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-68eeb8e7", __vue_options__)
-	  } else {
-	    hotAPI.reload("data-v-68eeb8e7", __vue_options__)
-	  }
-	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] account.vue: functional components are not supported and should be defined in plain js files using render functions.")}
-	
-	module.exports = __vue_exports__
-
-
-/***/ },
-/* 8 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_exports__, __vue_options__
-	var __vue_styles__ = {}
-	
-	/* styles */
-	__webpack_require__(2)
-	
-	/* script */
-	__vue_exports__ = __webpack_require__(16)
-	
-	/* template */
-	var __vue_template__ = __webpack_require__(11)
-	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-	if (
-	  typeof __vue_exports__.default === "object" ||
-	  typeof __vue_exports__.default === "function"
-	) {
-	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-	__vue_options__ = __vue_exports__ = __vue_exports__.default
-	}
-	if (typeof __vue_options__ === "function") {
-	  __vue_options__ = __vue_options__.options
-	}
-	__vue_options__.__file = "/home/xiewulong/com.xiawanle/vendor/xiewulong/yii2-account/js/components/accountHeader.vue"
-	__vue_options__.render = __vue_template__.render
-	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-0be731d4"
-	
-	/* hot reload */
-	if (false) {(function () {
-	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  module.hot.accept()
-	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-0be731d4", __vue_options__)
-	  } else {
-	    hotAPI.reload("data-v-0be731d4", __vue_options__)
-	  }
-	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] accountHeader.vue: functional components are not supported and should be defined in plain js files using render functions.")}
-	
-	module.exports = __vue_exports__
-
+	eval("// removed by extract-text-webpack-plugin\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi92ZW5kb3IveGlld3Vsb25nL3lpaTItYWNjb3VudC9qcy9jb21wb25lbnRzL2FjY291bnRIZWFkZXIudnVlPzZjNzciXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiOC5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vIHJlbW92ZWQgYnkgZXh0cmFjdC10ZXh0LXdlYnBhY2stcGx1Z2luXG5cblxuLy8vLy8vLy8vLy8vLy8vLy8vXG4vLyBXRUJQQUNLIEZPT1RFUlxuLy8gLi9+Ly4xLjAuMUBleHRyYWN0LXRleHQtd2VicGFjay1wbHVnaW4vbG9hZGVyLmpzP3tcInJlbW92ZVwiOnRydWV9IS4vfi8uMC4yNi4xQGNzcy1sb2FkZXI/c291cmNlTWFwIS4vfi8uMTAuMC4yQHZ1ZS1sb2FkZXIvbGliL3N0eWxlLXJld3JpdGVyLmpzP2lkPWRhdGEtdi0wYmU3MzFkNCZzY29wZWQ9dHJ1ZSEuL34vLjEuMi4xQHBvc3Rjc3MtbG9hZGVyIS4vfi8uNC4xLjFAc2Fzcy1sb2FkZXI/c291cmNlTWFwIS4vfi8uMTAuMC4yQHZ1ZS1sb2FkZXIvbGliL3NlbGVjdG9yLmpzP3R5cGU9c3R5bGVzJmluZGV4PTAhLi92ZW5kb3IveGlld3Vsb25nL3lpaTItYWNjb3VudC9qcy9jb21wb25lbnRzL2FjY291bnRIZWFkZXIudnVlXG4vLyBtb2R1bGUgaWQgPSA4XG4vLyBtb2R1bGUgY2h1bmtzID0gMCJdLCJzb3VyY2VSb290IjoiIn0=");
 
 /***/ },
 /* 9 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	var __vue_exports__, __vue_options__
-	var __vue_styles__ = {}
-	
-	/* styles */
-	__webpack_require__(3)
-	
-	/* script */
-	__vue_exports__ = __webpack_require__(17)
-	
-	/* template */
-	var __vue_template__ = __webpack_require__(12)
-	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-	if (
-	  typeof __vue_exports__.default === "object" ||
-	  typeof __vue_exports__.default === "function"
-	) {
-	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-	__vue_options__ = __vue_exports__ = __vue_exports__.default
-	}
-	if (typeof __vue_options__ === "function") {
-	  __vue_options__ = __vue_options__.options
-	}
-	__vue_options__.__file = "/home/xiewulong/com.xiawanle/vendor/xiewulong/yii2-account/js/components/accountLogin.vue"
-	__vue_options__.render = __vue_template__.render
-	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-32f17872"
-	
-	/* hot reload */
-	if (false) {(function () {
-	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  module.hot.accept()
-	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-32f17872", __vue_options__)
-	  } else {
-	    hotAPI.reload("data-v-32f17872", __vue_options__)
-	  }
-	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] accountLogin.vue: functional components are not supported and should be defined in plain js files using render functions.")}
-	
-	module.exports = __vue_exports__
-
+	eval("// removed by extract-text-webpack-plugin\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi92ZW5kb3IveGlld3Vsb25nL3lpaTItYWNjb3VudC9qcy9jb21wb25lbnRzL2FjY291bnRMb2dpbi52dWU/MTc4NyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsImZpbGUiOiI5LmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gcmVtb3ZlZCBieSBleHRyYWN0LXRleHQtd2VicGFjay1wbHVnaW5cblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyAuL34vLjEuMC4xQGV4dHJhY3QtdGV4dC13ZWJwYWNrLXBsdWdpbi9sb2FkZXIuanM/e1wicmVtb3ZlXCI6dHJ1ZX0hLi9+Ly4wLjI2LjFAY3NzLWxvYWRlcj9zb3VyY2VNYXAhLi9+Ly4xMC4wLjJAdnVlLWxvYWRlci9saWIvc3R5bGUtcmV3cml0ZXIuanM/aWQ9ZGF0YS12LTMyZjE3ODcyJnNjb3BlZD10cnVlIS4vfi8uMS4yLjFAcG9zdGNzcy1sb2FkZXIhLi9+Ly40LjEuMUBzYXNzLWxvYWRlcj9zb3VyY2VNYXAhLi9+Ly4xMC4wLjJAdnVlLWxvYWRlci9saWIvc2VsZWN0b3IuanM/dHlwZT1zdHlsZXMmaW5kZXg9MCEuL3ZlbmRvci94aWV3dWxvbmcveWlpMi1hY2NvdW50L2pzL2NvbXBvbmVudHMvYWNjb3VudExvZ2luLnZ1ZVxuLy8gbW9kdWxlIGlkID0gOVxuLy8gbW9kdWxlIGNodW5rcyA9IDAiXSwic291cmNlUm9vdCI6IiJ9");
 
 /***/ },
 /* 10 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	var __vue_exports__, __vue_options__
-	var __vue_styles__ = {}
-	
-	/* styles */
-	__webpack_require__(4)
-	
-	/* script */
-	__vue_exports__ = __webpack_require__(18)
-	
-	/* template */
-	var __vue_template__ = __webpack_require__(13)
-	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-	if (
-	  typeof __vue_exports__.default === "object" ||
-	  typeof __vue_exports__.default === "function"
-	) {
-	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-	__vue_options__ = __vue_exports__ = __vue_exports__.default
-	}
-	if (typeof __vue_options__ === "function") {
-	  __vue_options__ = __vue_options__.options
-	}
-	__vue_options__.__file = "/home/xiewulong/com.xiawanle/vendor/xiewulong/yii2-account/js/components/tabPage.vue"
-	__vue_options__.render = __vue_template__.render
-	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-360a4efe"
-	
-	/* hot reload */
-	if (false) {(function () {
-	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  module.hot.accept()
-	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-360a4efe", __vue_options__)
-	  } else {
-	    hotAPI.reload("data-v-360a4efe", __vue_options__)
-	  }
-	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] tabPage.vue: functional components are not supported and should be defined in plain js files using render functions.")}
-	
-	module.exports = __vue_exports__
-
+	eval("// removed by extract-text-webpack-plugin\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi92ZW5kb3IveGlld3Vsb25nL3lpaTItYWNjb3VudC9qcy9jb21wb25lbnRzL3RhYlBhZ2UudnVlPzI0Y2QiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiMTAuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvLyByZW1vdmVkIGJ5IGV4dHJhY3QtdGV4dC13ZWJwYWNrLXBsdWdpblxuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIC4vfi8uMS4wLjFAZXh0cmFjdC10ZXh0LXdlYnBhY2stcGx1Z2luL2xvYWRlci5qcz97XCJyZW1vdmVcIjp0cnVlfSEuL34vLjAuMjYuMUBjc3MtbG9hZGVyP3NvdXJjZU1hcCEuL34vLjEwLjAuMkB2dWUtbG9hZGVyL2xpYi9zdHlsZS1yZXdyaXRlci5qcz9pZD1kYXRhLXYtMzYwYTRlZmUmc2NvcGVkPXRydWUhLi9+Ly4xLjIuMUBwb3N0Y3NzLWxvYWRlciEuL34vLjQuMS4xQHNhc3MtbG9hZGVyP3NvdXJjZU1hcCEuL34vLjEwLjAuMkB2dWUtbG9hZGVyL2xpYi9zZWxlY3Rvci5qcz90eXBlPXN0eWxlcyZpbmRleD0wIS4vdmVuZG9yL3hpZXd1bG9uZy95aWkyLWFjY291bnQvanMvY29tcG9uZW50cy90YWJQYWdlLnZ1ZVxuLy8gbW9kdWxlIGlkID0gMTBcbi8vIG1vZHVsZSBjaHVua3MgPSAwIl0sInNvdXJjZVJvb3QiOiIifQ==");
 
 /***/ },
 /* 11 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: "account-header"
-	  }, [(_vm.$slots.logo) ? _c('div', {
-	    staticClass: "logo"
-	  }, [_vm._t("logo")], 2) : _vm._e(), _vm._t("default")], 2)
-	},staticRenderFns: []}
-	module.exports.render._withStripped = true
-	if (false) {
-	  module.hot.accept()
-	  if (module.hot.data) {
-	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-0be731d4", module.exports)
-	  }
-	}
+	eval("// removed by extract-text-webpack-plugin\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi92ZW5kb3IveGlld3Vsb25nL3lpaTItYWNjb3VudC9qcy9jb21wb25lbnRzL2FjY291bnQudnVlP2UwMTIiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiMTEuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvLyByZW1vdmVkIGJ5IGV4dHJhY3QtdGV4dC13ZWJwYWNrLXBsdWdpblxuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIC4vfi8uMS4wLjFAZXh0cmFjdC10ZXh0LXdlYnBhY2stcGx1Z2luL2xvYWRlci5qcz97XCJyZW1vdmVcIjp0cnVlfSEuL34vLjAuMjYuMUBjc3MtbG9hZGVyP3NvdXJjZU1hcCEuL34vLjEwLjAuMkB2dWUtbG9hZGVyL2xpYi9zdHlsZS1yZXdyaXRlci5qcz9pZD1kYXRhLXYtNjhlZWI4ZTcmc2NvcGVkPXRydWUhLi9+Ly4xLjIuMUBwb3N0Y3NzLWxvYWRlciEuL34vLjQuMS4xQHNhc3MtbG9hZGVyP3NvdXJjZU1hcCEuL34vLjEwLjAuMkB2dWUtbG9hZGVyL2xpYi9zZWxlY3Rvci5qcz90eXBlPXN0eWxlcyZpbmRleD0wIS4vdmVuZG9yL3hpZXd1bG9uZy95aWkyLWFjY291bnQvanMvY29tcG9uZW50cy9hY2NvdW50LnZ1ZVxuLy8gbW9kdWxlIGlkID0gMTFcbi8vIG1vZHVsZSBjaHVua3MgPSAwIl0sInNvdXJjZVJvb3QiOiIifQ==");
 
 /***/ },
 /* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('form', {
-	    staticClass: "account-login",
-	    on: {
-	      "submit": function($event) {
-	        _vm.submit($event)
-	      }
-	    }
-	  }, [_vm._t("default"), _c('div', {
-	    staticClass: "form-group"
-	  }, [_c('input', {
-	    directives: [{
-	      name: "model",
-	      rawName: "v-model",
-	      value: (_vm.usernameValue),
-	      expression: "usernameValue"
-	    }],
-	    ref: "username",
-	    staticClass: "form-control",
-	    attrs: {
-	      "type": "text",
-	      "name": _vm.username.name,
-	      "placeholder": _vm.username.label,
-	      "autofocus": _vm.username.error || !_vm.error
-	    },
-	    domProps: {
-	      "value": _vm._s(_vm.usernameValue)
-	    },
-	    on: {
-	      "input": function($event) {
-	        if ($event.target.composing) { return; }
-	        _vm.usernameValue = $event.target.value
-	      }
-	    }
-	  })]), _c('div', {
-	    staticClass: "form-group"
-	  }, [_c('input', {
-	    directives: [{
-	      name: "model",
-	      rawName: "v-model",
-	      value: (_vm.passwordValue),
-	      expression: "passwordValue"
-	    }],
-	    ref: "password",
-	    staticClass: "form-control",
-	    attrs: {
-	      "type": "password",
-	      "name": _vm.password.name,
-	      "placeholder": _vm.password.label,
-	      "autofocus": _vm.password.error
-	    },
-	    domProps: {
-	      "value": _vm._s(_vm.passwordValue)
-	    },
-	    on: {
-	      "input": function($event) {
-	        if ($event.target.composing) { return; }
-	        _vm.passwordValue = $event.target.value
-	      }
-	    }
-	  })]), _c('transition', {
-	    attrs: {
-	      "name": "message"
-	    }
-	  }, [(_vm.message) ? _c('div', {
-	    staticClass: "form-group message"
-	  }, [_vm._v(_vm._s(_vm.message))]) : _vm._e()]), _c('button', {
-	    staticClass: "btn btn-primary btn-block"
-	  }, [_vm._v(_vm._s(_vm.submitText))])], 2)
-	},staticRenderFns: []}
-	module.exports.render._withStripped = true
-	if (false) {
-	  module.hot.accept()
-	  if (module.hot.data) {
-	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-32f17872", module.exports)
-	  }
-	}
+	eval("var __vue_exports__, __vue_options__\nvar __vue_styles__ = {}\n\n/* styles */\n__webpack_require__(11)\n\n/* script */\n__vue_exports__ = __webpack_require__(20)\n\n/* template */\nvar __vue_template__ = __webpack_require__(19)\n__vue_options__ = __vue_exports__ = __vue_exports__ || {}\nif (\n  typeof __vue_exports__.default === \"object\" ||\n  typeof __vue_exports__.default === \"function\"\n) {\nif (Object.keys(__vue_exports__).some(function (key) { return key !== \"default\" && key !== \"__esModule\" })) {console.error(\"named exports are not supported in *.vue files.\")}\n__vue_options__ = __vue_exports__ = __vue_exports__.default\n}\nif (typeof __vue_options__ === \"function\") {\n  __vue_options__ = __vue_options__.options\n}\n__vue_options__.__file = \"/home/xiewulong/com.xiawanle/vendor/xiewulong/yii2-account/js/components/account.vue\"\n__vue_options__.render = __vue_template__.render\n__vue_options__.staticRenderFns = __vue_template__.staticRenderFns\n__vue_options__._scopeId = \"data-v-68eeb8e7\"\n\n/* hot reload */\nif (false) {(function () {\n  var hotAPI = require(\"vue-loader/node_modules/vue-hot-reload-api\")\n  hotAPI.install(require(\"vue\"), false)\n  if (!hotAPI.compatible) return\n  module.hot.accept()\n  if (!module.hot.data) {\n    hotAPI.createRecord(\"data-v-68eeb8e7\", __vue_options__)\n  } else {\n    hotAPI.reload(\"data-v-68eeb8e7\", __vue_options__)\n  }\n})()}\nif (__vue_options__.functional) {console.error(\"[vue-loader] account.vue: functional components are not supported and should be defined in plain js files using render functions.\")}\n\nmodule.exports = __vue_exports__\n\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi92ZW5kb3IveGlld3Vsb25nL3lpaTItYWNjb3VudC9qcy9jb21wb25lbnRzL2FjY291bnQudnVlPzgxZjAiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTs7QUFFQTtBQUNBLHNCQUF1Rzs7QUFFdkc7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHNEQUFzRCxtREFBbUQsSUFBSTtBQUM3RztBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQSxZQUFpQjtBQUNqQjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxHQUFHO0FBQ0g7QUFDQTtBQUNBLENBQUM7QUFDRCxpQ0FBaUM7O0FBRWpDIiwiZmlsZSI6IjEyLmpzIiwic291cmNlc0NvbnRlbnQiOlsidmFyIF9fdnVlX2V4cG9ydHNfXywgX192dWVfb3B0aW9uc19fXG52YXIgX192dWVfc3R5bGVzX18gPSB7fVxuXG4vKiBzdHlsZXMgKi9cbnJlcXVpcmUoXCIhIS4vLi4vLi4vLi4vLi4vLi4vbm9kZV9tb2R1bGVzLy4xLjAuMUBleHRyYWN0LXRleHQtd2VicGFjay1wbHVnaW4vbG9hZGVyLmpzP3tcXFwicmVtb3ZlXFxcIjp0cnVlfSFjc3M/c291cmNlTWFwIXZ1ZS1sb2FkZXIvbGliL3N0eWxlLXJld3JpdGVyP2lkPWRhdGEtdi02OGVlYjhlNyZzY29wZWQ9dHJ1ZSFwb3N0Y3NzIXNhc3M/c291cmNlTWFwIXZ1ZS1sb2FkZXIvbGliL3NlbGVjdG9yP3R5cGU9c3R5bGVzJmluZGV4PTAhLi9hY2NvdW50LnZ1ZVwiKVxuXG4vKiBzY3JpcHQgKi9cbl9fdnVlX2V4cG9ydHNfXyA9IHJlcXVpcmUoXCIhIWJhYmVsLWxvYWRlciF2dWUtbG9hZGVyL2xpYi9zZWxlY3Rvcj90eXBlPXNjcmlwdCZpbmRleD0wIS4vYWNjb3VudC52dWVcIilcblxuLyogdGVtcGxhdGUgKi9cbnZhciBfX3Z1ZV90ZW1wbGF0ZV9fID0gcmVxdWlyZShcIiEhdnVlLWxvYWRlci9saWIvdGVtcGxhdGUtY29tcGlsZXI/aWQ9ZGF0YS12LTY4ZWViOGU3IXZ1ZS1sb2FkZXIvbGliL3RlbXBsYXRlLWxvYWRlcj9yYXcmZW5naW5lPXB1ZyF2dWUtbG9hZGVyL2xpYi9zZWxlY3Rvcj90eXBlPXRlbXBsYXRlJmluZGV4PTAhLi9hY2NvdW50LnZ1ZVwiKVxuX192dWVfb3B0aW9uc19fID0gX192dWVfZXhwb3J0c19fID0gX192dWVfZXhwb3J0c19fIHx8IHt9XG5pZiAoXG4gIHR5cGVvZiBfX3Z1ZV9leHBvcnRzX18uZGVmYXVsdCA9PT0gXCJvYmplY3RcIiB8fFxuICB0eXBlb2YgX192dWVfZXhwb3J0c19fLmRlZmF1bHQgPT09IFwiZnVuY3Rpb25cIlxuKSB7XG5pZiAoT2JqZWN0LmtleXMoX192dWVfZXhwb3J0c19fKS5zb21lKGZ1bmN0aW9uIChrZXkpIHsgcmV0dXJuIGtleSAhPT0gXCJkZWZhdWx0XCIgJiYga2V5ICE9PSBcIl9fZXNNb2R1bGVcIiB9KSkge2NvbnNvbGUuZXJyb3IoXCJuYW1lZCBleHBvcnRzIGFyZSBub3Qgc3VwcG9ydGVkIGluICoudnVlIGZpbGVzLlwiKX1cbl9fdnVlX29wdGlvbnNfXyA9IF9fdnVlX2V4cG9ydHNfXyA9IF9fdnVlX2V4cG9ydHNfXy5kZWZhdWx0XG59XG5pZiAodHlwZW9mIF9fdnVlX29wdGlvbnNfXyA9PT0gXCJmdW5jdGlvblwiKSB7XG4gIF9fdnVlX29wdGlvbnNfXyA9IF9fdnVlX29wdGlvbnNfXy5vcHRpb25zXG59XG5fX3Z1ZV9vcHRpb25zX18uX19maWxlID0gXCIvaG9tZS94aWV3dWxvbmcvY29tLnhpYXdhbmxlL3ZlbmRvci94aWV3dWxvbmcveWlpMi1hY2NvdW50L2pzL2NvbXBvbmVudHMvYWNjb3VudC52dWVcIlxuX192dWVfb3B0aW9uc19fLnJlbmRlciA9IF9fdnVlX3RlbXBsYXRlX18ucmVuZGVyXG5fX3Z1ZV9vcHRpb25zX18uc3RhdGljUmVuZGVyRm5zID0gX192dWVfdGVtcGxhdGVfXy5zdGF0aWNSZW5kZXJGbnNcbl9fdnVlX29wdGlvbnNfXy5fc2NvcGVJZCA9IFwiZGF0YS12LTY4ZWViOGU3XCJcblxuLyogaG90IHJlbG9hZCAqL1xuaWYgKG1vZHVsZS5ob3QpIHsoZnVuY3Rpb24gKCkge1xuICB2YXIgaG90QVBJID0gcmVxdWlyZShcInZ1ZS1sb2FkZXIvbm9kZV9tb2R1bGVzL3Z1ZS1ob3QtcmVsb2FkLWFwaVwiKVxuICBob3RBUEkuaW5zdGFsbChyZXF1aXJlKFwidnVlXCIpLCBmYWxzZSlcbiAgaWYgKCFob3RBUEkuY29tcGF0aWJsZSkgcmV0dXJuXG4gIG1vZHVsZS5ob3QuYWNjZXB0KClcbiAgaWYgKCFtb2R1bGUuaG90LmRhdGEpIHtcbiAgICBob3RBUEkuY3JlYXRlUmVjb3JkKFwiZGF0YS12LTY4ZWViOGU3XCIsIF9fdnVlX29wdGlvbnNfXylcbiAgfSBlbHNlIHtcbiAgICBob3RBUEkucmVsb2FkKFwiZGF0YS12LTY4ZWViOGU3XCIsIF9fdnVlX29wdGlvbnNfXylcbiAgfVxufSkoKX1cbmlmIChfX3Z1ZV9vcHRpb25zX18uZnVuY3Rpb25hbCkge2NvbnNvbGUuZXJyb3IoXCJbdnVlLWxvYWRlcl0gYWNjb3VudC52dWU6IGZ1bmN0aW9uYWwgY29tcG9uZW50cyBhcmUgbm90IHN1cHBvcnRlZCBhbmQgc2hvdWxkIGJlIGRlZmluZWQgaW4gcGxhaW4ganMgZmlsZXMgdXNpbmcgcmVuZGVyIGZ1bmN0aW9ucy5cIil9XG5cbm1vZHVsZS5leHBvcnRzID0gX192dWVfZXhwb3J0c19fXG5cblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyAuL3ZlbmRvci94aWV3dWxvbmcveWlpMi1hY2NvdW50L2pzL2NvbXBvbmVudHMvYWNjb3VudC52dWVcbi8vIG1vZHVsZSBpZCA9IDEyXG4vLyBtb2R1bGUgY2h1bmtzID0gMCJdLCJzb3VyY2VSb290IjoiIn0=");
 
 /***/ },
 /* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return (_vm.tabs) ? _c('div', {
-	    staticClass: "tab-page"
-	  }, [_c('div', {
-	    staticClass: "tabs"
-	  }, [_c('div', {
-	    staticClass: "row"
-	  }, _vm._l((_vm.tabs), function(name, id) {
-	    return _c('div', {
-	      staticClass: "col-xs"
-	    }, [_c('a', {
-	      class: {
-	        active: id == _vm.activeId
-	      },
-	      on: {
-	        "click": function($event) {
-	          _vm.switcher(id)
-	        }
-	      }
-	    }, [_vm._v(_vm._s(name))])])
-	  }))]), _vm._l((_vm.tabs), function(name, id) {
-	    return (id == _vm.activeId) ? _c('div', {
-	      staticClass: "page",
-	      class: id
-	    }, [_vm._t(id)], 2) : _vm._e()
-	  })], 2) : _vm._e()
-	},staticRenderFns: []}
-	module.exports.render._withStripped = true
-	if (false) {
-	  module.hot.accept()
-	  if (module.hot.data) {
-	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-360a4efe", module.exports)
-	  }
-	}
+	eval("var __vue_exports__, __vue_options__\nvar __vue_styles__ = {}\n\n/* styles */\n__webpack_require__(8)\n\n/* script */\n__vue_exports__ = __webpack_require__(21)\n\n/* template */\nvar __vue_template__ = __webpack_require__(16)\n__vue_options__ = __vue_exports__ = __vue_exports__ || {}\nif (\n  typeof __vue_exports__.default === \"object\" ||\n  typeof __vue_exports__.default === \"function\"\n) {\nif (Object.keys(__vue_exports__).some(function (key) { return key !== \"default\" && key !== \"__esModule\" })) {console.error(\"named exports are not supported in *.vue files.\")}\n__vue_options__ = __vue_exports__ = __vue_exports__.default\n}\nif (typeof __vue_options__ === \"function\") {\n  __vue_options__ = __vue_options__.options\n}\n__vue_options__.__file = \"/home/xiewulong/com.xiawanle/vendor/xiewulong/yii2-account/js/components/accountHeader.vue\"\n__vue_options__.render = __vue_template__.render\n__vue_options__.staticRenderFns = __vue_template__.staticRenderFns\n__vue_options__._scopeId = \"data-v-0be731d4\"\n\n/* hot reload */\nif (false) {(function () {\n  var hotAPI = require(\"vue-loader/node_modules/vue-hot-reload-api\")\n  hotAPI.install(require(\"vue\"), false)\n  if (!hotAPI.compatible) return\n  module.hot.accept()\n  if (!module.hot.data) {\n    hotAPI.createRecord(\"data-v-0be731d4\", __vue_options__)\n  } else {\n    hotAPI.reload(\"data-v-0be731d4\", __vue_options__)\n  }\n})()}\nif (__vue_options__.functional) {console.error(\"[vue-loader] accountHeader.vue: functional components are not supported and should be defined in plain js files using render functions.\")}\n\nmodule.exports = __vue_exports__\n\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi92ZW5kb3IveGlld3Vsb25nL3lpaTItYWNjb3VudC9qcy9jb21wb25lbnRzL2FjY291bnRIZWFkZXIudnVlPzdmMDciXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTs7QUFFQTtBQUNBLHFCQUF1Rzs7QUFFdkc7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHNEQUFzRCxtREFBbUQsSUFBSTtBQUM3RztBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQSxZQUFpQjtBQUNqQjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxHQUFHO0FBQ0g7QUFDQTtBQUNBLENBQUM7QUFDRCxpQ0FBaUM7O0FBRWpDIiwiZmlsZSI6IjEzLmpzIiwic291cmNlc0NvbnRlbnQiOlsidmFyIF9fdnVlX2V4cG9ydHNfXywgX192dWVfb3B0aW9uc19fXG52YXIgX192dWVfc3R5bGVzX18gPSB7fVxuXG4vKiBzdHlsZXMgKi9cbnJlcXVpcmUoXCIhIS4vLi4vLi4vLi4vLi4vLi4vbm9kZV9tb2R1bGVzLy4xLjAuMUBleHRyYWN0LXRleHQtd2VicGFjay1wbHVnaW4vbG9hZGVyLmpzP3tcXFwicmVtb3ZlXFxcIjp0cnVlfSFjc3M/c291cmNlTWFwIXZ1ZS1sb2FkZXIvbGliL3N0eWxlLXJld3JpdGVyP2lkPWRhdGEtdi0wYmU3MzFkNCZzY29wZWQ9dHJ1ZSFwb3N0Y3NzIXNhc3M/c291cmNlTWFwIXZ1ZS1sb2FkZXIvbGliL3NlbGVjdG9yP3R5cGU9c3R5bGVzJmluZGV4PTAhLi9hY2NvdW50SGVhZGVyLnZ1ZVwiKVxuXG4vKiBzY3JpcHQgKi9cbl9fdnVlX2V4cG9ydHNfXyA9IHJlcXVpcmUoXCIhIWJhYmVsLWxvYWRlciF2dWUtbG9hZGVyL2xpYi9zZWxlY3Rvcj90eXBlPXNjcmlwdCZpbmRleD0wIS4vYWNjb3VudEhlYWRlci52dWVcIilcblxuLyogdGVtcGxhdGUgKi9cbnZhciBfX3Z1ZV90ZW1wbGF0ZV9fID0gcmVxdWlyZShcIiEhdnVlLWxvYWRlci9saWIvdGVtcGxhdGUtY29tcGlsZXI/aWQ9ZGF0YS12LTBiZTczMWQ0IXZ1ZS1sb2FkZXIvbGliL3RlbXBsYXRlLWxvYWRlcj9yYXcmZW5naW5lPXB1ZyF2dWUtbG9hZGVyL2xpYi9zZWxlY3Rvcj90eXBlPXRlbXBsYXRlJmluZGV4PTAhLi9hY2NvdW50SGVhZGVyLnZ1ZVwiKVxuX192dWVfb3B0aW9uc19fID0gX192dWVfZXhwb3J0c19fID0gX192dWVfZXhwb3J0c19fIHx8IHt9XG5pZiAoXG4gIHR5cGVvZiBfX3Z1ZV9leHBvcnRzX18uZGVmYXVsdCA9PT0gXCJvYmplY3RcIiB8fFxuICB0eXBlb2YgX192dWVfZXhwb3J0c19fLmRlZmF1bHQgPT09IFwiZnVuY3Rpb25cIlxuKSB7XG5pZiAoT2JqZWN0LmtleXMoX192dWVfZXhwb3J0c19fKS5zb21lKGZ1bmN0aW9uIChrZXkpIHsgcmV0dXJuIGtleSAhPT0gXCJkZWZhdWx0XCIgJiYga2V5ICE9PSBcIl9fZXNNb2R1bGVcIiB9KSkge2NvbnNvbGUuZXJyb3IoXCJuYW1lZCBleHBvcnRzIGFyZSBub3Qgc3VwcG9ydGVkIGluICoudnVlIGZpbGVzLlwiKX1cbl9fdnVlX29wdGlvbnNfXyA9IF9fdnVlX2V4cG9ydHNfXyA9IF9fdnVlX2V4cG9ydHNfXy5kZWZhdWx0XG59XG5pZiAodHlwZW9mIF9fdnVlX29wdGlvbnNfXyA9PT0gXCJmdW5jdGlvblwiKSB7XG4gIF9fdnVlX29wdGlvbnNfXyA9IF9fdnVlX29wdGlvbnNfXy5vcHRpb25zXG59XG5fX3Z1ZV9vcHRpb25zX18uX19maWxlID0gXCIvaG9tZS94aWV3dWxvbmcvY29tLnhpYXdhbmxlL3ZlbmRvci94aWV3dWxvbmcveWlpMi1hY2NvdW50L2pzL2NvbXBvbmVudHMvYWNjb3VudEhlYWRlci52dWVcIlxuX192dWVfb3B0aW9uc19fLnJlbmRlciA9IF9fdnVlX3RlbXBsYXRlX18ucmVuZGVyXG5fX3Z1ZV9vcHRpb25zX18uc3RhdGljUmVuZGVyRm5zID0gX192dWVfdGVtcGxhdGVfXy5zdGF0aWNSZW5kZXJGbnNcbl9fdnVlX29wdGlvbnNfXy5fc2NvcGVJZCA9IFwiZGF0YS12LTBiZTczMWQ0XCJcblxuLyogaG90IHJlbG9hZCAqL1xuaWYgKG1vZHVsZS5ob3QpIHsoZnVuY3Rpb24gKCkge1xuICB2YXIgaG90QVBJID0gcmVxdWlyZShcInZ1ZS1sb2FkZXIvbm9kZV9tb2R1bGVzL3Z1ZS1ob3QtcmVsb2FkLWFwaVwiKVxuICBob3RBUEkuaW5zdGFsbChyZXF1aXJlKFwidnVlXCIpLCBmYWxzZSlcbiAgaWYgKCFob3RBUEkuY29tcGF0aWJsZSkgcmV0dXJuXG4gIG1vZHVsZS5ob3QuYWNjZXB0KClcbiAgaWYgKCFtb2R1bGUuaG90LmRhdGEpIHtcbiAgICBob3RBUEkuY3JlYXRlUmVjb3JkKFwiZGF0YS12LTBiZTczMWQ0XCIsIF9fdnVlX29wdGlvbnNfXylcbiAgfSBlbHNlIHtcbiAgICBob3RBUEkucmVsb2FkKFwiZGF0YS12LTBiZTczMWQ0XCIsIF9fdnVlX29wdGlvbnNfXylcbiAgfVxufSkoKX1cbmlmIChfX3Z1ZV9vcHRpb25zX18uZnVuY3Rpb25hbCkge2NvbnNvbGUuZXJyb3IoXCJbdnVlLWxvYWRlcl0gYWNjb3VudEhlYWRlci52dWU6IGZ1bmN0aW9uYWwgY29tcG9uZW50cyBhcmUgbm90IHN1cHBvcnRlZCBhbmQgc2hvdWxkIGJlIGRlZmluZWQgaW4gcGxhaW4ganMgZmlsZXMgdXNpbmcgcmVuZGVyIGZ1bmN0aW9ucy5cIil9XG5cbm1vZHVsZS5leHBvcnRzID0gX192dWVfZXhwb3J0c19fXG5cblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyAuL3ZlbmRvci94aWV3dWxvbmcveWlpMi1hY2NvdW50L2pzL2NvbXBvbmVudHMvYWNjb3VudEhlYWRlci52dWVcbi8vIG1vZHVsZSBpZCA9IDEzXG4vLyBtb2R1bGUgY2h1bmtzID0gMCJdLCJzb3VyY2VSb290IjoiIn0=");
 
 /***/ },
 /* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: "account"
-	  }, [_c('div', {
-	    staticClass: "account-body"
-	  }, [_vm._t("default")], 2)])
-	},staticRenderFns: []}
-	module.exports.render._withStripped = true
-	if (false) {
-	  module.hot.accept()
-	  if (module.hot.data) {
-	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-68eeb8e7", module.exports)
-	  }
-	}
+	eval("var __vue_exports__, __vue_options__\nvar __vue_styles__ = {}\n\n/* styles */\n__webpack_require__(9)\n\n/* script */\n__vue_exports__ = __webpack_require__(22)\n\n/* template */\nvar __vue_template__ = __webpack_require__(17)\n__vue_options__ = __vue_exports__ = __vue_exports__ || {}\nif (\n  typeof __vue_exports__.default === \"object\" ||\n  typeof __vue_exports__.default === \"function\"\n) {\nif (Object.keys(__vue_exports__).some(function (key) { return key !== \"default\" && key !== \"__esModule\" })) {console.error(\"named exports are not supported in *.vue files.\")}\n__vue_options__ = __vue_exports__ = __vue_exports__.default\n}\nif (typeof __vue_options__ === \"function\") {\n  __vue_options__ = __vue_options__.options\n}\n__vue_options__.__file = \"/home/xiewulong/com.xiawanle/vendor/xiewulong/yii2-account/js/components/accountLogin.vue\"\n__vue_options__.render = __vue_template__.render\n__vue_options__.staticRenderFns = __vue_template__.staticRenderFns\n__vue_options__._scopeId = \"data-v-32f17872\"\n\n/* hot reload */\nif (false) {(function () {\n  var hotAPI = require(\"vue-loader/node_modules/vue-hot-reload-api\")\n  hotAPI.install(require(\"vue\"), false)\n  if (!hotAPI.compatible) return\n  module.hot.accept()\n  if (!module.hot.data) {\n    hotAPI.createRecord(\"data-v-32f17872\", __vue_options__)\n  } else {\n    hotAPI.reload(\"data-v-32f17872\", __vue_options__)\n  }\n})()}\nif (__vue_options__.functional) {console.error(\"[vue-loader] accountLogin.vue: functional components are not supported and should be defined in plain js files using render functions.\")}\n\nmodule.exports = __vue_exports__\n\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi92ZW5kb3IveGlld3Vsb25nL3lpaTItYWNjb3VudC9qcy9jb21wb25lbnRzL2FjY291bnRMb2dpbi52dWU/ZTZmZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBOztBQUVBO0FBQ0EscUJBQXVHOztBQUV2RztBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esc0RBQXNELG1EQUFtRCxJQUFJO0FBQzdHO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBLFlBQWlCO0FBQ2pCO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLEdBQUc7QUFDSDtBQUNBO0FBQ0EsQ0FBQztBQUNELGlDQUFpQzs7QUFFakMiLCJmaWxlIjoiMTQuanMiLCJzb3VyY2VzQ29udGVudCI6WyJ2YXIgX192dWVfZXhwb3J0c19fLCBfX3Z1ZV9vcHRpb25zX19cbnZhciBfX3Z1ZV9zdHlsZXNfXyA9IHt9XG5cbi8qIHN0eWxlcyAqL1xucmVxdWlyZShcIiEhLi8uLi8uLi8uLi8uLi8uLi9ub2RlX21vZHVsZXMvLjEuMC4xQGV4dHJhY3QtdGV4dC13ZWJwYWNrLXBsdWdpbi9sb2FkZXIuanM/e1xcXCJyZW1vdmVcXFwiOnRydWV9IWNzcz9zb3VyY2VNYXAhdnVlLWxvYWRlci9saWIvc3R5bGUtcmV3cml0ZXI/aWQ9ZGF0YS12LTMyZjE3ODcyJnNjb3BlZD10cnVlIXBvc3Rjc3Mhc2Fzcz9zb3VyY2VNYXAhdnVlLWxvYWRlci9saWIvc2VsZWN0b3I/dHlwZT1zdHlsZXMmaW5kZXg9MCEuL2FjY291bnRMb2dpbi52dWVcIilcblxuLyogc2NyaXB0ICovXG5fX3Z1ZV9leHBvcnRzX18gPSByZXF1aXJlKFwiISFiYWJlbC1sb2FkZXIhdnVlLWxvYWRlci9saWIvc2VsZWN0b3I/dHlwZT1zY3JpcHQmaW5kZXg9MCEuL2FjY291bnRMb2dpbi52dWVcIilcblxuLyogdGVtcGxhdGUgKi9cbnZhciBfX3Z1ZV90ZW1wbGF0ZV9fID0gcmVxdWlyZShcIiEhdnVlLWxvYWRlci9saWIvdGVtcGxhdGUtY29tcGlsZXI/aWQ9ZGF0YS12LTMyZjE3ODcyIXZ1ZS1sb2FkZXIvbGliL3RlbXBsYXRlLWxvYWRlcj9yYXcmZW5naW5lPXB1ZyF2dWUtbG9hZGVyL2xpYi9zZWxlY3Rvcj90eXBlPXRlbXBsYXRlJmluZGV4PTAhLi9hY2NvdW50TG9naW4udnVlXCIpXG5fX3Z1ZV9vcHRpb25zX18gPSBfX3Z1ZV9leHBvcnRzX18gPSBfX3Z1ZV9leHBvcnRzX18gfHwge31cbmlmIChcbiAgdHlwZW9mIF9fdnVlX2V4cG9ydHNfXy5kZWZhdWx0ID09PSBcIm9iamVjdFwiIHx8XG4gIHR5cGVvZiBfX3Z1ZV9leHBvcnRzX18uZGVmYXVsdCA9PT0gXCJmdW5jdGlvblwiXG4pIHtcbmlmIChPYmplY3Qua2V5cyhfX3Z1ZV9leHBvcnRzX18pLnNvbWUoZnVuY3Rpb24gKGtleSkgeyByZXR1cm4ga2V5ICE9PSBcImRlZmF1bHRcIiAmJiBrZXkgIT09IFwiX19lc01vZHVsZVwiIH0pKSB7Y29uc29sZS5lcnJvcihcIm5hbWVkIGV4cG9ydHMgYXJlIG5vdCBzdXBwb3J0ZWQgaW4gKi52dWUgZmlsZXMuXCIpfVxuX192dWVfb3B0aW9uc19fID0gX192dWVfZXhwb3J0c19fID0gX192dWVfZXhwb3J0c19fLmRlZmF1bHRcbn1cbmlmICh0eXBlb2YgX192dWVfb3B0aW9uc19fID09PSBcImZ1bmN0aW9uXCIpIHtcbiAgX192dWVfb3B0aW9uc19fID0gX192dWVfb3B0aW9uc19fLm9wdGlvbnNcbn1cbl9fdnVlX29wdGlvbnNfXy5fX2ZpbGUgPSBcIi9ob21lL3hpZXd1bG9uZy9jb20ueGlhd2FubGUvdmVuZG9yL3hpZXd1bG9uZy95aWkyLWFjY291bnQvanMvY29tcG9uZW50cy9hY2NvdW50TG9naW4udnVlXCJcbl9fdnVlX29wdGlvbnNfXy5yZW5kZXIgPSBfX3Z1ZV90ZW1wbGF0ZV9fLnJlbmRlclxuX192dWVfb3B0aW9uc19fLnN0YXRpY1JlbmRlckZucyA9IF9fdnVlX3RlbXBsYXRlX18uc3RhdGljUmVuZGVyRm5zXG5fX3Z1ZV9vcHRpb25zX18uX3Njb3BlSWQgPSBcImRhdGEtdi0zMmYxNzg3MlwiXG5cbi8qIGhvdCByZWxvYWQgKi9cbmlmIChtb2R1bGUuaG90KSB7KGZ1bmN0aW9uICgpIHtcbiAgdmFyIGhvdEFQSSA9IHJlcXVpcmUoXCJ2dWUtbG9hZGVyL25vZGVfbW9kdWxlcy92dWUtaG90LXJlbG9hZC1hcGlcIilcbiAgaG90QVBJLmluc3RhbGwocmVxdWlyZShcInZ1ZVwiKSwgZmFsc2UpXG4gIGlmICghaG90QVBJLmNvbXBhdGlibGUpIHJldHVyblxuICBtb2R1bGUuaG90LmFjY2VwdCgpXG4gIGlmICghbW9kdWxlLmhvdC5kYXRhKSB7XG4gICAgaG90QVBJLmNyZWF0ZVJlY29yZChcImRhdGEtdi0zMmYxNzg3MlwiLCBfX3Z1ZV9vcHRpb25zX18pXG4gIH0gZWxzZSB7XG4gICAgaG90QVBJLnJlbG9hZChcImRhdGEtdi0zMmYxNzg3MlwiLCBfX3Z1ZV9vcHRpb25zX18pXG4gIH1cbn0pKCl9XG5pZiAoX192dWVfb3B0aW9uc19fLmZ1bmN0aW9uYWwpIHtjb25zb2xlLmVycm9yKFwiW3Z1ZS1sb2FkZXJdIGFjY291bnRMb2dpbi52dWU6IGZ1bmN0aW9uYWwgY29tcG9uZW50cyBhcmUgbm90IHN1cHBvcnRlZCBhbmQgc2hvdWxkIGJlIGRlZmluZWQgaW4gcGxhaW4ganMgZmlsZXMgdXNpbmcgcmVuZGVyIGZ1bmN0aW9ucy5cIil9XG5cbm1vZHVsZS5leHBvcnRzID0gX192dWVfZXhwb3J0c19fXG5cblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyAuL3ZlbmRvci94aWV3dWxvbmcveWlpMi1hY2NvdW50L2pzL2NvbXBvbmVudHMvYWNjb3VudExvZ2luLnZ1ZVxuLy8gbW9kdWxlIGlkID0gMTRcbi8vIG1vZHVsZSBjaHVua3MgPSAwIl0sInNvdXJjZVJvb3QiOiIifQ==");
 
 /***/ },
 /* 15 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	//
-	//
-	//
-	//
-	//
-	//
-	
-	exports.default = {
-		name: 'account',
-	
-		props: {
-			hidden: String
-		}
-	};
+	eval("var __vue_exports__, __vue_options__\nvar __vue_styles__ = {}\n\n/* styles */\n__webpack_require__(10)\n\n/* script */\n__vue_exports__ = __webpack_require__(23)\n\n/* template */\nvar __vue_template__ = __webpack_require__(18)\n__vue_options__ = __vue_exports__ = __vue_exports__ || {}\nif (\n  typeof __vue_exports__.default === \"object\" ||\n  typeof __vue_exports__.default === \"function\"\n) {\nif (Object.keys(__vue_exports__).some(function (key) { return key !== \"default\" && key !== \"__esModule\" })) {console.error(\"named exports are not supported in *.vue files.\")}\n__vue_options__ = __vue_exports__ = __vue_exports__.default\n}\nif (typeof __vue_options__ === \"function\") {\n  __vue_options__ = __vue_options__.options\n}\n__vue_options__.__file = \"/home/xiewulong/com.xiawanle/vendor/xiewulong/yii2-account/js/components/tabPage.vue\"\n__vue_options__.render = __vue_template__.render\n__vue_options__.staticRenderFns = __vue_template__.staticRenderFns\n__vue_options__._scopeId = \"data-v-360a4efe\"\n\n/* hot reload */\nif (false) {(function () {\n  var hotAPI = require(\"vue-loader/node_modules/vue-hot-reload-api\")\n  hotAPI.install(require(\"vue\"), false)\n  if (!hotAPI.compatible) return\n  module.hot.accept()\n  if (!module.hot.data) {\n    hotAPI.createRecord(\"data-v-360a4efe\", __vue_options__)\n  } else {\n    hotAPI.reload(\"data-v-360a4efe\", __vue_options__)\n  }\n})()}\nif (__vue_options__.functional) {console.error(\"[vue-loader] tabPage.vue: functional components are not supported and should be defined in plain js files using render functions.\")}\n\nmodule.exports = __vue_exports__\n\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi92ZW5kb3IveGlld3Vsb25nL3lpaTItYWNjb3VudC9qcy9jb21wb25lbnRzL3RhYlBhZ2UudnVlPzdmNzgiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTs7QUFFQTtBQUNBLHNCQUF1Rzs7QUFFdkc7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHNEQUFzRCxtREFBbUQsSUFBSTtBQUM3RztBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQSxZQUFpQjtBQUNqQjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxHQUFHO0FBQ0g7QUFDQTtBQUNBLENBQUM7QUFDRCxpQ0FBaUM7O0FBRWpDIiwiZmlsZSI6IjE1LmpzIiwic291cmNlc0NvbnRlbnQiOlsidmFyIF9fdnVlX2V4cG9ydHNfXywgX192dWVfb3B0aW9uc19fXG52YXIgX192dWVfc3R5bGVzX18gPSB7fVxuXG4vKiBzdHlsZXMgKi9cbnJlcXVpcmUoXCIhIS4vLi4vLi4vLi4vLi4vLi4vbm9kZV9tb2R1bGVzLy4xLjAuMUBleHRyYWN0LXRleHQtd2VicGFjay1wbHVnaW4vbG9hZGVyLmpzP3tcXFwicmVtb3ZlXFxcIjp0cnVlfSFjc3M/c291cmNlTWFwIXZ1ZS1sb2FkZXIvbGliL3N0eWxlLXJld3JpdGVyP2lkPWRhdGEtdi0zNjBhNGVmZSZzY29wZWQ9dHJ1ZSFwb3N0Y3NzIXNhc3M/c291cmNlTWFwIXZ1ZS1sb2FkZXIvbGliL3NlbGVjdG9yP3R5cGU9c3R5bGVzJmluZGV4PTAhLi90YWJQYWdlLnZ1ZVwiKVxuXG4vKiBzY3JpcHQgKi9cbl9fdnVlX2V4cG9ydHNfXyA9IHJlcXVpcmUoXCIhIWJhYmVsLWxvYWRlciF2dWUtbG9hZGVyL2xpYi9zZWxlY3Rvcj90eXBlPXNjcmlwdCZpbmRleD0wIS4vdGFiUGFnZS52dWVcIilcblxuLyogdGVtcGxhdGUgKi9cbnZhciBfX3Z1ZV90ZW1wbGF0ZV9fID0gcmVxdWlyZShcIiEhdnVlLWxvYWRlci9saWIvdGVtcGxhdGUtY29tcGlsZXI/aWQ9ZGF0YS12LTM2MGE0ZWZlIXZ1ZS1sb2FkZXIvbGliL3RlbXBsYXRlLWxvYWRlcj9yYXcmZW5naW5lPXB1ZyF2dWUtbG9hZGVyL2xpYi9zZWxlY3Rvcj90eXBlPXRlbXBsYXRlJmluZGV4PTAhLi90YWJQYWdlLnZ1ZVwiKVxuX192dWVfb3B0aW9uc19fID0gX192dWVfZXhwb3J0c19fID0gX192dWVfZXhwb3J0c19fIHx8IHt9XG5pZiAoXG4gIHR5cGVvZiBfX3Z1ZV9leHBvcnRzX18uZGVmYXVsdCA9PT0gXCJvYmplY3RcIiB8fFxuICB0eXBlb2YgX192dWVfZXhwb3J0c19fLmRlZmF1bHQgPT09IFwiZnVuY3Rpb25cIlxuKSB7XG5pZiAoT2JqZWN0LmtleXMoX192dWVfZXhwb3J0c19fKS5zb21lKGZ1bmN0aW9uIChrZXkpIHsgcmV0dXJuIGtleSAhPT0gXCJkZWZhdWx0XCIgJiYga2V5ICE9PSBcIl9fZXNNb2R1bGVcIiB9KSkge2NvbnNvbGUuZXJyb3IoXCJuYW1lZCBleHBvcnRzIGFyZSBub3Qgc3VwcG9ydGVkIGluICoudnVlIGZpbGVzLlwiKX1cbl9fdnVlX29wdGlvbnNfXyA9IF9fdnVlX2V4cG9ydHNfXyA9IF9fdnVlX2V4cG9ydHNfXy5kZWZhdWx0XG59XG5pZiAodHlwZW9mIF9fdnVlX29wdGlvbnNfXyA9PT0gXCJmdW5jdGlvblwiKSB7XG4gIF9fdnVlX29wdGlvbnNfXyA9IF9fdnVlX29wdGlvbnNfXy5vcHRpb25zXG59XG5fX3Z1ZV9vcHRpb25zX18uX19maWxlID0gXCIvaG9tZS94aWV3dWxvbmcvY29tLnhpYXdhbmxlL3ZlbmRvci94aWV3dWxvbmcveWlpMi1hY2NvdW50L2pzL2NvbXBvbmVudHMvdGFiUGFnZS52dWVcIlxuX192dWVfb3B0aW9uc19fLnJlbmRlciA9IF9fdnVlX3RlbXBsYXRlX18ucmVuZGVyXG5fX3Z1ZV9vcHRpb25zX18uc3RhdGljUmVuZGVyRm5zID0gX192dWVfdGVtcGxhdGVfXy5zdGF0aWNSZW5kZXJGbnNcbl9fdnVlX29wdGlvbnNfXy5fc2NvcGVJZCA9IFwiZGF0YS12LTM2MGE0ZWZlXCJcblxuLyogaG90IHJlbG9hZCAqL1xuaWYgKG1vZHVsZS5ob3QpIHsoZnVuY3Rpb24gKCkge1xuICB2YXIgaG90QVBJID0gcmVxdWlyZShcInZ1ZS1sb2FkZXIvbm9kZV9tb2R1bGVzL3Z1ZS1ob3QtcmVsb2FkLWFwaVwiKVxuICBob3RBUEkuaW5zdGFsbChyZXF1aXJlKFwidnVlXCIpLCBmYWxzZSlcbiAgaWYgKCFob3RBUEkuY29tcGF0aWJsZSkgcmV0dXJuXG4gIG1vZHVsZS5ob3QuYWNjZXB0KClcbiAgaWYgKCFtb2R1bGUuaG90LmRhdGEpIHtcbiAgICBob3RBUEkuY3JlYXRlUmVjb3JkKFwiZGF0YS12LTM2MGE0ZWZlXCIsIF9fdnVlX29wdGlvbnNfXylcbiAgfSBlbHNlIHtcbiAgICBob3RBUEkucmVsb2FkKFwiZGF0YS12LTM2MGE0ZWZlXCIsIF9fdnVlX29wdGlvbnNfXylcbiAgfVxufSkoKX1cbmlmIChfX3Z1ZV9vcHRpb25zX18uZnVuY3Rpb25hbCkge2NvbnNvbGUuZXJyb3IoXCJbdnVlLWxvYWRlcl0gdGFiUGFnZS52dWU6IGZ1bmN0aW9uYWwgY29tcG9uZW50cyBhcmUgbm90IHN1cHBvcnRlZCBhbmQgc2hvdWxkIGJlIGRlZmluZWQgaW4gcGxhaW4ganMgZmlsZXMgdXNpbmcgcmVuZGVyIGZ1bmN0aW9ucy5cIil9XG5cbm1vZHVsZS5leHBvcnRzID0gX192dWVfZXhwb3J0c19fXG5cblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyAuL3ZlbmRvci94aWV3dWxvbmcveWlpMi1hY2NvdW50L2pzL2NvbXBvbmVudHMvdGFiUGFnZS52dWVcbi8vIG1vZHVsZSBpZCA9IDE1XG4vLyBtb2R1bGUgY2h1bmtzID0gMCJdLCJzb3VyY2VSb290IjoiIn0=");
 
 /***/ },
 /* 16 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	
-	exports.default = {
-		name: 'account-header'
-	};
+	eval("module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;\n  return _c('div', {\n    staticClass: \"account-header\"\n  }, [(_vm.$slots.logo) ? _c('div', {\n    staticClass: \"logo\"\n  }, [_vm._t(\"logo\")], 2) : _vm._e(), _vm._t(\"default\")], 2)\n},staticRenderFns: []}\nmodule.exports.render._withStripped = true\nif (false) {\n  module.hot.accept()\n  if (module.hot.data) {\n     require(\"vue-loader/node_modules/vue-hot-reload-api\").rerender(\"data-v-0be731d4\", module.exports)\n  }\n}\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi92ZW5kb3IveGlld3Vsb25nL3lpaTItYWNjb3VudC9qcy9jb21wb25lbnRzL2FjY291bnRIZWFkZXIudnVlPzFiNzQiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsZ0JBQWdCLG1CQUFtQixhQUFhLDBCQUEwQjtBQUMxRTtBQUNBO0FBQ0EsR0FBRztBQUNIO0FBQ0EsR0FBRztBQUNILENBQUM7QUFDRDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsImZpbGUiOiIxNi5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzPXtyZW5kZXI6ZnVuY3Rpb24gKCl7dmFyIF92bT10aGlzO3ZhciBfaD1fdm0uJGNyZWF0ZUVsZW1lbnQ7dmFyIF9jPV92bS5fc2VsZi5fY3x8X2g7XG4gIHJldHVybiBfYygnZGl2Jywge1xuICAgIHN0YXRpY0NsYXNzOiBcImFjY291bnQtaGVhZGVyXCJcbiAgfSwgWyhfdm0uJHNsb3RzLmxvZ28pID8gX2MoJ2RpdicsIHtcbiAgICBzdGF0aWNDbGFzczogXCJsb2dvXCJcbiAgfSwgW192bS5fdChcImxvZ29cIildLCAyKSA6IF92bS5fZSgpLCBfdm0uX3QoXCJkZWZhdWx0XCIpXSwgMilcbn0sc3RhdGljUmVuZGVyRm5zOiBbXX1cbm1vZHVsZS5leHBvcnRzLnJlbmRlci5fd2l0aFN0cmlwcGVkID0gdHJ1ZVxuaWYgKG1vZHVsZS5ob3QpIHtcbiAgbW9kdWxlLmhvdC5hY2NlcHQoKVxuICBpZiAobW9kdWxlLmhvdC5kYXRhKSB7XG4gICAgIHJlcXVpcmUoXCJ2dWUtbG9hZGVyL25vZGVfbW9kdWxlcy92dWUtaG90LXJlbG9hZC1hcGlcIikucmVyZW5kZXIoXCJkYXRhLXYtMGJlNzMxZDRcIiwgbW9kdWxlLmV4cG9ydHMpXG4gIH1cbn1cblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyAuL34vLjEwLjAuMkB2dWUtbG9hZGVyL2xpYi90ZW1wbGF0ZS1jb21waWxlci5qcz9pZD1kYXRhLXYtMGJlNzMxZDQhLi9+Ly4xMC4wLjJAdnVlLWxvYWRlci9saWIvdGVtcGxhdGUtbG9hZGVyLmpzP3JhdyZlbmdpbmU9cHVnIS4vfi8uMTAuMC4yQHZ1ZS1sb2FkZXIvbGliL3NlbGVjdG9yLmpzP3R5cGU9dGVtcGxhdGUmaW5kZXg9MCEuL3ZlbmRvci94aWV3dWxvbmcveWlpMi1hY2NvdW50L2pzL2NvbXBvbmVudHMvYWNjb3VudEhlYWRlci52dWVcbi8vIG1vZHVsZSBpZCA9IDE2XG4vLyBtb2R1bGUgY2h1bmtzID0gMCJdLCJzb3VyY2VSb290IjoiIn0=");
 
 /***/ },
 /* 17 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	
-	exports.default = {
-		name: 'account-login',
-	
-		props: {
-			error: String,
-			password: {
-				type: Object,
-				required: true
-			},
-			submitText: {
-				type: String,
-				default: '登录'
-			},
-			username: {
-				type: Object,
-				required: true
-			},
-			duration: {
-				type: Number,
-				default: 2000
-			}
-		},
-	
-		data: function data() {
-			return {
-				usernameValue: this.username.value,
-				passwordValue: this.password.value,
-				message: this.error
-			};
-		},
-		mounted: function mounted() {
-			this.message && this.hideMessage();
-		},
-	
-	
-		watch: {
-			message: function message(_message) {
-				_message && this.hideMessage();
-			}
-		},
-	
-		methods: {
-			submit: function submit(e) {
-				var error = void 0;
-	
-				if (!this.usernameValue) {
-					error = this.username.hint;
-					this.$refs.username.focus();
-				} else if (!this.passwordValue) {
-					error = this.password.hint;
-					this.$refs.password.focus();
-				}
-	
-				if (error) {
-					this.message = error;
-					e.preventDefault();
-				}
-			},
-			hideMessage: function hideMessage() {
-				var _this = this;
-	
-				setTimeout(function () {
-					_this.message = '';
-				}, this.duration);
-			}
-		}
-	};
+	eval("module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;\n  return _c('form', {\n    staticClass: \"account-login\",\n    on: {\n      \"submit\": function($event) {\n        _vm.submit($event)\n      }\n    }\n  }, [_vm._t(\"default\"), _c('div', {\n    staticClass: \"form-group\"\n  }, [_c('input', {\n    directives: [{\n      name: \"model\",\n      rawName: \"v-model\",\n      value: (_vm.usernameValue),\n      expression: \"usernameValue\"\n    }],\n    ref: \"username\",\n    staticClass: \"form-control\",\n    attrs: {\n      \"type\": \"text\",\n      \"name\": _vm.username.name,\n      \"placeholder\": _vm.username.label,\n      \"autofocus\": _vm.username.error || !_vm.error\n    },\n    domProps: {\n      \"value\": _vm._s(_vm.usernameValue)\n    },\n    on: {\n      \"input\": function($event) {\n        if ($event.target.composing) { return; }\n        _vm.usernameValue = $event.target.value\n      }\n    }\n  })]), _c('div', {\n    staticClass: \"form-group\"\n  }, [_c('input', {\n    directives: [{\n      name: \"model\",\n      rawName: \"v-model\",\n      value: (_vm.passwordValue),\n      expression: \"passwordValue\"\n    }],\n    ref: \"password\",\n    staticClass: \"form-control\",\n    attrs: {\n      \"type\": \"password\",\n      \"name\": _vm.password.name,\n      \"placeholder\": _vm.password.label,\n      \"autofocus\": _vm.password.error\n    },\n    domProps: {\n      \"value\": _vm._s(_vm.passwordValue)\n    },\n    on: {\n      \"input\": function($event) {\n        if ($event.target.composing) { return; }\n        _vm.passwordValue = $event.target.value\n      }\n    }\n  })]), _c('transition', {\n    attrs: {\n      \"name\": \"message\"\n    }\n  }, [(_vm.message) ? _c('div', {\n    staticClass: \"form-group message\"\n  }, [_vm._v(_vm._s(_vm.message))]) : _vm._e()]), _c('button', {\n    staticClass: \"btn btn-primary btn-block\"\n  }, [_vm._v(_vm._s(_vm.submitText))])], 2)\n},staticRenderFns: []}\nmodule.exports.render._withStripped = true\nif (false) {\n  module.hot.accept()\n  if (module.hot.data) {\n     require(\"vue-loader/node_modules/vue-hot-reload-api\").rerender(\"data-v-32f17872\", module.exports)\n  }\n}\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi92ZW5kb3IveGlld3Vsb25nL3lpaTItYWNjb3VudC9qcy9jb21wb25lbnRzL2FjY291bnRMb2dpbi52dWU/M2M3MSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxnQkFBZ0IsbUJBQW1CLGFBQWEsMEJBQTBCO0FBQzFFO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsR0FBRztBQUNIO0FBQ0EsR0FBRztBQUNIO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxLQUFLO0FBQ0w7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxLQUFLO0FBQ0w7QUFDQTtBQUNBLEtBQUs7QUFDTDtBQUNBO0FBQ0Esc0NBQXNDLFFBQVE7QUFDOUM7QUFDQTtBQUNBO0FBQ0EsR0FBRztBQUNIO0FBQ0EsR0FBRztBQUNIO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxLQUFLO0FBQ0w7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxLQUFLO0FBQ0w7QUFDQTtBQUNBLEtBQUs7QUFDTDtBQUNBO0FBQ0Esc0NBQXNDLFFBQVE7QUFDOUM7QUFDQTtBQUNBO0FBQ0EsR0FBRztBQUNIO0FBQ0E7QUFDQTtBQUNBLEdBQUc7QUFDSDtBQUNBLEdBQUc7QUFDSDtBQUNBLEdBQUc7QUFDSCxDQUFDO0FBQ0Q7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJmaWxlIjoiMTcuanMiLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cz17cmVuZGVyOmZ1bmN0aW9uICgpe3ZhciBfdm09dGhpczt2YXIgX2g9X3ZtLiRjcmVhdGVFbGVtZW50O3ZhciBfYz1fdm0uX3NlbGYuX2N8fF9oO1xuICByZXR1cm4gX2MoJ2Zvcm0nLCB7XG4gICAgc3RhdGljQ2xhc3M6IFwiYWNjb3VudC1sb2dpblwiLFxuICAgIG9uOiB7XG4gICAgICBcInN1Ym1pdFwiOiBmdW5jdGlvbigkZXZlbnQpIHtcbiAgICAgICAgX3ZtLnN1Ym1pdCgkZXZlbnQpXG4gICAgICB9XG4gICAgfVxuICB9LCBbX3ZtLl90KFwiZGVmYXVsdFwiKSwgX2MoJ2RpdicsIHtcbiAgICBzdGF0aWNDbGFzczogXCJmb3JtLWdyb3VwXCJcbiAgfSwgW19jKCdpbnB1dCcsIHtcbiAgICBkaXJlY3RpdmVzOiBbe1xuICAgICAgbmFtZTogXCJtb2RlbFwiLFxuICAgICAgcmF3TmFtZTogXCJ2LW1vZGVsXCIsXG4gICAgICB2YWx1ZTogKF92bS51c2VybmFtZVZhbHVlKSxcbiAgICAgIGV4cHJlc3Npb246IFwidXNlcm5hbWVWYWx1ZVwiXG4gICAgfV0sXG4gICAgcmVmOiBcInVzZXJuYW1lXCIsXG4gICAgc3RhdGljQ2xhc3M6IFwiZm9ybS1jb250cm9sXCIsXG4gICAgYXR0cnM6IHtcbiAgICAgIFwidHlwZVwiOiBcInRleHRcIixcbiAgICAgIFwibmFtZVwiOiBfdm0udXNlcm5hbWUubmFtZSxcbiAgICAgIFwicGxhY2Vob2xkZXJcIjogX3ZtLnVzZXJuYW1lLmxhYmVsLFxuICAgICAgXCJhdXRvZm9jdXNcIjogX3ZtLnVzZXJuYW1lLmVycm9yIHx8ICFfdm0uZXJyb3JcbiAgICB9LFxuICAgIGRvbVByb3BzOiB7XG4gICAgICBcInZhbHVlXCI6IF92bS5fcyhfdm0udXNlcm5hbWVWYWx1ZSlcbiAgICB9LFxuICAgIG9uOiB7XG4gICAgICBcImlucHV0XCI6IGZ1bmN0aW9uKCRldmVudCkge1xuICAgICAgICBpZiAoJGV2ZW50LnRhcmdldC5jb21wb3NpbmcpIHsgcmV0dXJuOyB9XG4gICAgICAgIF92bS51c2VybmFtZVZhbHVlID0gJGV2ZW50LnRhcmdldC52YWx1ZVxuICAgICAgfVxuICAgIH1cbiAgfSldKSwgX2MoJ2RpdicsIHtcbiAgICBzdGF0aWNDbGFzczogXCJmb3JtLWdyb3VwXCJcbiAgfSwgW19jKCdpbnB1dCcsIHtcbiAgICBkaXJlY3RpdmVzOiBbe1xuICAgICAgbmFtZTogXCJtb2RlbFwiLFxuICAgICAgcmF3TmFtZTogXCJ2LW1vZGVsXCIsXG4gICAgICB2YWx1ZTogKF92bS5wYXNzd29yZFZhbHVlKSxcbiAgICAgIGV4cHJlc3Npb246IFwicGFzc3dvcmRWYWx1ZVwiXG4gICAgfV0sXG4gICAgcmVmOiBcInBhc3N3b3JkXCIsXG4gICAgc3RhdGljQ2xhc3M6IFwiZm9ybS1jb250cm9sXCIsXG4gICAgYXR0cnM6IHtcbiAgICAgIFwidHlwZVwiOiBcInBhc3N3b3JkXCIsXG4gICAgICBcIm5hbWVcIjogX3ZtLnBhc3N3b3JkLm5hbWUsXG4gICAgICBcInBsYWNlaG9sZGVyXCI6IF92bS5wYXNzd29yZC5sYWJlbCxcbiAgICAgIFwiYXV0b2ZvY3VzXCI6IF92bS5wYXNzd29yZC5lcnJvclxuICAgIH0sXG4gICAgZG9tUHJvcHM6IHtcbiAgICAgIFwidmFsdWVcIjogX3ZtLl9zKF92bS5wYXNzd29yZFZhbHVlKVxuICAgIH0sXG4gICAgb246IHtcbiAgICAgIFwiaW5wdXRcIjogZnVuY3Rpb24oJGV2ZW50KSB7XG4gICAgICAgIGlmICgkZXZlbnQudGFyZ2V0LmNvbXBvc2luZykgeyByZXR1cm47IH1cbiAgICAgICAgX3ZtLnBhc3N3b3JkVmFsdWUgPSAkZXZlbnQudGFyZ2V0LnZhbHVlXG4gICAgICB9XG4gICAgfVxuICB9KV0pLCBfYygndHJhbnNpdGlvbicsIHtcbiAgICBhdHRyczoge1xuICAgICAgXCJuYW1lXCI6IFwibWVzc2FnZVwiXG4gICAgfVxuICB9LCBbKF92bS5tZXNzYWdlKSA/IF9jKCdkaXYnLCB7XG4gICAgc3RhdGljQ2xhc3M6IFwiZm9ybS1ncm91cCBtZXNzYWdlXCJcbiAgfSwgW192bS5fdihfdm0uX3MoX3ZtLm1lc3NhZ2UpKV0pIDogX3ZtLl9lKCldKSwgX2MoJ2J1dHRvbicsIHtcbiAgICBzdGF0aWNDbGFzczogXCJidG4gYnRuLXByaW1hcnkgYnRuLWJsb2NrXCJcbiAgfSwgW192bS5fdihfdm0uX3MoX3ZtLnN1Ym1pdFRleHQpKV0pXSwgMilcbn0sc3RhdGljUmVuZGVyRm5zOiBbXX1cbm1vZHVsZS5leHBvcnRzLnJlbmRlci5fd2l0aFN0cmlwcGVkID0gdHJ1ZVxuaWYgKG1vZHVsZS5ob3QpIHtcbiAgbW9kdWxlLmhvdC5hY2NlcHQoKVxuICBpZiAobW9kdWxlLmhvdC5kYXRhKSB7XG4gICAgIHJlcXVpcmUoXCJ2dWUtbG9hZGVyL25vZGVfbW9kdWxlcy92dWUtaG90LXJlbG9hZC1hcGlcIikucmVyZW5kZXIoXCJkYXRhLXYtMzJmMTc4NzJcIiwgbW9kdWxlLmV4cG9ydHMpXG4gIH1cbn1cblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyAuL34vLjEwLjAuMkB2dWUtbG9hZGVyL2xpYi90ZW1wbGF0ZS1jb21waWxlci5qcz9pZD1kYXRhLXYtMzJmMTc4NzIhLi9+Ly4xMC4wLjJAdnVlLWxvYWRlci9saWIvdGVtcGxhdGUtbG9hZGVyLmpzP3JhdyZlbmdpbmU9cHVnIS4vfi8uMTAuMC4yQHZ1ZS1sb2FkZXIvbGliL3NlbGVjdG9yLmpzP3R5cGU9dGVtcGxhdGUmaW5kZXg9MCEuL3ZlbmRvci94aWV3dWxvbmcveWlpMi1hY2NvdW50L2pzL2NvbXBvbmVudHMvYWNjb3VudExvZ2luLnZ1ZVxuLy8gbW9kdWxlIGlkID0gMTdcbi8vIG1vZHVsZSBjaHVua3MgPSAwIl0sInNvdXJjZVJvb3QiOiIifQ==");
 
 /***/ },
 /* 18 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	
-	exports.default = {
-		name: 'account-login',
-	
-		props: {
-			active: String,
-			tabs: Object
-		},
-	
-		data: function data() {
-			var active = this.active;
-			if (!active) {
-				var id = void 0;
-				for (id in this.tabs) {
-					active = id;
-					break;
-				}
-			}
-	
-			return {
-				activeId: active
-			};
-		},
-	
-	
-		methods: {
-			switcher: function switcher(id) {
-				this.activeId = id;
-			}
-		}
-	};
+	eval("module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;\n  return (_vm.tabs) ? _c('div', {\n    staticClass: \"tab-page\"\n  }, [_c('div', {\n    staticClass: \"tabs\"\n  }, [_c('div', {\n    staticClass: \"row\"\n  }, _vm._l((_vm.tabs), function(name, id) {\n    return _c('div', {\n      staticClass: \"col-xs\"\n    }, [_c('a', {\n      class: {\n        active: id == _vm.activeId\n      },\n      on: {\n        \"click\": function($event) {\n          _vm.switcher(id)\n        }\n      }\n    }, [_vm._v(_vm._s(name))])])\n  }))]), _vm._l((_vm.tabs), function(name, id) {\n    return (id == _vm.activeId) ? _c('div', {\n      staticClass: \"page\",\n      class: id\n    }, [_vm._t(id)], 2) : _vm._e()\n  })], 2) : _vm._e()\n},staticRenderFns: []}\nmodule.exports.render._withStripped = true\nif (false) {\n  module.hot.accept()\n  if (module.hot.data) {\n     require(\"vue-loader/node_modules/vue-hot-reload-api\").rerender(\"data-v-360a4efe\", module.exports)\n  }\n}\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi92ZW5kb3IveGlld3Vsb25nL3lpaTItYWNjb3VudC9qcy9jb21wb25lbnRzL3RhYlBhZ2UudnVlPzdiNjEiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsZ0JBQWdCLG1CQUFtQixhQUFhLDBCQUEwQjtBQUMxRTtBQUNBO0FBQ0EsR0FBRztBQUNIO0FBQ0EsR0FBRztBQUNIO0FBQ0EsR0FBRztBQUNIO0FBQ0E7QUFDQSxLQUFLO0FBQ0w7QUFDQTtBQUNBLE9BQU87QUFDUDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsS0FBSztBQUNMLEdBQUc7QUFDSDtBQUNBO0FBQ0E7QUFDQSxLQUFLO0FBQ0wsR0FBRztBQUNILENBQUM7QUFDRDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsImZpbGUiOiIxOC5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzPXtyZW5kZXI6ZnVuY3Rpb24gKCl7dmFyIF92bT10aGlzO3ZhciBfaD1fdm0uJGNyZWF0ZUVsZW1lbnQ7dmFyIF9jPV92bS5fc2VsZi5fY3x8X2g7XG4gIHJldHVybiAoX3ZtLnRhYnMpID8gX2MoJ2RpdicsIHtcbiAgICBzdGF0aWNDbGFzczogXCJ0YWItcGFnZVwiXG4gIH0sIFtfYygnZGl2Jywge1xuICAgIHN0YXRpY0NsYXNzOiBcInRhYnNcIlxuICB9LCBbX2MoJ2RpdicsIHtcbiAgICBzdGF0aWNDbGFzczogXCJyb3dcIlxuICB9LCBfdm0uX2woKF92bS50YWJzKSwgZnVuY3Rpb24obmFtZSwgaWQpIHtcbiAgICByZXR1cm4gX2MoJ2RpdicsIHtcbiAgICAgIHN0YXRpY0NsYXNzOiBcImNvbC14c1wiXG4gICAgfSwgW19jKCdhJywge1xuICAgICAgY2xhc3M6IHtcbiAgICAgICAgYWN0aXZlOiBpZCA9PSBfdm0uYWN0aXZlSWRcbiAgICAgIH0sXG4gICAgICBvbjoge1xuICAgICAgICBcImNsaWNrXCI6IGZ1bmN0aW9uKCRldmVudCkge1xuICAgICAgICAgIF92bS5zd2l0Y2hlcihpZClcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH0sIFtfdm0uX3YoX3ZtLl9zKG5hbWUpKV0pXSlcbiAgfSkpXSksIF92bS5fbCgoX3ZtLnRhYnMpLCBmdW5jdGlvbihuYW1lLCBpZCkge1xuICAgIHJldHVybiAoaWQgPT0gX3ZtLmFjdGl2ZUlkKSA/IF9jKCdkaXYnLCB7XG4gICAgICBzdGF0aWNDbGFzczogXCJwYWdlXCIsXG4gICAgICBjbGFzczogaWRcbiAgICB9LCBbX3ZtLl90KGlkKV0sIDIpIDogX3ZtLl9lKClcbiAgfSldLCAyKSA6IF92bS5fZSgpXG59LHN0YXRpY1JlbmRlckZuczogW119XG5tb2R1bGUuZXhwb3J0cy5yZW5kZXIuX3dpdGhTdHJpcHBlZCA9IHRydWVcbmlmIChtb2R1bGUuaG90KSB7XG4gIG1vZHVsZS5ob3QuYWNjZXB0KClcbiAgaWYgKG1vZHVsZS5ob3QuZGF0YSkge1xuICAgICByZXF1aXJlKFwidnVlLWxvYWRlci9ub2RlX21vZHVsZXMvdnVlLWhvdC1yZWxvYWQtYXBpXCIpLnJlcmVuZGVyKFwiZGF0YS12LTM2MGE0ZWZlXCIsIG1vZHVsZS5leHBvcnRzKVxuICB9XG59XG5cblxuLy8vLy8vLy8vLy8vLy8vLy8vXG4vLyBXRUJQQUNLIEZPT1RFUlxuLy8gLi9+Ly4xMC4wLjJAdnVlLWxvYWRlci9saWIvdGVtcGxhdGUtY29tcGlsZXIuanM/aWQ9ZGF0YS12LTM2MGE0ZWZlIS4vfi8uMTAuMC4yQHZ1ZS1sb2FkZXIvbGliL3RlbXBsYXRlLWxvYWRlci5qcz9yYXcmZW5naW5lPXB1ZyEuL34vLjEwLjAuMkB2dWUtbG9hZGVyL2xpYi9zZWxlY3Rvci5qcz90eXBlPXRlbXBsYXRlJmluZGV4PTAhLi92ZW5kb3IveGlld3Vsb25nL3lpaTItYWNjb3VudC9qcy9jb21wb25lbnRzL3RhYlBhZ2UudnVlXG4vLyBtb2R1bGUgaWQgPSAxOFxuLy8gbW9kdWxlIGNodW5rcyA9IDAiXSwic291cmNlUm9vdCI6IiJ9");
 
 /***/ },
 /* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _account = __webpack_require__(7);
-	
-	var _account2 = _interopRequireDefault(_account);
-	
-	var _accountHeader = __webpack_require__(8);
-	
-	var _accountHeader2 = _interopRequireDefault(_accountHeader);
-	
-	var _accountLogin = __webpack_require__(9);
-	
-	var _accountLogin2 = _interopRequireDefault(_accountLogin);
-	
-	var _tabPage = __webpack_require__(10);
-	
-	var _tabPage2 = _interopRequireDefault(_tabPage);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	/*!
-	 * components
-	 * xiewulong <xiewulong@vip.qq.com>
-	 * create: 2017/1/5
-	 * since: 0.0.1
-	 */
-	exports.default = {
-	  account: _account2.default,
-	  accountHeader: _accountHeader2.default,
-	  accountLogin: _accountLogin2.default,
-	  tabPage: _tabPage2.default
-	};
+	eval("module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;\n  return _c('div', {\n    staticClass: \"account\"\n  }, [_c('div', {\n    staticClass: \"account-body\"\n  }, [_vm._t(\"default\")], 2)])\n},staticRenderFns: []}\nmodule.exports.render._withStripped = true\nif (false) {\n  module.hot.accept()\n  if (module.hot.data) {\n     require(\"vue-loader/node_modules/vue-hot-reload-api\").rerender(\"data-v-68eeb8e7\", module.exports)\n  }\n}\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi92ZW5kb3IveGlld3Vsb25nL3lpaTItYWNjb3VudC9qcy9jb21wb25lbnRzL2FjY291bnQudnVlP2I5NDMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsZ0JBQWdCLG1CQUFtQixhQUFhLDBCQUEwQjtBQUMxRTtBQUNBO0FBQ0EsR0FBRztBQUNIO0FBQ0EsR0FBRztBQUNILENBQUM7QUFDRDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsImZpbGUiOiIxOS5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzPXtyZW5kZXI6ZnVuY3Rpb24gKCl7dmFyIF92bT10aGlzO3ZhciBfaD1fdm0uJGNyZWF0ZUVsZW1lbnQ7dmFyIF9jPV92bS5fc2VsZi5fY3x8X2g7XG4gIHJldHVybiBfYygnZGl2Jywge1xuICAgIHN0YXRpY0NsYXNzOiBcImFjY291bnRcIlxuICB9LCBbX2MoJ2RpdicsIHtcbiAgICBzdGF0aWNDbGFzczogXCJhY2NvdW50LWJvZHlcIlxuICB9LCBbX3ZtLl90KFwiZGVmYXVsdFwiKV0sIDIpXSlcbn0sc3RhdGljUmVuZGVyRm5zOiBbXX1cbm1vZHVsZS5leHBvcnRzLnJlbmRlci5fd2l0aFN0cmlwcGVkID0gdHJ1ZVxuaWYgKG1vZHVsZS5ob3QpIHtcbiAgbW9kdWxlLmhvdC5hY2NlcHQoKVxuICBpZiAobW9kdWxlLmhvdC5kYXRhKSB7XG4gICAgIHJlcXVpcmUoXCJ2dWUtbG9hZGVyL25vZGVfbW9kdWxlcy92dWUtaG90LXJlbG9hZC1hcGlcIikucmVyZW5kZXIoXCJkYXRhLXYtNjhlZWI4ZTdcIiwgbW9kdWxlLmV4cG9ydHMpXG4gIH1cbn1cblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyAuL34vLjEwLjAuMkB2dWUtbG9hZGVyL2xpYi90ZW1wbGF0ZS1jb21waWxlci5qcz9pZD1kYXRhLXYtNjhlZWI4ZTchLi9+Ly4xMC4wLjJAdnVlLWxvYWRlci9saWIvdGVtcGxhdGUtbG9hZGVyLmpzP3JhdyZlbmdpbmU9cHVnIS4vfi8uMTAuMC4yQHZ1ZS1sb2FkZXIvbGliL3NlbGVjdG9yLmpzP3R5cGU9dGVtcGxhdGUmaW5kZXg9MCEuL3ZlbmRvci94aWV3dWxvbmcveWlpMi1hY2NvdW50L2pzL2NvbXBvbmVudHMvYWNjb3VudC52dWVcbi8vIG1vZHVsZSBpZCA9IDE5XG4vLyBtb2R1bGUgY2h1bmtzID0gMCJdLCJzb3VyY2VSb290IjoiIn0=");
 
 /***/ },
 /* 20 */
 /***/ function(module, exports) {
 
-	module.exports = Vue;
+	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n\tvalue: true\n});\n//\n//\n//\n//\n//\n//\n\nexports.default = {\n\tname: 'account',\n\n\tprops: {\n\t\thidden: String\n\t}\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vYWNjb3VudC52dWU/NDU2YSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0FBT0E7OztPQUdBOzs7VUFHQTtBQUZBO0FBSEEiLCJmaWxlIjoiMjAuanMiLCJzb3VyY2VzQ29udGVudCI6WyI8dGVtcGxhdGUgbGFuZz1cInB1Z1wiPlxuLmFjY291bnRcblx0LmFjY291bnQtYm9keVxuXHRcdHNsb3RcbjwvdGVtcGxhdGU+XG5cbjxzY3JpcHQ+XG5leHBvcnQgZGVmYXVsdCB7XG5cdG5hbWU6ICdhY2NvdW50JyxcblxuXHRwcm9wczoge1xuXHRcdGhpZGRlbjogU3RyaW5nLFxuXHR9LFxufTtcbjwvc2NyaXB0PlxuXG48c3R5bGUgbGFuZz1cInNjc3NcIiBzY29wZWQ+XG5AaW1wb3J0ICcuLi8uLi9zY3NzL2NvbmZpZyc7XG5cbi5hY2NvdW50IHtcblx0cGFkZGluZy10b3A6IDZyZW07XG5cdHRleHQtYWxpZ246IGNlbnRlcjtcblxuXHQuYWNjb3VudC1ib2R5IHtcblx0XHRtYXJnaW46IDAgYXV0bztcblx0XHRtYXgtd2lkdGg6IDE3LjVyZW07XG5cblx0XHRAbWVkaWEgKG1pbi13aWR0aDogNTQ0cHgpIHtcblx0XHRcdGJhY2tncm91bmQtY29sb3I6ICR3aGl0ZTtcblx0XHRcdG1heC13aWR0aDogMzByZW07XG5cdFx0XHRwYWRkaW5nOiA1cmVtO1xuXHRcdFx0bWluLWhlaWdodDogNDByZW07XG5cdFx0fVxuXHR9XG59XG48L3N0eWxlPlxuXG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIGFjY291bnQudnVlPzZjZTFjODI2Il0sInNvdXJjZVJvb3QiOiIifQ==");
+
+/***/ },
+/* 21 */
+/***/ function(module, exports) {
+
+	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n\tvalue: true\n});\n//\n//\n//\n//\n//\n//\n//\n\nexports.default = {\n\tname: 'account-header'\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vYWNjb3VudEhlYWRlci52dWU/NjZhNyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7OztBQVFBOzs7T0FFQTtBQURBIiwiZmlsZSI6IjIxLmpzIiwic291cmNlc0NvbnRlbnQiOlsiPHRlbXBsYXRlIGxhbmc9XCJwdWdcIj5cbi5hY2NvdW50LWhlYWRlclxuXHQubG9nbyh2LWlmPVwiJHNsb3RzLmxvZ29cIilcblx0XHRzbG90KG5hbWU9XCJsb2dvXCIpXG5cdHNsb3RcbjwvdGVtcGxhdGU+XG5cbjxzY3JpcHQ+XG5leHBvcnQgZGVmYXVsdCB7XG5cdG5hbWU6ICdhY2NvdW50LWhlYWRlcicsXG59O1xuPC9zY3JpcHQ+XG5cbjxzdHlsZSBsYW5nPVwic2Nzc1wiIHNjb3BlZD5cbkBpbXBvcnQgJy4uLy4uL3Njc3MvY29uZmlnJztcblxuLmFjY291bnQtaGVhZGVyIHtcblx0cGFkZGluZy1ib3R0b206IDEuNXJlbTtcblxuXHRAbWVkaWEgKG1pbi13aWR0aDogNTQ0cHgpIHtcblx0XHRwYWRkaW5nLWJvdHRvbTogMy4yNXJlbTtcblx0fVxuXG5cdC5sb2dvIHtcblx0XHRwYWRkaW5nLWJvdHRvbTogMS4yNXJlbTtcblxuXHRcdGltZyB7XG5cdFx0XHRtYXgtd2lkdGg6IDEwMCU7XG5cdFx0XHRtYXgtaGVpZ2h0OiAyLjVyZW07XG5cdFx0fVxuXHR9XG5cblx0aDEge1xuXHRcdGZvbnQtc2l6ZTogMS4yNXJlbTtcblx0XHRtYXJnaW4tYm90dG9tOiAwO1xuXHR9XG59XG48L3N0eWxlPlxuXG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIGFjY291bnRIZWFkZXIudnVlPzFkZTg1Zjc4Il0sInNvdXJjZVJvb3QiOiIifQ==");
+
+/***/ },
+/* 22 */
+/***/ function(module, exports) {
+
+	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n\tvalue: true\n});\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\nexports.default = {\n\tname: 'account-login',\n\n\tprops: {\n\t\terror: String,\n\t\tpassword: {\n\t\t\ttype: Object,\n\t\t\trequired: true\n\t\t},\n\t\tsubmitText: {\n\t\t\ttype: String,\n\t\t\tdefault: '登录'\n\t\t},\n\t\tusername: {\n\t\t\ttype: Object,\n\t\t\trequired: true\n\t\t},\n\t\tduration: {\n\t\t\ttype: Number,\n\t\t\tdefault: 2000\n\t\t}\n\t},\n\n\tdata: function data() {\n\t\treturn {\n\t\t\tusernameValue: this.username.value,\n\t\t\tpasswordValue: this.password.value,\n\t\t\tmessage: this.error\n\t\t};\n\t},\n\tmounted: function mounted() {\n\t\tthis.message && this.hideMessage();\n\t},\n\n\n\twatch: {\n\t\tmessage: function message(_message) {\n\t\t\t_message && this.hideMessage();\n\t\t}\n\t},\n\n\tmethods: {\n\t\tsubmit: function submit(e) {\n\t\t\tvar error = void 0;\n\n\t\t\tif (!this.usernameValue) {\n\t\t\t\terror = this.username.hint;\n\t\t\t\tthis.$refs.username.focus();\n\t\t\t} else if (!this.passwordValue) {\n\t\t\t\terror = this.password.hint;\n\t\t\t\tthis.$refs.password.focus();\n\t\t\t}\n\n\t\t\tif (error) {\n\t\t\t\tthis.message = error;\n\t\t\t\te.preventDefault();\n\t\t\t}\n\t\t},\n\t\thideMessage: function hideMessage() {\n\t\t\tvar _this = this;\n\n\t\t\tsetTimeout(function () {\n\t\t\t\t_this.message = '';\n\t\t\t}, this.duration);\n\t\t}\n\t}\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vYWNjb3VudExvZ2luLnZ1ZT9mOTdlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQTJCQTs7O09BR0E7OztTQUVBOztTQUVBO2FBRUE7QUFIQTs7U0FLQTtZQUVBO0FBSEE7O1NBS0E7YUFFQTtBQUhBOztTQUtBO1lBSUE7QUFMQTtBQWRBOzt1QkFvQkE7O2dDQUVBO2dDQUNBO2lCQUVBO0FBSkE7QUFNQTs2QkFDQTt1QkFDQTtBQUVBOzs7O3NDQUVBO29CQUNBO0FBR0E7QUFMQTs7OzZCQU9BO09BRUE7OzRCQUNBOzBCQUNBO3dCQUNBO21DQUNBOzBCQUNBO3dCQUNBO0FBRUE7O2NBQ0E7bUJBQ0E7TUFDQTtBQUNBO0FBQ0E7O0FBQ0E7OzBCQUNBO29CQUNBO1dBQ0E7QUFFQTtBQXRCQTtBQXpDQSIsImZpbGUiOiIyMi5qcyIsInNvdXJjZXNDb250ZW50IjpbIjx0ZW1wbGF0ZSBsYW5nPVwicHVnXCI+XG5mb3JtLmFjY291bnQtbG9naW4oQHN1Ym1pdD1cInN1Ym1pdCgkZXZlbnQpXCIpXG5cdHNsb3Rcblx0LmZvcm0tZ3JvdXBcblx0XHRpbnB1dC5mb3JtLWNvbnRyb2woXG5cdFx0XHR0eXBlPVwidGV4dFwiLFxuXHRcdFx0Om5hbWU9XCJ1c2VybmFtZS5uYW1lXCIsXG5cdFx0XHQ6cGxhY2Vob2xkZXI9XCJ1c2VybmFtZS5sYWJlbFwiLFxuXHRcdFx0OmF1dG9mb2N1cz1cInVzZXJuYW1lLmVycm9yIHx8ICFlcnJvclwiLFxuXHRcdFx0cmVmPVwidXNlcm5hbWVcIixcblx0XHRcdHYtbW9kZWw9XCJ1c2VybmFtZVZhbHVlXCIsXG5cdFx0KVxuXHQuZm9ybS1ncm91cFxuXHRcdGlucHV0LmZvcm0tY29udHJvbChcblx0XHRcdHR5cGU9XCJwYXNzd29yZFwiLFxuXHRcdFx0Om5hbWU9XCJwYXNzd29yZC5uYW1lXCIsXG5cdFx0XHQ6cGxhY2Vob2xkZXI9XCJwYXNzd29yZC5sYWJlbFwiLFxuXHRcdFx0OmF1dG9mb2N1cz1cInBhc3N3b3JkLmVycm9yXCIsXG5cdFx0XHRyZWY9XCJwYXNzd29yZFwiLFxuXHRcdFx0di1tb2RlbD1cInBhc3N3b3JkVmFsdWVcIixcblx0XHQpXG5cdHRyYW5zaXRpb24obmFtZT1cIm1lc3NhZ2VcIilcblx0XHQuZm9ybS1ncm91cC5tZXNzYWdlKHYtaWY9XCJtZXNzYWdlXCIpIHt7bWVzc2FnZX19XG5cdGJ1dHRvbi5idG4uYnRuLXByaW1hcnkuYnRuLWJsb2NrIHt7c3VibWl0VGV4dH19XG48L3RlbXBsYXRlPlxuXG48c2NyaXB0PlxuZXhwb3J0IGRlZmF1bHQge1xuXHRuYW1lOiAnYWNjb3VudC1sb2dpbicsXG5cblx0cHJvcHM6IHtcblx0XHRlcnJvcjogU3RyaW5nLFxuXHRcdHBhc3N3b3JkOiB7XG5cdFx0XHR0eXBlOiBPYmplY3QsXG5cdFx0XHRyZXF1aXJlZDogdHJ1ZSxcblx0XHR9LFxuXHRcdHN1Ym1pdFRleHQ6IHtcblx0XHRcdHR5cGU6IFN0cmluZyxcblx0XHRcdGRlZmF1bHQ6ICfnmbvlvZUnLFxuXHRcdH0sXG5cdFx0dXNlcm5hbWU6IHtcblx0XHRcdHR5cGU6IE9iamVjdCxcblx0XHRcdHJlcXVpcmVkOiB0cnVlLFxuXHRcdH0sXG5cdFx0ZHVyYXRpb246IHtcblx0XHRcdHR5cGU6IE51bWJlcixcblx0XHRcdGRlZmF1bHQ6IDIwMDAsXG5cdFx0fSxcblx0fSxcblxuXHRkYXRhKCkge1xuXHRcdHJldHVybiB7XG5cdFx0XHR1c2VybmFtZVZhbHVlOiB0aGlzLnVzZXJuYW1lLnZhbHVlLFxuXHRcdFx0cGFzc3dvcmRWYWx1ZTogdGhpcy5wYXNzd29yZC52YWx1ZSxcblx0XHRcdG1lc3NhZ2U6IHRoaXMuZXJyb3IsXG5cdFx0fTtcblx0fSxcblxuXHRtb3VudGVkKCkge1xuXHRcdHRoaXMubWVzc2FnZSAmJiB0aGlzLmhpZGVNZXNzYWdlKCk7XG5cdH0sXG5cblx0d2F0Y2g6IHtcblx0XHRtZXNzYWdlKF9tZXNzYWdlKSB7XG5cdFx0XHRfbWVzc2FnZSAmJiB0aGlzLmhpZGVNZXNzYWdlKCk7XG5cdFx0fSxcblx0fSxcblxuXHRtZXRob2RzOiB7XG5cdFx0c3VibWl0KGUpIHtcblx0XHRcdGxldCBlcnJvcjtcblxuXHRcdFx0aWYoIXRoaXMudXNlcm5hbWVWYWx1ZSkge1xuXHRcdFx0XHRlcnJvciA9IHRoaXMudXNlcm5hbWUuaGludDtcblx0XHRcdFx0dGhpcy4kcmVmcy51c2VybmFtZS5mb2N1cygpO1xuXHRcdFx0fSBlbHNlIGlmKCF0aGlzLnBhc3N3b3JkVmFsdWUpIHtcblx0XHRcdFx0ZXJyb3IgPSB0aGlzLnBhc3N3b3JkLmhpbnQ7XG5cdFx0XHRcdHRoaXMuJHJlZnMucGFzc3dvcmQuZm9jdXMoKTtcblx0XHRcdH1cblxuXHRcdFx0aWYoZXJyb3IpIHtcblx0XHRcdFx0dGhpcy5tZXNzYWdlID0gZXJyb3I7XG5cdFx0XHRcdGUucHJldmVudERlZmF1bHQoKTtcblx0XHRcdH1cblx0XHR9LFxuXHRcdGhpZGVNZXNzYWdlKCkge1xuXHRcdFx0c2V0VGltZW91dCgoKSA9PiB7XG5cdFx0XHRcdHRoaXMubWVzc2FnZSA9ICcnO1xuXHRcdFx0fSwgdGhpcy5kdXJhdGlvbik7XG5cdFx0fSxcblx0fSxcbn07XG48L3NjcmlwdD5cblxuPHN0eWxlIGxhbmc9XCJzY3NzXCIgc2NvcGVkPlxuQGltcG9ydCAnLi4vLi4vc2Nzcy9jb25maWcnO1xuXG4uYWNjb3VudC1sb2dpbiB7XG5cblx0LmJ0bixcblx0LmZvcm0tY29udHJvbCB7XG5cdFx0Ym9yZGVyLXJhZGl1czogMDtcblx0XHRmb250LXNpemU6IC44NzVyZW07XG5cdH1cblxuXHQuYnRuIHtcblx0XHRiYWNrZ3JvdW5kLWNvbG9yOiAkYXNwaGFsdDtcblx0XHRib3JkZXItY29sb3I6ICRhc3BoYWx0O1xuXG5cdFx0Jjpob3Zlcixcblx0XHQmOmZvY3VzIHtcblx0XHRcdGJhY2tncm91bmQtY29sb3I6ICRhc3BoYWx0LWRhcms7XG5cdFx0XHRib3JkZXItY29sb3I6ICRhc3BoYWx0LWRhcms7XG5cdFx0fVxuXHR9XG5cblx0LmZvcm0tY29udHJvbCB7XG5cdFx0Y29sb3I6ICRhc3BoYWx0O1xuXHRcdGJvcmRlci1jb2xvcjogJGdyYXktbGlnaHQ7XG5cblx0XHQmOmZvY3VzIHtcblx0XHRcdGJvcmRlci1jb2xvcjogJGFzcGhhbHQ7XG5cdFx0fVxuXHR9XG5cblx0Lm1lc3NhZ2Uge1xuXHRcdG1hcmdpbi1ib3R0b206IDA7XG5cdFx0b3ZlcmZsb3c6IGhpZGRlbjtcblx0XHRmb250LXNpemU6IC43NXJlbTtcblx0XHRoZWlnaHQ6IDJyZW07XG5cblx0XHQmLWVudGVyLWFjdGl2ZSxcblx0XHQmLWxlYXZlLWFjdGl2ZSB7XG5cdFx0XHR0cmFuc2l0aW9uOiBoZWlnaHQgLjJzIGVhc2Utb3V0O1xuXHRcdH1cblxuXHRcdCYtZW50ZXIsXG5cdFx0Ji1sZWF2ZS1hY3RpdmUge1xuXHRcdFx0aGVpZ2h0OiAwO1xuXHRcdH1cblx0fVxufVxuPC9zdHlsZT5cblxuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyBhY2NvdW50TG9naW4udnVlPzViOTVhNmM0Il0sInNvdXJjZVJvb3QiOiIifQ==");
+
+/***/ },
+/* 23 */
+/***/ function(module, exports) {
+
+	eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n\tvalue: true\n});\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\nexports.default = {\n\tname: 'account-login',\n\n\tprops: {\n\t\tactive: String,\n\t\ttabs: Object\n\t},\n\n\tdata: function data() {\n\t\tvar active = this.active;\n\t\tif (!active) {\n\t\t\tvar id = void 0;\n\t\t\tfor (id in this.tabs) {\n\t\t\t\tactive = id;\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\n\t\treturn {\n\t\t\tactiveId: active\n\t\t};\n\t},\n\n\n\tmethods: {\n\t\tswitcher: function switcher(id) {\n\t\t\tthis.activeId = id;\n\t\t}\n\t}\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vdGFiUGFnZS52dWU/ZTdjYiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQW9CQTs7O09BR0E7OztVQUVBO1FBR0E7QUFKQTs7dUJBS0E7b0JBQ0E7ZUFDQTtPQUNBO3lCQUNBO2FBQ0E7QUFDQTtBQUNBO0FBRUE7OzthQUdBO0FBRkE7QUFJQTs7OztrQ0FFQTttQkFDQTtBQUVBO0FBSkE7QUF2QkEiLCJmaWxlIjoiMjMuanMiLCJzb3VyY2VzQ29udGVudCI6WyI8dGVtcGxhdGUgbGFuZz1cInB1Z1wiPlxuLnRhYi1wYWdlKHYtaWY9XCJ0YWJzXCIpXG5cdC50YWJzXG5cdFx0LnJvd1xuXHRcdFx0LmNvbC14cyhcblx0XHRcdFx0di1mb3I9XCIobmFtZSwgaWQpIGluIHRhYnNcIixcblx0XHRcdClcblx0XHRcdFx0YShcblx0XHRcdFx0XHQ6Y2xhc3M9XCJ7YWN0aXZlOiBpZCA9PSBhY3RpdmVJZH1cIixcblx0XHRcdFx0XHRAY2xpY2s9XCJzd2l0Y2hlcihpZClcIixcblx0XHRcdFx0KSB7e25hbWV9fVxuXHQucGFnZShcblx0XHQ6Y2xhc3M9XCJpZFwiLFxuXHRcdHYtZm9yPVwiKG5hbWUsIGlkKSBpbiB0YWJzXCIsXG5cdFx0di1pZj1cImlkID09IGFjdGl2ZUlkXCIsXG5cdClcblx0XHRzbG90KDpuYW1lPVwiaWRcIilcbjwvdGVtcGxhdGU+XG5cbjxzY3JpcHQ+XG5leHBvcnQgZGVmYXVsdCB7XG5cdG5hbWU6ICdhY2NvdW50LWxvZ2luJyxcblxuXHRwcm9wczoge1xuXHRcdGFjdGl2ZTogU3RyaW5nLFxuXHRcdHRhYnM6IE9iamVjdCxcblx0fSxcblxuXHRkYXRhKCkge1xuXHRcdGxldCBhY3RpdmUgPSB0aGlzLmFjdGl2ZTtcblx0XHRpZighYWN0aXZlKSB7XG5cdFx0XHRsZXQgaWQ7XG5cdFx0XHRmb3IoaWQgaW4gdGhpcy50YWJzKSB7XG5cdFx0XHRcdGFjdGl2ZSA9IGlkO1xuXHRcdFx0XHRicmVhaztcblx0XHRcdH1cblx0XHR9XG5cblx0XHRyZXR1cm4ge1xuXHRcdFx0YWN0aXZlSWQ6IGFjdGl2ZSxcblx0XHR9O1xuXHR9LFxuXG5cdG1ldGhvZHM6IHtcblx0XHRzd2l0Y2hlcihpZCkge1xuXHRcdFx0dGhpcy5hY3RpdmVJZCA9IGlkO1xuXHRcdH0sXG5cdH0sXG59O1xuPC9zY3JpcHQ+XG5cbjxzdHlsZSBsYW5nPVwic2Nzc1wiIHNjb3BlZD5cbkBpbXBvcnQgJy4uLy4uL3Njc3MvY29uZmlnJztcblxuLnRhYi1wYWdlIHtcblxuXHQudGFicyB7XG5cdFx0Ym9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICRncmF5LWxpZ2h0O1xuXHRcdG1hcmdpbi1ib3R0b206IDFyZW07XG5cdFx0aGVpZ2h0OiA1MHB4O1xuXHRcdHRleHQtYWxpZ246IGNlbnRlcjtcblxuXHRcdEBtZWRpYSAobWluLXdpZHRoOiA1NDRweCkge1xuXHRcdFx0bWFyZ2luLWJvdHRvbTogM3JlbTtcblx0XHR9XG5cblx0XHRhIHtcblx0XHRcdGNvbG9yOiAkZ3JheTtcblx0XHRcdGRpc3BsYXk6IGlubGluZS1ibG9jaztcblx0XHRcdGN1cnNvcjogcG9pbnRlcjtcblx0XHRcdGhlaWdodDogNTBweDtcblx0XHRcdGxpbmUtaGVpZ2h0OiA0OHB4O1xuXHRcdFx0Ym9yZGVyLWJvdHRvbTogMnB4IHNvbGlkIHRyYW5zcGFyZW50O1xuXHRcdFx0b3ZlcmZsb3c6IGhpZGRlbjtcblx0XHRcdHRyYW5zaXRpb246IGFsbCAuMnMgZWFzZS1vdXQ7XG5cdFx0XHRmb250LXNpemU6IC44NzVyZW07XG5cblx0XHRcdEBtZWRpYSAobWluLXdpZHRoOiA1NDRweCkge1xuXHRcdFx0XHRmb250LXNpemU6IDFyZW07XG5cdFx0XHR9XG5cblx0XHRcdCYuYWN0aXZlIHtcblx0XHRcdFx0Y3Vyc29yOiBkZWZhdWx0O1xuXHRcdFx0fVxuXG5cdFx0XHQmOmhvdmVyLFxuXHRcdFx0Ji5hY3RpdmUge1xuXHRcdFx0XHRib3JkZXItYm90dG9tLWNvbG9yOiAkYXNwaGFsdDtcblx0XHRcdFx0Y29sb3I6ICRhc3BoYWx0O1xuXHRcdFx0fVxuXHRcdH1cblx0fVxufVxuPC9zdHlsZT5cblxuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyB0YWJQYWdlLnZ1ZT8yODA2ZWRmZSJdLCJzb3VyY2VSb290IjoiIn0=");
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=account.js.map
