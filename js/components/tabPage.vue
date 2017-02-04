@@ -55,21 +55,30 @@ export default {
 .tab-page {
 
 	.tabs {
+		height: 30px;
 		border-bottom: 1px solid $gray-light;
 		margin-bottom: 1rem;
-		height: 50px;
 		text-align: center;
 
 		@media (min-width: 544px) {
+			height: 50px;
 			margin-bottom: 3rem;
+		}
+
+		.row {
+			display: flex;
+
+			.col-xs {
+				flex: 1;
+			}
 		}
 
 		a {
 			color: $gray;
 			display: inline-block;
 			cursor: pointer;
-			height: 50px;
-			line-height: 48px;
+			height: 30px;
+			line-height: 28px;
 			border-bottom: 2px solid transparent;
 			overflow: hidden;
 			transition: all .2s ease-out;
@@ -77,16 +86,22 @@ export default {
 
 			@media (min-width: 544px) {
 				font-size: 1rem;
-			}
-
-			&.active {
-				cursor: default;
+				height: 50px;
+				line-height: 48px;
 			}
 
 			&:hover,
 			&.active {
 				border-bottom-color: $asphalt;
 				color: $asphalt;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
+
+			&.active {
+				cursor: default;
 			}
 		}
 	}

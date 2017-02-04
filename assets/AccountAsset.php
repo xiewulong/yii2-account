@@ -10,6 +10,7 @@ class AccountAsset extends AssetBundle {
 		// 'yii\xui\FontAwesomeAsset',
 		'yii\xui\BootstrapCssAsset',
 		// 'yii\xui\BootstrapFlexAsset',
+		'yii\wechat\assets\WechatAsset',
 		'yii\xui\VueAsset',
 		// 'yii\xui\VuexAsset',
 		// 'yii\xui\AxiosAsset',

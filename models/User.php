@@ -7,6 +7,8 @@ use yii\behaviors\TimestampBehavior;
 use yii\components\ActiveRecord;
 use yii\web\IdentityInterface;
 
+use yii\wechat\models\WechatUser;
+
 /**
  * User model
  *
@@ -33,6 +35,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	const STATUS_DELETED = 0;
 	const STATUS_ACTIVE = 1;
 	const STATUS_INACTIVE = 2;
+	const STATUS_BLANK = 3;
 
 	public $username;
 
@@ -78,6 +81,7 @@ class User extends ActiveRecord implements IdentityInterface {
 			['status', 'in', 'range' => [
 				static::STATUS_ACTIVE,
 				static::STATUS_INACTIVE,
+				static::STATUS_BLANK,
 			]],
 
 			['password', 'string', 'min' => 6, 'max' => 16, 'on' => ['password-reset']],
@@ -100,6 +104,11 @@ class User extends ActiveRecord implements IdentityInterface {
 			'username',
 			'password',
 			'remember_me',
+		];
+
+		$scenarios['blank'] = [
+			'auth_key',
+			'status',
 		];
 
 		$scenarios['password-reset'] = [
@@ -185,9 +194,10 @@ class User extends ActiveRecord implements IdentityInterface {
 	public function statusItems() {
 		return [
 			[
+				static::STATUS_DELETED => \Yii::t($this->messageCategory, 'deleted'),
 				static::STATUS_ACTIVE => \Yii::t($this->messageCategory, 'active'),
 				static::STATUS_INACTIVE => \Yii::t($this->messageCategory, 'inactive'),
-				static::STATUS_DELETED => \Yii::t($this->messageCategory, 'deleted'),
+				static::STATUS_BLANK => \Yii::t($this->messageCategory, 'blank account for third party'),
 			],
 		];
 	}
@@ -322,6 +332,27 @@ class User extends ActiveRecord implements IdentityInterface {
 	 */
 	public function validateAuthKey($authKey) {
 		return $this->getAuthKey() == $authKey;
+	}
+
+	/**
+	 * Return wechat users
+	 *
+	 * @since 0.0.1
+	 * @return {array}
+	 */
+	public function getWechatUsers() {
+		return $this->hasMany(WechatUser::className(), ['user_id' => 'id']);
+	}
+
+	/**
+	 * Returns wechat user
+	 *
+	 * @since 0.0.1
+	 * @param {string} $appid wechat appid
+	 * @return {object}
+	 */
+	public function getWechatUser($appid) {
+		return $this->getWechatUsers()->where(['appid' => $appid])->one();
 	}
 
 }

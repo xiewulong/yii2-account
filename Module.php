@@ -5,7 +5,7 @@
  * https://github.com/xiewulong/yii2-account
  * https://raw.githubusercontent.com/xiewulong/yii2-account/master/LICENSE
  * create: 2016/07/27
- * update: 2017/01/07
+ * update: 2017/01/24
  * since: 0.0.1
  */
 
@@ -15,7 +15,7 @@ use Yii;
 
 class Module extends \yii\components\Module {
 
-	public $defaultRoute = 'user';
+	public $defaultRoute = 'sign';
 
 	public $messageCategory = 'account';
 
@@ -34,5 +34,19 @@ class Module extends \yii\components\Module {
 	public $title;
 
 	public $logo;
+
+	public $wechatAccountEnabled = false;
+
+	public $wechatComponent = 'wechat';
+
+	public $wechat;
+
+	public function init() {
+		parent::init();
+
+		if($this->wechatAccountEnabled) {
+			$this->wechat = \Yii::createObject(\Yii::$app->components[$this->wechatComponent]);
+		}
+	}
 
 }

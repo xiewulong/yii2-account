@@ -52,36 +52,30 @@
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /*!
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * account
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * xiewulong <xiewulong@vip.qq.com>
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * create: 2016/8/1
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * create: 2016/08/01
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * since: 0.0.1
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      */
-	
-	// styles
 	
 	// import Vuex from 'vuex';
 	
 	
-	__webpack_require__(/*! ../scss/account.scss */ 1);
-	
-	var _vue = __webpack_require__(/*! vue */ 20);
+	var _vue = __webpack_require__(/*! vue */ 24);
 	
 	var _vue2 = _interopRequireDefault(_vue);
 	
-	var _components = __webpack_require__(/*! ./components */ 19);
-	
-	var _components2 = _interopRequireDefault(_components);
-	
-	var _fastclick = __webpack_require__(/*! fastclick */ 6);
+	var _fastclick = __webpack_require__(/*! fastclick */ 7);
 	
 	var _fastclick2 = _interopRequireDefault(_fastclick);
+	
+	__webpack_require__(/*! ../scss/account.scss */ 1);
+	
+	var _components = __webpack_require__(/*! ./components */ 23);
+	
+	var _components2 = _interopRequireDefault(_components);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	_fastclick2.default.attach(document.body);
-	
-	// Vue.use(Vuex);
 	
 	window.App = function () {
 		function App() {
@@ -109,6 +103,8 @@
 	
 		return App;
 	}();
+	
+	_fastclick2.default.attach(document.body);
 
 /***/ },
 /* 1 */
@@ -122,25 +118,17 @@
 /***/ },
 /* 2 */
 /*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./~/.1.0.1@extract-text-webpack-plugin/loader.js?{"remove":true}!./~/.0.26.1@css-loader?sourceMap!./~/.10.0.2@vue-loader/lib/style-rewriter.js?id=data-v-0be731d4&scoped=true!./~/.1.2.1@postcss-loader!./~/.4.1.1@sass-loader?sourceMap!./~/.10.0.2@vue-loader/lib/selector.js?type=styles&index=0!./vendor/xiewulong/yii2-account/js/components/accountHeader.vue ***!
+  !*** ./~/.1.0.1@extract-text-webpack-plugin/loader.js?{"remove":true}!./~/.0.26.1@css-loader?sourceMap!./~/.10.0.2@vue-loader/lib/style-rewriter.js?id=data-v-0be731d4&scoped=true!./~/.1.2.2@postcss-loader!./~/.4.1.1@sass-loader?sourceMap!./~/.10.0.2@vue-loader/lib/selector.js?type=styles&index=0!./vendor/xiewulong/yii2-account/js/components/accountHeader.vue ***!
   \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 3 */
-/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./~/.1.0.1@extract-text-webpack-plugin/loader.js?{"remove":true}!./~/.0.26.1@css-loader?sourceMap!./~/.10.0.2@vue-loader/lib/style-rewriter.js?id=data-v-32f17872&scoped=true!./~/.1.2.1@postcss-loader!./~/.4.1.1@sass-loader?sourceMap!./~/.10.0.2@vue-loader/lib/selector.js?type=styles&index=0!./vendor/xiewulong/yii2-account/js/components/accountLogin.vue ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
+/* 3 */,
 /* 4 */
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./~/.1.0.1@extract-text-webpack-plugin/loader.js?{"remove":true}!./~/.0.26.1@css-loader?sourceMap!./~/.10.0.2@vue-loader/lib/style-rewriter.js?id=data-v-360a4efe&scoped=true!./~/.1.2.1@postcss-loader!./~/.4.1.1@sass-loader?sourceMap!./~/.10.0.2@vue-loader/lib/selector.js?type=styles&index=0!./vendor/xiewulong/yii2-account/js/components/tabPage.vue ***!
+  !*** ./~/.1.0.1@extract-text-webpack-plugin/loader.js?{"remove":true}!./~/.0.26.1@css-loader?sourceMap!./~/.10.0.2@vue-loader/lib/style-rewriter.js?id=data-v-360a4efe&scoped=true!./~/.1.2.2@postcss-loader!./~/.4.1.1@sass-loader?sourceMap!./~/.10.0.2@vue-loader/lib/selector.js?type=styles&index=0!./vendor/xiewulong/yii2-account/js/components/tabPage.vue ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ function(module, exports) {
 
@@ -149,7 +137,7 @@
 /***/ },
 /* 5 */
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./~/.1.0.1@extract-text-webpack-plugin/loader.js?{"remove":true}!./~/.0.26.1@css-loader?sourceMap!./~/.10.0.2@vue-loader/lib/style-rewriter.js?id=data-v-68eeb8e7&scoped=true!./~/.1.2.1@postcss-loader!./~/.4.1.1@sass-loader?sourceMap!./~/.10.0.2@vue-loader/lib/selector.js?type=styles&index=0!./vendor/xiewulong/yii2-account/js/components/account.vue ***!
+  !*** ./~/.1.0.1@extract-text-webpack-plugin/loader.js?{"remove":true}!./~/.0.26.1@css-loader?sourceMap!./~/.10.0.2@vue-loader/lib/style-rewriter.js?id=data-v-68eeb8e7&scoped=true!./~/.1.2.2@postcss-loader!./~/.4.1.1@sass-loader?sourceMap!./~/.10.0.2@vue-loader/lib/selector.js?type=styles&index=0!./vendor/xiewulong/yii2-account/js/components/account.vue ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ function(module, exports) {
 
@@ -157,6 +145,15 @@
 
 /***/ },
 /* 6 */
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./~/.1.0.1@extract-text-webpack-plugin/loader.js?{"remove":true}!./~/.0.26.1@css-loader?sourceMap!./~/.10.0.2@vue-loader/lib/style-rewriter.js?id=data-v-82633eba&scoped=true!./~/.1.2.2@postcss-loader!./~/.4.1.1@sass-loader?sourceMap!./~/.10.0.2@vue-loader/lib/selector.js?type=styles&index=0!./vendor/xiewulong/yii2-account/js/components/login.vue ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 7 */
 /*!*********************************************!*\
   !*** ./~/.1.0.6@fastclick/lib/fastclick.js ***!
   \*********************************************/
@@ -1006,7 +1003,7 @@
 
 
 /***/ },
-/* 7 */
+/* 8 */
 /*!*****************************************************************!*\
   !*** ./vendor/xiewulong/yii2-account/js/components/account.vue ***!
   \*****************************************************************/
@@ -1019,10 +1016,10 @@
 	__webpack_require__(/*! !./../../../../../~/.1.0.1@extract-text-webpack-plugin/loader.js?{"remove":true}!css?sourceMap!vue-loader/lib/style-rewriter?id=data-v-68eeb8e7&scoped=true!postcss!sass?sourceMap!vue-loader/lib/selector?type=styles&index=0!./account.vue */ 5)
 	
 	/* script */
-	__vue_exports__ = __webpack_require__(/*! !babel-loader!vue-loader/lib/selector?type=script&index=0!./account.vue */ 15)
+	__vue_exports__ = __webpack_require__(/*! !babel-loader!vue-loader/lib/selector?type=script&index=0!./account.vue */ 18)
 	
 	/* template */
-	var __vue_template__ = __webpack_require__(/*! !vue-loader/lib/template-compiler?id=data-v-68eeb8e7!vue-loader/lib/template-loader?raw&engine=pug!vue-loader/lib/selector?type=template&index=0!./account.vue */ 14)
+	var __vue_template__ = __webpack_require__(/*! !vue-loader/lib/template-compiler?id=data-v-68eeb8e7!vue-loader/lib/template-loader?raw&engine=pug!vue-loader/lib/selector?type=template&index=0!./account.vue */ 16)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -1057,7 +1054,7 @@
 
 
 /***/ },
-/* 8 */
+/* 9 */
 /*!***********************************************************************!*\
   !*** ./vendor/xiewulong/yii2-account/js/components/accountHeader.vue ***!
   \***********************************************************************/
@@ -1070,10 +1067,10 @@
 	__webpack_require__(/*! !./../../../../../~/.1.0.1@extract-text-webpack-plugin/loader.js?{"remove":true}!css?sourceMap!vue-loader/lib/style-rewriter?id=data-v-0be731d4&scoped=true!postcss!sass?sourceMap!vue-loader/lib/selector?type=styles&index=0!./accountHeader.vue */ 2)
 	
 	/* script */
-	__vue_exports__ = __webpack_require__(/*! !babel-loader!vue-loader/lib/selector?type=script&index=0!./accountHeader.vue */ 16)
+	__vue_exports__ = __webpack_require__(/*! !babel-loader!vue-loader/lib/selector?type=script&index=0!./accountHeader.vue */ 19)
 	
 	/* template */
-	var __vue_template__ = __webpack_require__(/*! !vue-loader/lib/template-compiler?id=data-v-0be731d4!vue-loader/lib/template-loader?raw&engine=pug!vue-loader/lib/selector?type=template&index=0!./accountHeader.vue */ 11)
+	var __vue_template__ = __webpack_require__(/*! !vue-loader/lib/template-compiler?id=data-v-0be731d4!vue-loader/lib/template-loader?raw&engine=pug!vue-loader/lib/selector?type=template&index=0!./accountHeader.vue */ 13)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -1108,23 +1105,23 @@
 
 
 /***/ },
-/* 9 */
-/*!**********************************************************************!*\
-  !*** ./vendor/xiewulong/yii2-account/js/components/accountLogin.vue ***!
-  \**********************************************************************/
+/* 10 */
+/*!***************************************************************!*\
+  !*** ./vendor/xiewulong/yii2-account/js/components/login.vue ***!
+  \***************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 	
 	/* styles */
-	__webpack_require__(/*! !./../../../../../~/.1.0.1@extract-text-webpack-plugin/loader.js?{"remove":true}!css?sourceMap!vue-loader/lib/style-rewriter?id=data-v-32f17872&scoped=true!postcss!sass?sourceMap!vue-loader/lib/selector?type=styles&index=0!./accountLogin.vue */ 3)
+	__webpack_require__(/*! !./../../../../../~/.1.0.1@extract-text-webpack-plugin/loader.js?{"remove":true}!css?sourceMap!vue-loader/lib/style-rewriter?id=data-v-82633eba&scoped=true!postcss!sass?sourceMap!vue-loader/lib/selector?type=styles&index=0!./login.vue */ 6)
 	
 	/* script */
-	__vue_exports__ = __webpack_require__(/*! !babel-loader!vue-loader/lib/selector?type=script&index=0!./accountLogin.vue */ 17)
+	__vue_exports__ = __webpack_require__(/*! !babel-loader!vue-loader/lib/selector?type=script&index=0!./login.vue */ 20)
 	
 	/* template */
-	var __vue_template__ = __webpack_require__(/*! !vue-loader/lib/template-compiler?id=data-v-32f17872!vue-loader/lib/template-loader?raw&engine=pug!vue-loader/lib/selector?type=template&index=0!./accountLogin.vue */ 12)
+	var __vue_template__ = __webpack_require__(/*! !vue-loader/lib/template-compiler?id=data-v-82633eba!vue-loader/lib/template-loader?raw&engine=pug!vue-loader/lib/selector?type=template&index=0!./login.vue */ 17)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -1136,10 +1133,10 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/home/xiewulong/com.xiawanle/vendor/xiewulong/yii2-account/js/components/accountLogin.vue"
+	__vue_options__.__file = "/home/xiewulong/com.xiawanle/vendor/xiewulong/yii2-account/js/components/login.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-32f17872"
+	__vue_options__._scopeId = "data-v-82633eba"
 	
 	/* hot reload */
 	if (false) {(function () {
@@ -1148,18 +1145,18 @@
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-32f17872", __vue_options__)
+	    hotAPI.createRecord("data-v-82633eba", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-32f17872", __vue_options__)
+	    hotAPI.reload("data-v-82633eba", __vue_options__)
 	  }
 	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] accountLogin.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	if (__vue_options__.functional) {console.error("[vue-loader] login.vue: functional components are not supported and should be defined in plain js files using render functions.")}
 	
 	module.exports = __vue_exports__
 
 
 /***/ },
-/* 10 */
+/* 11 */
 /*!*****************************************************************!*\
   !*** ./vendor/xiewulong/yii2-account/js/components/tabPage.vue ***!
   \*****************************************************************/
@@ -1172,10 +1169,10 @@
 	__webpack_require__(/*! !./../../../../../~/.1.0.1@extract-text-webpack-plugin/loader.js?{"remove":true}!css?sourceMap!vue-loader/lib/style-rewriter?id=data-v-360a4efe&scoped=true!postcss!sass?sourceMap!vue-loader/lib/selector?type=styles&index=0!./tabPage.vue */ 4)
 	
 	/* script */
-	__vue_exports__ = __webpack_require__(/*! !babel-loader!vue-loader/lib/selector?type=script&index=0!./tabPage.vue */ 18)
+	__vue_exports__ = __webpack_require__(/*! !babel-loader!vue-loader/lib/selector?type=script&index=0!./tabPage.vue */ 21)
 	
 	/* template */
-	var __vue_template__ = __webpack_require__(/*! !vue-loader/lib/template-compiler?id=data-v-360a4efe!vue-loader/lib/template-loader?raw&engine=pug!vue-loader/lib/selector?type=template&index=0!./tabPage.vue */ 13)
+	var __vue_template__ = __webpack_require__(/*! !vue-loader/lib/template-compiler?id=data-v-360a4efe!vue-loader/lib/template-loader?raw&engine=pug!vue-loader/lib/selector?type=template&index=0!./tabPage.vue */ 15)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -1210,7 +1207,8 @@
 
 
 /***/ },
-/* 11 */
+/* 12 */,
+/* 13 */
 /*!********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./~/.10.0.2@vue-loader/lib/template-compiler.js?id=data-v-0be731d4!./~/.10.0.2@vue-loader/lib/template-loader.js?raw&engine=pug!./~/.10.0.2@vue-loader/lib/selector.js?type=template&index=0!./vendor/xiewulong/yii2-account/js/components/accountHeader.vue ***!
   \********************************************************************************************************************************************************************************************************************************************************************/
@@ -1232,15 +1230,80 @@
 	}
 
 /***/ },
-/* 12 */
-/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./~/.10.0.2@vue-loader/lib/template-compiler.js?id=data-v-32f17872!./~/.10.0.2@vue-loader/lib/template-loader.js?raw&engine=pug!./~/.10.0.2@vue-loader/lib/selector.js?type=template&index=0!./vendor/xiewulong/yii2-account/js/components/accountLogin.vue ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************/
+/* 14 */,
+/* 15 */
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./~/.10.0.2@vue-loader/lib/template-compiler.js?id=data-v-360a4efe!./~/.10.0.2@vue-loader/lib/template-loader.js?raw&engine=pug!./~/.10.0.2@vue-loader/lib/selector.js?type=template&index=0!./vendor/xiewulong/yii2-account/js/components/tabPage.vue ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return (_vm.tabs) ? _c('div', {
+	    staticClass: "tab-page"
+	  }, [_c('div', {
+	    staticClass: "tabs"
+	  }, [_c('div', {
+	    staticClass: "row"
+	  }, _vm._l((_vm.tabs), function(name, id) {
+	    return _c('div', {
+	      staticClass: "col-xs"
+	    }, [_c('a', {
+	      class: {
+	        active: id == _vm.activeId
+	      },
+	      on: {
+	        "click": function($event) {
+	          _vm.switcher(id)
+	        }
+	      }
+	    }, [_vm._v(_vm._s(name))])])
+	  }))]), _vm._l((_vm.tabs), function(name, id) {
+	    return (id == _vm.activeId) ? _c('div', {
+	      staticClass: "page",
+	      class: id
+	    }, [_vm._t(id)], 2) : _vm._e()
+	  })], 2) : _vm._e()
+	},staticRenderFns: []}
+	module.exports.render._withStripped = true
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-360a4efe", module.exports)
+	  }
+	}
+
+/***/ },
+/* 16 */
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./~/.10.0.2@vue-loader/lib/template-compiler.js?id=data-v-68eeb8e7!./~/.10.0.2@vue-loader/lib/template-loader.js?raw&engine=pug!./~/.10.0.2@vue-loader/lib/selector.js?type=template&index=0!./vendor/xiewulong/yii2-account/js/components/account.vue ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: "account"
+	  }, [_c('div', {
+	    staticClass: "account-body"
+	  }, [_vm._t("default")], 2)])
+	},staticRenderFns: []}
+	module.exports.render._withStripped = true
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-68eeb8e7", module.exports)
+	  }
+	}
+
+/***/ },
+/* 17 */
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./~/.10.0.2@vue-loader/lib/template-compiler.js?id=data-v-82633eba!./~/.10.0.2@vue-loader/lib/template-loader.js?raw&engine=pug!./~/.10.0.2@vue-loader/lib/selector.js?type=template&index=0!./vendor/xiewulong/yii2-account/js/components/login.vue ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('form', {
-	    staticClass: "account-login",
+	    staticClass: "login",
 	    on: {
 	      "submit": function($event) {
 	        _vm.submit($event)
@@ -1312,76 +1375,12 @@
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-32f17872", module.exports)
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-82633eba", module.exports)
 	  }
 	}
 
 /***/ },
-/* 13 */
-/*!**************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./~/.10.0.2@vue-loader/lib/template-compiler.js?id=data-v-360a4efe!./~/.10.0.2@vue-loader/lib/template-loader.js?raw&engine=pug!./~/.10.0.2@vue-loader/lib/selector.js?type=template&index=0!./vendor/xiewulong/yii2-account/js/components/tabPage.vue ***!
-  \**************************************************************************************************************************************************************************************************************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return (_vm.tabs) ? _c('div', {
-	    staticClass: "tab-page"
-	  }, [_c('div', {
-	    staticClass: "tabs"
-	  }, [_c('div', {
-	    staticClass: "row"
-	  }, _vm._l((_vm.tabs), function(name, id) {
-	    return _c('div', {
-	      staticClass: "col-xs"
-	    }, [_c('a', {
-	      class: {
-	        active: id == _vm.activeId
-	      },
-	      on: {
-	        "click": function($event) {
-	          _vm.switcher(id)
-	        }
-	      }
-	    }, [_vm._v(_vm._s(name))])])
-	  }))]), _vm._l((_vm.tabs), function(name, id) {
-	    return (id == _vm.activeId) ? _c('div', {
-	      staticClass: "page",
-	      class: id
-	    }, [_vm._t(id)], 2) : _vm._e()
-	  })], 2) : _vm._e()
-	},staticRenderFns: []}
-	module.exports.render._withStripped = true
-	if (false) {
-	  module.hot.accept()
-	  if (module.hot.data) {
-	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-360a4efe", module.exports)
-	  }
-	}
-
-/***/ },
-/* 14 */
-/*!**************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./~/.10.0.2@vue-loader/lib/template-compiler.js?id=data-v-68eeb8e7!./~/.10.0.2@vue-loader/lib/template-loader.js?raw&engine=pug!./~/.10.0.2@vue-loader/lib/selector.js?type=template&index=0!./vendor/xiewulong/yii2-account/js/components/account.vue ***!
-  \**************************************************************************************************************************************************************************************************************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: "account"
-	  }, [_c('div', {
-	    staticClass: "account-body"
-	  }, [_vm._t("default")], 2)])
-	},staticRenderFns: []}
-	module.exports.render._withStripped = true
-	if (false) {
-	  module.hot.accept()
-	  if (module.hot.data) {
-	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-68eeb8e7", module.exports)
-	  }
-	}
-
-/***/ },
-/* 15 */
+/* 18 */
 /*!*********************************************************************************************************************************************************!*\
   !*** ./~/.6.2.10@babel-loader/lib!./~/.10.0.2@vue-loader/lib/selector.js?type=script&index=0!./vendor/xiewulong/yii2-account/js/components/account.vue ***!
   \*********************************************************************************************************************************************************/
@@ -1408,7 +1407,7 @@
 	};
 
 /***/ },
-/* 16 */
+/* 19 */
 /*!***************************************************************************************************************************************************************!*\
   !*** ./~/.6.2.10@babel-loader/lib!./~/.10.0.2@vue-loader/lib/selector.js?type=script&index=0!./vendor/xiewulong/yii2-account/js/components/accountHeader.vue ***!
   \***************************************************************************************************************************************************************/
@@ -1432,10 +1431,10 @@
 	};
 
 /***/ },
-/* 17 */
-/*!**************************************************************************************************************************************************************!*\
-  !*** ./~/.6.2.10@babel-loader/lib!./~/.10.0.2@vue-loader/lib/selector.js?type=script&index=0!./vendor/xiewulong/yii2-account/js/components/accountLogin.vue ***!
-  \**************************************************************************************************************************************************************/
+/* 20 */
+/*!*******************************************************************************************************************************************************!*\
+  !*** ./~/.6.2.10@babel-loader/lib!./~/.10.0.2@vue-loader/lib/selector.js?type=script&index=0!./vendor/xiewulong/yii2-account/js/components/login.vue ***!
+  \*******************************************************************************************************************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1471,7 +1470,7 @@
 	//
 	
 	exports.default = {
-		name: 'account-login',
+		name: 'login',
 	
 		props: {
 			error: String,
@@ -1539,7 +1538,7 @@
 	};
 
 /***/ },
-/* 18 */
+/* 21 */
 /*!*********************************************************************************************************************************************************!*\
   !*** ./~/.6.2.10@babel-loader/lib!./~/.10.0.2@vue-loader/lib/selector.js?type=script&index=0!./vendor/xiewulong/yii2-account/js/components/tabPage.vue ***!
   \*********************************************************************************************************************************************************/
@@ -1602,7 +1601,8 @@
 	};
 
 /***/ },
-/* 19 */
+/* 22 */,
+/* 23 */
 /*!**************************************************************!*\
   !*** ./vendor/xiewulong/yii2-account/js/components/index.js ***!
   \**************************************************************/
@@ -1611,22 +1611,30 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+		value: true
 	});
 	
-	var _account = __webpack_require__(/*! ./account.vue */ 7);
+	var _account = __webpack_require__(/*! ./account.vue */ 8);
 	
 	var _account2 = _interopRequireDefault(_account);
 	
-	var _accountHeader = __webpack_require__(/*! ./accountHeader.vue */ 8);
+	var _accountHeader = __webpack_require__(/*! ./accountHeader.vue */ 9);
 	
 	var _accountHeader2 = _interopRequireDefault(_accountHeader);
 	
-	var _accountLogin = __webpack_require__(/*! ./accountLogin.vue */ 9);
+	var _login = __webpack_require__(/*! ./login.vue */ 10);
 	
-	var _accountLogin2 = _interopRequireDefault(_accountLogin);
+	var _login2 = _interopRequireDefault(_login);
 	
-	var _tabPage = __webpack_require__(/*! ./tabPage.vue */ 10);
+	var _pair = __webpack_require__(/*! ./pair.vue */ 29);
+	
+	var _pair2 = _interopRequireDefault(_pair);
+	
+	var _signup = __webpack_require__(/*! ./signup.vue */ 32);
+	
+	var _signup2 = _interopRequireDefault(_signup);
+	
+	var _tabPage = __webpack_require__(/*! ./tabPage.vue */ 11);
 	
 	var _tabPage2 = _interopRequireDefault(_tabPage);
 	
@@ -1639,20 +1647,463 @@
 	 * since: 0.0.1
 	 */
 	exports.default = {
-	  account: _account2.default,
-	  accountHeader: _accountHeader2.default,
-	  accountLogin: _accountLogin2.default,
-	  tabPage: _tabPage2.default
+		account: _account2.default,
+		accountHeader: _accountHeader2.default,
+		login: _login2.default,
+		pair: _pair2.default,
+		signup: _signup2.default,
+		tabPage: _tabPage2.default
 	};
 
 /***/ },
-/* 20 */
+/* 24 */
 /*!**********************!*\
   !*** external "Vue" ***!
   \**********************/
 /***/ function(module, exports) {
 
 	module.exports = Vue;
+
+/***/ },
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./~/.1.0.1@extract-text-webpack-plugin/loader.js?{"remove":true}!./~/.0.26.1@css-loader?sourceMap!./~/.10.0.2@vue-loader/lib/style-rewriter.js?id=data-v-86c0dde0&scoped=true!./~/.1.2.2@postcss-loader!./~/.4.1.1@sass-loader?sourceMap!./~/.10.0.2@vue-loader/lib/selector.js?type=styles&index=0!./vendor/xiewulong/yii2-account/js/components/pair.vue ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 29 */
+/*!**************************************************************!*\
+  !*** ./vendor/xiewulong/yii2-account/js/components/pair.vue ***!
+  \**************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+	
+	/* styles */
+	__webpack_require__(/*! !./../../../../../~/.1.0.1@extract-text-webpack-plugin/loader.js?{"remove":true}!css?sourceMap!vue-loader/lib/style-rewriter?id=data-v-86c0dde0&scoped=true!postcss!sass?sourceMap!vue-loader/lib/selector?type=styles&index=0!./pair.vue */ 28)
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(/*! !babel-loader!vue-loader/lib/selector?type=script&index=0!./pair.vue */ 31)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(/*! !vue-loader/lib/template-compiler?id=data-v-86c0dde0!vue-loader/lib/template-loader?raw&engine=pug!vue-loader/lib/selector?type=template&index=0!./pair.vue */ 30)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/home/xiewulong/com.xiawanle/vendor/xiewulong/yii2-account/js/components/pair.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	__vue_options__._scopeId = "data-v-86c0dde0"
+	
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-86c0dde0", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-86c0dde0", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] pair.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 30 */
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./~/.10.0.2@vue-loader/lib/template-compiler.js?id=data-v-86c0dde0!./~/.10.0.2@vue-loader/lib/template-loader.js?raw&engine=pug!./~/.10.0.2@vue-loader/lib/selector.js?type=template&index=0!./vendor/xiewulong/yii2-account/js/components/pair.vue ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: "pair row"
+	  }, [_c('div', {
+	    staticClass: "col-xs"
+	  }, [_c('b', [_c('img', {
+	    attrs: {
+	      "src": _vm._user.face
+	    }
+	  })]), _c('p', [_vm._v(_vm._s(_vm._user.name))])]), (_vm.user) ? _c('div', {
+	    staticClass: "col-xs"
+	  }, [_c('b', [_c('img', {
+	    attrs: {
+	      "src": _vm.user.face
+	    }
+	  })]), _c('p', [_vm._v(_vm._s(_vm.user.username))])]) : _c('div', {
+	    staticClass: "col-xs guest"
+	  }, _vm._l((_vm.guest), function(text) {
+	    return _c('p', [_vm._v(_vm._s(text))])
+	  }))])
+	},staticRenderFns: []}
+	module.exports.render._withStripped = true
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-86c0dde0", module.exports)
+	  }
+	}
+
+/***/ },
+/* 31 */
+/*!******************************************************************************************************************************************************!*\
+  !*** ./~/.6.2.10@babel-loader/lib!./~/.10.0.2@vue-loader/lib/selector.js?type=script&index=0!./vendor/xiewulong/yii2-account/js/components/pair.vue ***!
+  \******************************************************************************************************************************************************/
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	
+	exports.default = {
+		name: 'pair',
+	
+		props: {
+			_user: {
+				type: Object,
+				required: true
+			},
+			guest: {
+				type: Array,
+				default: function _default() {
+					return ['您尚未登录', '请先绑定账户'];
+				}
+			},
+			user: {
+				type: Object,
+				default: function _default() {
+					return null;
+				}
+			}
+		}
+	};
+
+/***/ },
+/* 32 */
+/*!****************************************************************!*\
+  !*** ./vendor/xiewulong/yii2-account/js/components/signup.vue ***!
+  \****************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+	
+	/* styles */
+	__webpack_require__(/*! !./../../../../../~/.1.0.1@extract-text-webpack-plugin/loader.js?{"remove":true}!css?sourceMap!vue-loader/lib/style-rewriter?id=data-v-6757a0ce&scoped=true!postcss!sass?sourceMap!vue-loader/lib/selector?type=styles&index=0!./signup.vue */ 33)
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(/*! !babel-loader!vue-loader/lib/selector?type=script&index=0!./signup.vue */ 35)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(/*! !vue-loader/lib/template-compiler?id=data-v-6757a0ce!vue-loader/lib/template-loader?raw&engine=pug!vue-loader/lib/selector?type=template&index=0!./signup.vue */ 34)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/home/xiewulong/com.xiawanle/vendor/xiewulong/yii2-account/js/components/signup.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	__vue_options__._scopeId = "data-v-6757a0ce"
+	
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-6757a0ce", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-6757a0ce", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] signup.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 33 */
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./~/.1.0.1@extract-text-webpack-plugin/loader.js?{"remove":true}!./~/.0.26.1@css-loader?sourceMap!./~/.10.0.2@vue-loader/lib/style-rewriter.js?id=data-v-6757a0ce&scoped=true!./~/.1.2.2@postcss-loader!./~/.4.1.1@sass-loader?sourceMap!./~/.10.0.2@vue-loader/lib/selector.js?type=styles&index=0!./vendor/xiewulong/yii2-account/js/components/signup.vue ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 34 */
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./~/.10.0.2@vue-loader/lib/template-compiler.js?id=data-v-6757a0ce!./~/.10.0.2@vue-loader/lib/template-loader.js?raw&engine=pug!./~/.10.0.2@vue-loader/lib/selector.js?type=template&index=0!./vendor/xiewulong/yii2-account/js/components/signup.vue ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('form', {
+	    staticClass: "signup",
+	    on: {
+	      "submit": function($event) {
+	        _vm.submit($event)
+	      }
+	    }
+	  }, [_vm._t("default"), (_vm._user) ? _c('input', {
+	    attrs: {
+	      "type": "hidden",
+	      "name": "type"
+	    },
+	    domProps: {
+	      "value": _vm._user.type
+	    }
+	  }) : _vm._e(), (_vm._user) ? _c('input', {
+	    attrs: {
+	      "type": "hidden",
+	      "name": "id"
+	    },
+	    domProps: {
+	      "value": _vm._user.id
+	    }
+	  }) : _vm._e(), (!_vm._user) ? _c('div', {
+	    staticClass: "form-group"
+	  }, [_c('input', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (_vm.usernameValue),
+	      expression: "usernameValue"
+	    }],
+	    ref: "username",
+	    staticClass: "form-control",
+	    attrs: {
+	      "type": "text",
+	      "name": _vm.username.name,
+	      "placeholder": _vm.username.label,
+	      "autofocus": _vm.username.error || !_vm.error
+	    },
+	    domProps: {
+	      "value": _vm._s(_vm.usernameValue)
+	    },
+	    on: {
+	      "input": function($event) {
+	        if ($event.target.composing) { return; }
+	        _vm.usernameValue = $event.target.value
+	      }
+	    }
+	  })]) : _vm._e(), (!_vm._user) ? _c('div', {
+	    staticClass: "form-group"
+	  }, [_c('input', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (_vm.passwordValue),
+	      expression: "passwordValue"
+	    }],
+	    ref: "password",
+	    staticClass: "form-control",
+	    attrs: {
+	      "type": "password",
+	      "name": _vm.password.name,
+	      "placeholder": _vm.password.label,
+	      "autofocus": _vm.password.error
+	    },
+	    domProps: {
+	      "value": _vm._s(_vm.passwordValue)
+	    },
+	    on: {
+	      "input": function($event) {
+	        if ($event.target.composing) { return; }
+	        _vm.passwordValue = $event.target.value
+	      }
+	    }
+	  })]) : _vm._e(), _c('transition', {
+	    attrs: {
+	      "name": "message"
+	    }
+	  }, [(_vm.message) ? _c('div', {
+	    staticClass: "form-group message"
+	  }, [_vm._v(_vm._s(_vm.message))]) : _vm._e()]), _c('button', {
+	    staticClass: "btn btn-primary btn-block"
+	  }, [_vm._v(_vm._s(_vm.submitText))])], 2)
+	},staticRenderFns: []}
+	module.exports.render._withStripped = true
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-6757a0ce", module.exports)
+	  }
+	}
+
+/***/ },
+/* 35 */
+/*!********************************************************************************************************************************************************!*\
+  !*** ./~/.6.2.10@babel-loader/lib!./~/.10.0.2@vue-loader/lib/selector.js?type=script&index=0!./vendor/xiewulong/yii2-account/js/components/signup.vue ***!
+  \********************************************************************************************************************************************************/
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	
+	exports.default = {
+		name: 'signup',
+	
+		props: {
+			_user: {
+				type: Object,
+				default: function _default() {
+					return null;
+				}
+			},
+			error: String,
+			password: {
+				type: Object,
+				default: function _default() {
+					return {};
+				}
+			},
+			submitText: {
+				type: String,
+				default: function _default() {
+					return this._user ? '生成账户' : '注册';
+				}
+			},
+			username: {
+				type: Object,
+				default: function _default() {
+					return {};
+				}
+			},
+			duration: {
+				type: Number,
+				default: 2000
+			}
+		},
+	
+		data: function data() {
+			return {
+				usernameValue: this.username.value,
+				passwordValue: this.password.value,
+				message: this.error
+			};
+		},
+		mounted: function mounted() {
+			this.message && this.hideMessage();
+		},
+	
+	
+		watch: {
+			message: function message(_message) {
+				_message && this.hideMessage();
+			}
+		},
+	
+		methods: {
+			submit: function submit(e) {
+				var error = void 0;
+	
+				if (!this.usernameValue) {
+					error = this.username.hint;
+					this.$refs.username.focus();
+				} else if (!this.passwordValue) {
+					error = this.password.hint;
+					this.$refs.password.focus();
+				}
+	
+				if (error) {
+					this.message = error;
+					e.preventDefault();
+				}
+			},
+			hideMessage: function hideMessage() {
+				var _this = this;
+	
+				setTimeout(function () {
+					_this.message = '';
+				}, this.duration);
+			}
+		}
+	};
 
 /***/ }
 /******/ ]);

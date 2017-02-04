@@ -6,12 +6,16 @@
  */
 import account from './account.vue';
 import accountHeader from './accountHeader.vue';
-import accountLogin from './accountLogin.vue';
+import login from './login.vue';
+import pair from './pair.vue';
+import signup from './signup.vue';
 import tabPage from './tabPage.vue';
 
 export default {
 	account,
 	accountHeader,
-	accountLogin,
+	login,
+	pair,
+	signup,
 	tabPage,
 };

@@ -2,6 +2,7 @@
 return [
 	'active' => '有效',
 	'authentication key' => '认证密钥',
+	'blank account for third party' => '第三方空白帐户',
 	'created time' => '创建时间',
 	'choose' => '选择',
 	'confirm' => '确定',

@@ -17,6 +17,35 @@ a {
 	}
 }
 
+.btn,
+.form-control {
+	font-size: .875rem;
+	border-radius: $border-radius;
+}
+
+.btn {
+
+	&-primary {
+		background-color: $asphalt;
+		border-color: $asphalt;
+
+		&:hover,
+		&:focus {
+			background-color: $asphalt-dark;
+			border-color: $asphalt-dark;
+		}
+	}
+}
+
+.form-control {
+	color: $asphalt;
+	border-color: $gray-light;
+
+	&:focus {
+		border-color: $asphalt;
+	}
+}
+
 // @media (min-width: 544px) {}
 // @media (min-width: 768px) {}
 // @media (min-width: 992px) {}

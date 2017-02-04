@@ -1,21 +1,15 @@
 /*!
  * account
  * xiewulong <xiewulong@vip.qq.com>
- * create: 2016/8/1
+ * create: 2016/08/01
  * since: 0.0.1
  */
-
-// styles
-import '../scss/account.scss';
-
 import Vue from 'vue';
 // import Vuex from 'vuex';
-import components from './components';
 import FastClick from 'fastclick';
 
-FastClick.attach(document.body);
-
-// Vue.use(Vuex);
+import '../scss/account.scss';
+import components from './components';
 
 window.App = class App {
 
@@ -34,4 +28,6 @@ window.App = class App {
 		});
 	}
 
-}
+};
+
+FastClick.attach(document.body);

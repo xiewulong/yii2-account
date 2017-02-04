@@ -1,7 +1,19 @@
 <template lang="pug">
-form.account-login(@submit="submit($event)")
+form.signup(@submit="submit($event)")
 	slot
-	.form-group
+	input(
+		v-if="_user",
+		type="hidden",
+		name="type",
+		:value="_user.type",
+	)
+	input(
+		v-if="_user",
+		type="hidden",
+		name="id",
+		:value="_user.id",
+	)
+	.form-group(v-if="!_user")
 		input.form-control(
 			type="text",
 			:name="username.name",
@@ -10,7 +22,7 @@ form.account-login(@submit="submit($event)")
 			ref="username",
 			v-model="usernameValue",
 		)
-	.form-group
+	.form-group(v-if="!_user")
 		input.form-control(
 			type="password",
 			:name="password.name",
@@ -26,21 +38,33 @@ form.account-login(@submit="submit($event)")
 
 <script>
 export default {
-	name: 'account-login',
+	name: 'signup',
 
 	props: {
+		_user: {
+			type: Object,
+			default() {
+				return null;
+			},
+		},
 		error: String,
 		password: {
 			type: Object,
-			required: true,
+			default() {
+				return {};
+			},
 		},
 		submitText: {
 			type: String,
-			default: '登录',
+			default() {
+				return this._user ? '生成账户' : '注册';
+			},
 		},
 		username: {
 			type: Object,
-			required: true,
+			default() {
+				return {};
+			},
 		},
 		duration: {
 			type: Number,
@@ -95,39 +119,14 @@ export default {
 <style lang="scss" scoped>
 @import '../../scss/config';
 
-.account-login {
-
-	.btn,
-	.form-control {
-		border-radius: 0;
-		font-size: .875rem;
-	}
-
-	.btn {
-		background-color: $asphalt;
-		border-color: $asphalt;
-
-		&:hover,
-		&:focus {
-			background-color: $asphalt-dark;
-			border-color: $asphalt-dark;
-		}
-	}
-
-	.form-control {
-		color: $asphalt;
-		border-color: $gray-light;
-
-		&:focus {
-			border-color: $asphalt;
-		}
-	}
+.signup {
 
 	.message {
 		margin-bottom: 0;
 		overflow: hidden;
 		font-size: .75rem;
 		height: 2rem;
+		color: $color-danger;
 
 		&-enter-active,
 		&-leave-active {
