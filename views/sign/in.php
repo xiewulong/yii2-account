@@ -21,7 +21,7 @@ $this->registerJs('new App;', 3);
 ]) ?>
 <? } ?>
 
-<div is="tab-page" :tabs="{login: '<?= $_user ? "绑定已有账户" : $this->title ?>', <?php if($_user) { ?>signup: '自动生成账户'}<? } ?>">
+<div is="tab-page" :tabs="{login: '<?= $_user ? "绑定已有账户" : $this->title ?>'<?php if($_user) { ?>, signup: '自动生成账户'<? } ?>}">
 
 	<?php if($_user) { ?>
 	<?= Html::beginForm(['up'], 'post', [

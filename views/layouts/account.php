@@ -5,10 +5,6 @@ use yii\helpers\Json;
 use yii\account\assets\AccountAsset;
 
 AccountAsset::register($this);
-
-if(\Yii::$app->controller->module->wechatAccountEnabled) {
-	$this->registerJs('new Wechat(' . Json::encode(\Yii::$app->controller->module->wechat->jsapiConfig) . ');', 3);
-}
 ?>
 <?php $this->beginPage(); ?>
 <!doctype html>
